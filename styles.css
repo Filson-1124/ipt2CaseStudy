@@ -1,0 +1,31 @@
+
+:root {
+  /* Elements */
+  --color-background: #0f0e17;
+  --color-headline: #ffffff;
+  --color-paragraph: #a7a9be;
+  --color-button: #f18906;
+  --color-button-text: #ffffff;
+
+  /* Illustration */
+  --color-stroke: #000000;
+  --color-main: #ffffff;
+  --color-highlight: #f18906;
+  --color-secondary: #f25f4c;
+  --color-tertiary: #e53170;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,700,900');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body{
+    padding-top: 2rem;
+}
+

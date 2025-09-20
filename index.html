@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tailwind Colors CDN</title>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Tailwind Config -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            background: "#0f0e17",
+            headline: "#ffffff",
+            paragraph: "#a7a9be",
+            button: "#f18906",
+            "button-text": "#ffffff",
+            stroke: "#000000",
+            main: "#ffffff",
+            highlight: "#f18906",
+            secondary: "#f25f4c",
+            tertiary: "#e53170",
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-background text-paragraph min-h-screen flex flex-col items-center justify-center gap-5">
+  <header>
+    <h1 class="text-headline text-2xl">Lumiere</h1>
+  </header>
+
+  <main class="h-[100vh] w-full m-5">
+    <section class="place-self-center w-[95%] h-[100vh] flex overflow-x-auto overflow-y-hidden snap-x snap-mandatory">
+
+      <!-- WORKING COPY -->
+      <div class="lg:h-[70%] relative group border-[10px] border-red-500 rounded-lg bg-white min-w-[22rem] h-[90%] m-2 flex-shrink-0 snap-center overflow-hidden">
+        <!-- Main image -->
+        <img src="./assets/pics/KIM JENNIE ❤️.jpeg" 
+             alt="Jennie" 
+             class="h-full place-self-center  object-cover transition duration-300 group-hover:blur-sm" />
+
+        <!-- Overlay PNG -->
+        <img src="./assets/pics/pngs/KIM_JENNIE__️-removebg-preview.png" 
+             alt="Overlay" 
+             class="absolute inset-0 w-full h-full object-contain opacity-0 transition duration-300 group-hover:opacity-100 group-hover:scale-[1.10]" />
+
+        <!-- Text -->
+        <h1 class="absolute bottom-2 left-2 text-white text-xl opacity-0 transition duration-300 group-hover:opacity-100">
+          Name: Jennie
+        </h1>
+      </div>
+
+      <!-- PLACEHOLDERS -->
+      <div class="lg:h-[70%] border-2 border-dashed border-gray-500 rounded-lg bg-gray-200 min-w-[22rem] h-[90%] m-2 flex items-center justify-center flex-shrink-0 snap-center">
+        <span class="text-gray-600">Placeholder</span>
+      </div>
+      <div class="lg:h-[70%] border-2 border-dashed border-gray-500 rounded-lg bg-gray-200 min-w-[22rem] h-[90%] m-2 flex items-center justify-center flex-shrink-0 snap-center">
+        <span class="text-gray-600">Placeholder</span>
+      </div>
+      <div class="lg:h-[70%] border-2 border-dashed border-gray-500 rounded-lg bg-gray-200 min-w-[22rem] h-[90%] m-2 flex items-center justify-center flex-shrink-0 snap-center">
+        <span class="text-gray-600">Placeholder</span>
+      </div>
+
+    </section>
+    <section class="h-[100vh] bg-headline
+    "></section>
+  </main>
+</body>
+</html>
