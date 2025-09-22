@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth overflow-x-hidden">
 <head>
   <meta charset="UTF-8">
   <link rel="stylesheet" href="styles.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tailwind Colors CDN</title>
+  <title>Team Landing Page</title>
 
   <!-- Tailwind CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -14,8 +14,18 @@
     tailwind.config = {
       theme: {
         extend: {
+          keyframes: {
+            moveBg: {
+              "0%": { backgroundPosition: "0 0" },
+              "100%": { backgroundPosition: "100% 0" },
+            }
+          },
+          animation: {
+            moveBg: "moveBg 20s linear infinite", 
+          },
           colors: {
             background: "#0f0e17",
+            lightBackground:"#302d4a",
             headline: "#ffffff",
             paragraph: "#a7a9be",
             button: "#f18906",
@@ -25,52 +35,259 @@
             highlight: "#f18906",
             secondary: "#f25f4c",
             tertiary: "#e53170",
+          },
+          screens: {
+            'xs': '390px',
           }
         }
       }
     }
   </script>
 </head>
-<body class="bg-background text-paragraph min-h-screen flex flex-col items-center justify-center gap-5">
-  <header>
-    <h1 class="text-headline text-2xl">Lumiere</h1>
-  </header>
+<body class="bg-background text-paragraph min-h-screen w-screen">
 
-  <main class="h-[100vh] w-full m-5">
-    <section class="place-self-center w-[95%] h-[100vh] flex overflow-x-auto overflow-y-hidden snap-x snap-mandatory">
+<!-- Hamburger -->
+<div id="hamburger" class="fixed top-4 right-4 z-20 cursor-pointer">
+  <img src="./assets/svgs/menu_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" alt="Menu">
+</div>
 
-      <!-- WORKING COPY -->
-      <div class="lg:h-[70%] relative group border-[10px] border-red-500 rounded-lg bg-white min-w-[22rem] h-[90%] m-2 flex-shrink-0 snap-center overflow-hidden">
-        <!-- Main image -->
-        <img src="./assets/pics/KIM JENNIE ❤️.jpeg" 
-             alt="Jennie" 
-             class="h-full place-self-center  object-cover transition duration-300 group-hover:blur-sm" />
+<!-- Sidebar Menu -->
+<nav id="menu" class="fixed top-0 right-[-100%] h-full w-64 bg-background text-headline flex flex-col p-6 space-y-6 transition-all duration-300 z-10">
+  <a href="#members" class="hover:text-highlight">Members</a>
+  <a href="#about" class="hover:text-highlight">About</a>
+  <a href="#contacts" class="hover:text-highlight">Contacts</a>
+</nav>
 
-        <!-- Overlay PNG -->
-        <img src="./assets/pics/pngs/KIM_JENNIE__️-removebg-preview.png" 
-             alt="Overlay" 
-             class="absolute inset-0 w-full h-full object-contain opacity-0 transition duration-300 group-hover:opacity-100 group-hover:scale-[1.10]" />
+<main class="h-[100vh] w-full">
 
-        <!-- Text -->
-        <h1 class="absolute bottom-2 left-2 text-white text-xl opacity-0 transition duration-300 group-hover:opacity-100">
-          Name: Jennie
-        </h1>
+  <!-- Hero -->
+  <div class="relative h-screen w-screen overflow-hidden bg-background">
+    <section class="bg-repeat h-screen w-screen flex 
+                    bg-[url('./assets/wal2.png')] 
+                    bg-top bg-[length:200%] 
+                    animate-moveBg">
+      <div class="w-full h-full flex flex-col items-center justify-center text-center p-1.5">
+        <h1 class="heroTitle text-4xl permanent-marker-regular text-headline text-[64px] leading-[4.2rem]">MEET THE TEAM.</h1>
+        <p class="text-paragraph">"A team of student programmers passionate about building ideas into reality."</p>
       </div>
-
-      <!-- PLACEHOLDERS -->
-      <div class="lg:h-[70%] border-2 border-dashed border-gray-500 rounded-lg bg-gray-200 min-w-[22rem] h-[90%] m-2 flex items-center justify-center flex-shrink-0 snap-center">
-        <span class="text-gray-600">Placeholder</span>
-      </div>
-      <div class="lg:h-[70%] border-2 border-dashed border-gray-500 rounded-lg bg-gray-200 min-w-[22rem] h-[90%] m-2 flex items-center justify-center flex-shrink-0 snap-center">
-        <span class="text-gray-600">Placeholder</span>
-      </div>
-      <div class="lg:h-[70%] border-2 border-dashed border-gray-500 rounded-lg bg-gray-200 min-w-[22rem] h-[90%] m-2 flex items-center justify-center flex-shrink-0 snap-center">
-        <span class="text-gray-600">Placeholder</span>
-      </div>
-
     </section>
-    <section class="h-[100vh] bg-headline
-    "></section>
-  </main>
+  </div>
+
+  <!-- Members -->
+ <section class="flex flex-col items-center h-[100vh] w-[100vw]" id="members">
+  <h1 class="mt-10 sectionTitle text-7xl">Members</h1>
+  <div class="w-[95%] h-[100vh] flex items-center overflow-x-auto overflow-y-hidden snap-x snap-mandatory">
+
+   <!-- Jennie -->
+<div class="member-card xs:w-[80%] xs:h-[70vh] lg:w-[25%] lg:h-[70%] 
+            relative group rounded-lg 
+            min-w-[22rem] h-[90%] m-2 flex-shrink-0 snap-center overflow-hidden">
+
+  <!-- Pokémon Card Frame -->
+  <img src="./assets/pokemonCard.png"
+       alt="Card Frame"
+       class="absolute inset-0 w-full h-full object-contain pointer-events-none z-20" />
+
+  <!-- Image Window -->
+  <div class="absolute top-[16%] left-[5%] w-[90%] h-[32%] overflow-hidden z-10 rounded-md flex items-start justify-center">
+    <img src="./assets/pics/KIM JENNIE ❤️.jpeg"
+         alt="Jennie"
+         class="w-[70%] h-auto object-contain transition duration-300 group-hover:blur-sm group-hover:scale-[0.9]" />
+  </div>
+
+  <!-- Overlay Cutout -->
+  <img src="./assets/pics/pngs/KIM_JENNIE__️-removebg-preview.png"
+       alt="Overlay"
+       class="absolute top-[10%] left-1/2 -translate-x-1/2 w-[70%] h-auto object-contain opacity-0 scale-90
+              transition duration-300 z-30
+              group-hover:opacity-100 group-hover:scale-100" />
+
+  <!-- Text Placeholders -->
+  <div class="absolute bottom-[20%] left-[8%] w-[84%] h-[10%] text-sm text-black z-30">
+    <p class="font-bold px-2 py-1  text-black rounded group-hover:bg-black/70 group-hover:text-white">[Name Here]</p>
+  </div>
+  <div class="absolute bottom-[10%] left-[8%] w-[84%] h-[8%] text-xs text-black z-30">
+    <p class="px-2 py-1  text-black rounded group-hover:text-white group-hover:bg-black/70">[Description / Power Info]</p>
+  </div>
+  <div class="absolute bottom-[6%] left-[15%] w-[70%] h-[5%] text-xs text-black z-30 flex justify-between">
+    <span class="px-2 py-1  text-black rounded group-hover:bg-black/70 group-hover:text-white">[HP]</span>
+    <span class="px-2 py-1  text-black rounded group-hover:bg-black/70 group-hover:text-white">[Type]</span>
+  </div>
+</div>
+
+
+
+<!-- Jisoo -->
+<div class="member-card xs:w-[80%] xs:h-[70vh] lg:w-[25%] lg:h-[70%] 
+            relative group  rounded-lg 
+            min-w-[22rem] h-[90%] m-2 flex-shrink-0 snap-center overflow-hidden">
+
+  <img src="./assets/pokemonCard.png" class="absolute inset-0 w-full h-full object-contain pointer-events-none z-20" />
+  
+  <div class="absolute top-[16%] left-[5%] w-[90%] h-[32%] overflow-hidden z-10 rounded-md flex items-start justify-center">
+    <img src="./assets/pics/Jisoo wallpaper 2024.jpeg" alt="Jisoo"
+         class="w-[70%] h-auto object-contain transition duration-300 group-hover:blur-sm group-hover:scale-[0.9]" />
+  </div>
+  
+  <img src="./assets/pics/pngs/Jisoo_wallpaper_2024-removebg-preview.png"
+       alt="Overlay"
+       class="absolute top-[0%] left-1/2 -translate-x-1/2 w-[70%] h-auto object-contain opacity-0 scale-90
+              transition duration-300 z-30
+              group-hover:opacity-100 group-hover:scale-100" />
+  
+  <div class="absolute bottom-[20%] left-[8%] w-[84%] h-[10%] text-sm text-black z-30">
+    <p class="font-bold px-2 py-1  text-black rounded group-hover:bg-black/70 group-hover:text-white">[Name Here]</p>
+  </div>
+  <div class="absolute bottom-[10%] left-[8%] w-[84%] h-[8%] text-xs text-black z-30">
+    <p class="px-2 py-1  text-black rounded group-hover:text-white group-hover:bg-black/70">[Description / Power Info]</p>
+  </div>
+  <div class="absolute bottom-[6%] left-[15%] w-[70%] h-[5%] text-xs text-black z-30 flex justify-between">
+    <span class="px-2 py-1  text-black rounded group-hover:bg-black/70 group-hover:text-white">[HP]</span>
+    <span class="px-2 py-1  text-black rounded group-hover:bg-black/70 group-hover:text-white">[Type]</span>
+  </div>
+</div>
+
+
+<!-- Lisa -->
+<div class="member-card xs:w-[80%] xs:h-[70vh] lg:w-[25%] lg:h-[70%] 
+            relative group  rounded-lg
+            min-w-[22rem] h-[90%] m-2 flex-shrink-0 snap-center overflow-hidden">
+
+  <img src="./assets/pokemonCard.png" class="absolute inset-0 w-full h-full object-contain pointer-events-none z-20" />
+  
+  <div class="absolute top-[16%] left-[5%] w-[90%] h-[32%] overflow-hidden z-10 rounded-md flex items-start justify-center">
+    <img src="./assets/pics/download (2).jpeg" alt="Lisa"
+         class="w-[70%] h-auto object-contain transition duration-300 group-hover:blur-sm group-hover:scale-[0.9]" />
+  </div>
+  
+  <img src="./assets/pics/pngs/download__2_-removebg-preview.png"
+       alt="Overlay"
+       class="absolute top-[10%] left-1/2 -translate-x-1/2 w-[70%] h-auto object-contain opacity-0 scale-90
+              transition duration-300 z-30
+              group-hover:opacity-100 group-hover:scale-100" />
+  
+ <div class="absolute bottom-[20%] left-[8%] w-[84%] h-[10%] text-sm text-black z-30">
+    <p class="font-bold px-2 py-1  text-black rounded group-hover:bg-black/70 group-hover:text-white">[Name Here]</p>
+  </div>
+  <div class="absolute bottom-[10%] left-[8%] w-[84%] h-[8%] text-xs text-black z-30">
+    <p class="px-2 py-1  text-black rounded group-hover:text-white group-hover:bg-black/70">[Description / Power Info]</p>
+  </div>
+  <div class="absolute bottom-[6%] left-[15%] w-[70%] h-[5%] text-xs text-black z-30 flex justify-between">
+    <span class="px-2 py-1  text-black rounded group-hover:bg-black/70 group-hover:text-white">[HP]</span>
+    <span class="px-2 py-1  text-black rounded group-hover:bg-black/70 group-hover:text-white">[Type]</span>
+  </div>
+</div>
+
+
+<!-- Rosé -->
+<div class="member-card xs:w-[80%] xs:h-[70vh] lg:w-[25%] lg:h-[70%] 
+            relative group  rounded-lg 
+            min-w-[22rem] h-[90%] m-2 flex-shrink-0 snap-center overflow-hidden">
+
+  <img src="./assets/pokemonCard.png" class="absolute inset-0 w-full h-full object-contain pointer-events-none z-20" />
+  
+  <div class="absolute top-[16%] left-[5%] w-[90%] h-[32%] overflow-hidden z-10 rounded-md flex items-start justify-center">
+    <img src="./assets/pics/download (1).jpeg" alt="Rosé"
+         class="w-[70%] h-auto object-contain transition duration-300 group-hover:blur-sm group-hover:scale-[0.9]" />
+  </div>
+  
+  <img src="./assets/pics/pngs/download__1_-removebg-preview.png"
+       alt="Overlay"
+       class="absolute top-[10%] left-1/2 -translate-x-1/2 w-[70%] h-auto object-contain opacity-0 scale-90
+              transition duration-300 z-30
+              group-hover:opacity-100 group-hover:scale-100" />
+  
+ <div class="absolute bottom-[20%] left-[8%] w-[84%] h-[10%] text-sm text-black z-30">
+    <p class="font-bold px-2 py-1  text-black rounded group-hover:bg-black/70 group-hover:text-white">[Name Here]</p>
+  </div>
+  <div class="absolute bottom-[10%] left-[8%] w-[84%] h-[8%] text-xs text-black z-30">
+    <p class="px-2 py-1  text-black rounded group-hover:text-white group-hover:bg-black/70">[Description / Power Info]</p>
+  </div>
+  <div class="absolute bottom-[6%] left-[15%] w-[70%] h-[5%] text-xs text-black z-30 flex justify-between">
+    <span class="px-2 py-1  text-black rounded group-hover:bg-black/70 group-hover:text-white">[HP]</span>
+    <span class="px-2 py-1  text-black rounded group-hover:bg-black/70 group-hover:text-white">[Type]</span>
+  </div>
+</div>
+
+
+  </div>
+</section>
+
+  <!-- About -->
+  <section class="about p-10 md:w-[80vw] flex flex-col md:flex-row place-self-center" id="about">
+    <!-- Sticky Sidebar -->
+    <div class="md:w-1/2 w-full static top-0 md:h-screen overflow-auto p-6 bg-lightBackground rounded-xl md:sticky">
+      <h2 class="text-4xl md:text-7xl font-bold mb-4 sectionTitle">About us.</h2>
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta nihil ex nesciunt libero aspernatur veritatis! 
+        Aspernatur reiciendis rerum illum, minus voluptatem ratione, error explicabo repellendus est esse deserunt sint facere, eum nisi.
+      </p>
+    </div>
+
+    <!-- Scrollable Content (animated) -->
+    <div class="md:w-1/2 w-full p-2 space-y-8">
+      <p class="box h-[100vh] bg-red-200 rounded-lg opacity-0 translate-x-10 transition-all duration-700">Content Section 1</p>
+      <p class="box h-[100vh] bg-green-200 rounded-lg opacity-0 translate-x-10 transition-all duration-700">Content Section 2</p>
+      <p class="box h-[100vh] bg-blue-200 rounded-lg opacity-0 translate-x-10 transition-all duration-700">Content Section 3</p>
+      <p class="box h-[100vh] bg-purple-200 rounded-lg opacity-0 translate-x-10 transition-all duration-700">Content Section 4</p>
+    </div>
+  </section>
+
+  <!-- Contacts -->
+  <section class="contacts w-[100vw] h-[100vh]" id="contacts"></section>
+  <section class="h-[100vh]"></section>
+
+</main>
+
+<!-- Script -->
+<script>
+  const hamburger = document.getElementById("hamburger");
+  const menu = document.getElementById("menu");
+  const boxes = document.querySelectorAll(".box");
+
+  // Box animation (slide from right)
+  const boxObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.remove("opacity-0", "translate-x-10");
+          entry.target.classList.add("opacity-100", "translate-x-0");
+        } else {
+          entry.target.classList.remove("opacity-100", "translate-x-0");
+          entry.target.classList.add("opacity-0", "translate-x-10");
+        }
+      });
+    },
+    { threshold: 0.2 }
+  );
+  boxes.forEach((box) => boxObserver.observe(box));
+
+  // Hamburger toggle
+  hamburger.addEventListener("click", () => {
+    if (menu.classList.contains("right-0")) {
+      menu.classList.replace("right-0", "right-[-100%]");
+    } else {
+      menu.classList.replace("right-[-100%]", "right-0");
+    }
+  });
+
+  // Member card observer (optional highlight effect)
+  document.addEventListener("DOMContentLoaded", () => {
+    const cards = document.querySelectorAll(".member-card");
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("active");
+          } else {
+            entry.target.classList.remove("active");
+          }
+        });
+      },
+      { threshold: 0.7 }
+    );
+    cards.forEach((card) => observer.observe(card));
+  });
+</script>
 </body>
 </html>
