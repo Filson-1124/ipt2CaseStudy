@@ -49,8 +49,8 @@
                   </div>                  
             </div>
         </nav>
-        <el-dialog>
             <!-- MOBILE -->
+        <el-dialog>
         <dialog id="mobile-menu" class="backdrop:bg-transparent lg:hidden">
             <div tabindex="0" class="fixed inset-0 focus:outline-none">
             <el-dialog-panel class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-gray-900 p-6 sm:max-w-sm sm:ring-1 sm:ring-gray-100/10">
@@ -90,7 +90,7 @@
                     <div class="text-center">
                       <!-- Profile image -->
                       <div class="flex justify-center mb-8">
-                        <img src="./assets/pics/marianne.jpg"
+                        <img src="./assets/pics/marianne2.jpg"
                              alt="Marianne"
                              class="w-[15rem] h-[15rem] object-cover rounded-full shadow-lg" />
                       </div>
@@ -119,12 +119,12 @@
         </section>
         <!-- ABOUT -->
         <section id="about" class="flex items-center justify-center">
-            <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-20 items-center p-20">
+            <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 items-center px-5 py-20">
               
-              <div class="col-span-1 flex justify-center">
-                <img src="./assets/pics/marianne2.jpg" 
-                     alt="Marianne"
-                     class="w-[20rem] h-[30rem] object-cover rounded-lg shadow-lg" />
+              <div class="col-span-1 flex justify-center ">
+                <img src="./assets/pics/marianne.jpg" 
+                  alt="Marianne"
+                  class="w-full max-w-md h-auto object-cover rounded-lg shadow-lg" />
               </div>
           
               <div class="col-span-2 space-y-6 text-center md:text-left">
@@ -140,7 +140,7 @@
                 <p class="text-lg leading-relaxed text-white">
                   I love turning ideas into clean, responsive, and interactive web experiences.  
                   My main focus is on building modern UI/UX with <span class="text-yellow-300">HTML, CSS, JavaScript, and React</span>,  
-                  while also exploring design tools and frameworks like <span class="text-yellow-300">Tailwind CSS</span>.
+                  while also exploring design tools and frameworks like <span class="text-yellow-300">Tailwind CSS</span> and <span class="text-yellow-300">Bootstrap</span>.
                 </p>
           
                 <p class="text-lg leading-relaxed text-white">
@@ -189,52 +189,131 @@
             </div>
         </section>
           <!-- PORTFOLIO SECTION -->
-        <section id="portfolio" class="py-20 px-10">
+        <section id="portfolio" class="py-20 px-5">
             <div class="max-w-6xl mx-auto text-center md:text-left">
               <h1 class="text-3xl font-bold text-yellow-400 mb-12">Portfolio</h1>
               <!-- Projects Grid -->
               <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
                 <!-- Project 1 -->
                 <div class="bg-gray-800 rounded-lg shadow-lg overflow-hidden border-2 border-amber-500/70  hover:scale-105 hover:shadow-yellow-400/30 transition transform duration-300">
-                  <img src="./assets/projects/project1.png" alt="Project 1" class="w-full h-48 object-cover">
+                  <img src="./assets/mari_ss_portfolio/revio-app-ss.jpg" 
+                      alt="Revio App Project" 
+                      class="w-full h-48 object-contain mx-auto bg-black">
                   <div class="p-6 space-y-4">
                     <h2 class="text-xl font-semibold text-white">Revio App</h2>
                     <p class="text-gray-400 text-sm">
                       A reviewer generator that makes flashcards and summarization of the study materials.
                     </p>
+                    <div class="w-28 p-1 h-auto text-center border border-cyan-600 rounded-full">
+                      <p class="text-cyan-200 text-xs font-light">React Native</p>
+                    </div>
                     <div class="flex gap-4 justify-center md:justify-start">
                       <!-- <a href="#" class="px-4 py-2 rounded-full bg-yellow-500 text-black text-sm font-semibold hover:bg-yellow-400 transition">Live Demo</a> -->
-                      <a href="#" class="px-4 py-2 rounded-full border border-yellow-500 text-yellow-500 text-sm font-semibold hover:bg-yellow-500 hover:text-black transition">GitHub</a>
+                      <a href="https://github.com/marianne-yo/Revio-Mobile" target="_blank" class="px-4 py-2 rounded-lg border border-yellow-500 text-yellow-500 text-sm font-semibold hover:bg-yellow-500 hover:text-black transition">GitHub</a>
                     </div>
                   </div>
                 </div>
           
                 <!-- Project 2 -->
                 <div class="bg-gray-800 rounded-lg shadow-lg overflow-hidden border-2 border-amber-500/70  hover:scale-105 hover:shadow-yellow-400/30 transition transform duration-300">
-                  <img src="./assets/projects/project2.png" alt="Project 2" class="w-full h-48 object-cover">
+                  <img src="./assets/mari_ss_portfolio/calc-ss.png" alt="Project 2" class="w-full h-48 object-cover">
                   <div class="p-6 space-y-4">
                     <h2 class="text-xl font-semibold text-white">Calculator</h2>
                     <p class="text-gray-400 text-sm">
                       My first simple calculator that handles basic arithmetic operations.
                     </p>
+                    <div class="flex flex-row gap-1">
+                      <div class="w-20 p-1 h-auto text-center border border-orange-600 rounded-full">
+                      <p class="text-orange-200 text-xs font-light">HTML</p>
+                      </div>
+                      <div class="w-20 p-1 h-auto text-center border border-blue-600 rounded-full">
+                        <p class="text-blue-200 text-xs font-light">CSS</p>
+                      </div>
+                      <div class="w-20 p-1 h-auto text-center border border-amber-600 rounded-full">
+                        <p class="text-amber-200 text-xs font-light">JavaScript</p>
+                      </div>
+                    </div>
                     <div class="flex gap-4 justify-center md:justify-start">
                       <!-- <a href="#" class="px-4 py-2 rounded-full bg-yellow-500 text-black text-sm font-semibold hover:bg-yellow-400 transition">Live Demo</a> -->
-                      <a href="#" class="px-4 py-2 rounded-full border border-yellow-500 text-yellow-500 text-sm font-semibold hover:bg-yellow-500 hover:text-black transition">GitHub</a>
+                      <a href="https://github.com/marianne-yo/My-Calculator" target="_blank" class="px-4 py-2 rounded-lg border border-yellow-500 text-yellow-500 text-sm font-semibold hover:bg-yellow-500 hover:text-black transition">GitHub</a>
                     </div>
                   </div>
                 </div>
           
                 <!-- Project 3 -->
                 <div class="bg-gray-800 rounded-lg shadow-lg overflow-hidden border-2 border-amber-500/70 hover:scale-105 hover:shadow-yellow-400/30 transition transform duration-300">
-                  <img src="./assets/projects/project3.png" alt="Project 3" class="w-full h-48 object-cover">
+                  <img src="./assets/mari_ss_portfolio/tierra-ss.png" alt="Project 3" class="w-full h-48 object-cover">
                   <div class="p-6 space-y-4">
                     <h2 class="text-xl font-semibold text-white">Festverse</h2>
                     <p class="text-gray-400 text-sm">
                       A landing page for Festverse, a company that promotes music festivals.
                     </p>
+                    <div class="flex flex-row gap-1">
+                      <div class="w-20 p-1 h-auto text-center border border-orange-600 rounded-full">
+                      <p class="text-orange-200 text-xs font-light">HTML</p>
+                      </div>
+                      <div class="w-20 p-1 h-auto text-center border border-blue-600 rounded-full">
+                        <p class="text-blue-200 text-xs font-light">CSS</p>
+                      </div>
+                      <div class="w-20 p-1 h-auto text-center border border-amber-600 rounded-full">
+                        <p class="text-amber-200 text-xs font-light">JavaScript</p>
+                      </div>
+                    </div>
                     <div class="flex gap-4 justify-center md:justify-start">
                       <!-- <a href="#" class="px-4 py-2 rounded-full bg-yellow-500 text-black text-sm font-semibold hover:bg-yellow-400 transition">Live Demo</a> -->
-                      <a href="#" class="px-4 py-2 rounded-full border border-yellow-500 text-yellow-500 text-sm font-semibold hover:bg-yellow-500 hover:text-black transition">GitHub</a>
+                      <a href="https://github.com/marianne-yo/tierra" target="_blank" class="px-4 py-2 rounded-lg border border-yellow-500 text-yellow-500 text-sm font-semibold hover:bg-yellow-500 hover:text-black transition">GitHub</a>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="bg-gray-800 rounded-lg shadow-lg overflow-hidden border-2 border-amber-500/70 hover:scale-105 hover:shadow-yellow-400/30 transition transform duration-300">
+                  <img src="./assets/mari_ss_portfolio/profilecard-ss.png" alt="Project 3" class="w-full h-48 object-cover">
+                  <div class="p-6 space-y-4">
+                    <h2 class="text-xl font-semibold text-white">Profile Card</h2>
+                    <p class="text-gray-400 text-sm">
+                      A simple profile card, that has my details and my favorite quote.
+                    </p>
+                    <div class="flex flex-row gap-1">
+                      <div class="w-20 p-1 h-auto text-center border border-orange-600 rounded-full">
+                      <p class="text-orange-200 text-xs font-light">HTML</p>
+                      </div>
+                      <div class="w-20 p-1 h-auto text-center border border-blue-600 rounded-full">
+                        <p class="text-blue-200 text-xs font-light">CSS</p>
+                      </div>
+                      <div class="w-20 p-1 h-auto text-center border border-amber-600 rounded-full">
+                        <p class="text-amber-200 text-xs font-light">JavaScript</p>
+                      </div>
+                    </div>
+                    <div class="flex gap-4 justify-center md:justify-start">
+                      <!-- <a href="#" class="px-4 py-2 rounded-full bg-yellow-500 text-black text-sm font-semibold hover:bg-yellow-400 transition">Live Demo</a> -->
+                      <a href="https://github.com/marianne-yo/profileCard" target="_blank" class="px-4 py-2 rounded-lg border border-yellow-500 text-yellow-500 text-sm font-semibold hover:bg-yellow-500 hover:text-black transition">GitHub</a>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="bg-gray-800 rounded-lg shadow-lg overflow-hidden border-2 border-amber-500/70 hover:scale-105 hover:shadow-yellow-400/30 transition transform duration-300">
+                  <img src="./assets/mari_ss_portfolio/pricing-ss.png" alt="Project 3" class="w-full h-48 object-cover">
+                  <div class="p-6 space-y-4">
+                    <h2 class="text-xl font-semibold text-white">Festverse</h2>
+                    <p class="text-gray-400 text-sm">
+                      A simple pricing table that can be used in subscription.
+                    </p>
+                    <div class="flex flex-row gap-1">
+                      <div class="w-20 p-1 h-auto text-center border border-orange-600 rounded-full">
+                      <p class="text-orange-200 text-xs font-light">HTML</p>
+                      </div>
+                      <div class="w-20 p-1 h-auto text-center border border-blue-600 rounded-full">
+                        <p class="text-blue-200 text-xs font-light">CSS</p>
+                      </div>
+                      <div class="w-20 p-1 h-auto text-center border border-amber-600 rounded-full">
+                        <p class="text-amber-200 text-xs font-light">JavaScript</p>
+                      </div>
+                    </div>
+                    <div class="flex gap-4 justify-center md:justify-start">
+                      <!-- <a href="#" class="px-4 py-2 rounded-full bg-yellow-500 text-black text-sm font-semibold hover:bg-yellow-400 transition">Live Demo</a> -->
+                      <a href="https://github.com/marianne-yo/pricingTable" target="_blank" class="px-4 py-2 rounded-lg border border-yellow-500 text-yellow-500 text-sm font-semibold hover:bg-yellow-500 hover:text-black transition">GitHub</a>
                     </div>
                   </div>
                 </div>
@@ -243,7 +322,7 @@
           </section>
           
           
-          <section id="contact" class="py-20 px-20">
+          <section id="contact" class="py-10 px-20">
             <div class="p-20 flex flex-col items-left">
               <h1 class="text-3xl font-bold text-yellow-400 mb-12">CONTACT</h1>
               <div class="flex items-center gap-4 text-center pb-5">
@@ -268,17 +347,23 @@
                     </h4>
                 </a>
               </div>
+              <!-- Button -->
+              <div class="mt-4 flex items-center justify-center animate-bounce">
+                <a href="#home"
+                class="rounded-full border-2 border-white/25 text-sm font-semibold text-white shadow-xs 
+                        hover:bg-yellow-500 hover:text-black transition-colors duration-300">
+                    <ion-icon name="arrow-up" class="size-5 p-[10px]"></ion-icon>
+                </a>
+              </div>
             </div>
           </section>
           
     </main>
     <footer class="bg-gradient-to-t from-gray-900 to-black py-6">
-        <div class="flex flex-col items-center justify-center">
-          <!-- <p class="text-white font-semibold tracking-wide">MARIANNE</p> -->
-          <p class="text-gray-400 text-sm mt-2">&copy; 2025 Marianne. All rights reserved.</p>
-        </div>
-      </footer>
-         
-
+      <div class="flex flex-col items-center justify-center text-center">
+        <p class="text-gray-400 text-sm">&copy; 2025 Marianne Balen</p>
+        <p class="text-gray-500 text-xs mt-1">Building clean and creative web and app experiences.</p>
+      </div>
+    </footer>
 </body>
 </html>
