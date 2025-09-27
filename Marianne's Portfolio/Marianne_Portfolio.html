@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css?family=Poppins:400,700,900');
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+    }
+    html {
+        scroll-behavior: smooth;
+    }
+  </style>
+  <!-- <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet"> -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+<body class="min-h-screen">
+    <div class="bg-gradient-to-b from-gray-800 via-gray-900 to-black
+    min-h-screen">
+    <header class="absolute inset-x-0 top-0 z-50">
+        <nav aria-label="Global" class="flex items-center justify-between p-6 bg-gradient-to-t from-gray-800/50 via-gray-900/75 to-black
+        lg:px-20 py-5">
+            <div class="flex lg:flex-1">
+                <a href="#" class="-m-1.5 p-1.5">
+                    <h1 class="text-lg/6 font-semibold text-white">Marianne</h1>
+                </a>
+            </div>
+            <div class="flex lg:hidden">
+                <button type="button" command="show-modal" commandfor="mobile-menu" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-200">
+                <span class="sr-only">Open main menu</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon" aria-hidden="true" class="size-6">
+                    <path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                </button>
+            </div>
+            <div class="hidden lg:flex lg:gap-x-10">
+                <div class="hidden lg:flex lg:gap-x-10">
+                    <a href="#home" class="text-md font-bold px-3 py-3 rounded-md hover:border hover:border-yellow-500 text-white active:bg-yellow-400 active:text-black transition-colors duration-300">Home</a>
+                    <a href="#about" class="text-md font-bold px-3 py-3 rounded-md hover:border hover:border-yellow-500 text-white active:bg-yellow-400 active:text-black transition-colors duration-300">About</a>
+                    <a href="#portfolio" class="text-md font-bold px-3 py-3 rounded-md hover:border hover:border-yellow-500 text-white active:bg-yellow-400 active:text-black transition-colors duration-300">Portfolio</a>
+                    <a href="#contact" class="text-md font-bold px-3 py-3 rounded-md hover:border hover:border-yellow-500 text-white active:bg-yellow-400 active:text-black transition-colors duration-300">Contact</a>
+                  </div>                  
+            </div>
+        </nav>
+            <!-- MOBILE -->
+        <el-dialog>
+        <dialog id="mobile-menu" class="backdrop:bg-transparent lg:hidden">
+            <div tabindex="0" class="fixed inset-0 focus:outline-none">
+            <el-dialog-panel class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-gray-900 p-6 sm:max-w-sm sm:ring-1 sm:ring-gray-100/10">
+                <div class="flex items-center justify-between">
+                <a href="#" class="-m-1.5 p-1.5">
+                    <h1 class="text-sm/6 font-semibold text-white">Marianne</h1>
+                </a>
+                <button type="button" command="close" commandfor="mobile-menu" class="-m-2.5 rounded-md p-2.5 text-gray-200">
+                    <span class="sr-only">Close menu</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon" aria-hidden="true" class="size-6">
+                    <path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </button>
+                </div>
+                <div class="mt-6 flow-root">
+                <div class="-my-6 divide-y divide-white/10">
+                    <div class="space-y-2 py-6">
+                    <a href="#home" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-white/5">Home</a>
+                    <a href="#about" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-white/5">About</a>
+                    <a href="#portfolio" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-white/5">Portfolio</a>
+                    <a href="#contact" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-white/5">Contact</a>
+                    </div>
+                    <div class="py-6">
+                    </div>
+                </div>
+                </div>
+            </el-dialog-panel>
+            </div>
+        </dialog>
+        </el-dialog>
+    </header>
+
+    <main>
+        <section>
+            <div id="home" class="relative isolate px-6 pt-14 lg:px-8">
+                <div class="mx-auto py-20 px-20 sm:py-48 lg:py-56 w-full">
+                    <div class="text-center">
+                      <!-- Profile image -->
+                      <div class="flex justify-center mb-8">
+                        <img src="../assets/pics/marianne2.jpg"
+                             alt="Marianne"
+                             class="w-[15rem] h-[15rem] object-cover rounded-full shadow-lg" />
+                      </div>
+                      <!-- Text -->
+                      <h2 class="text-5xl font-bold tracking-tight text-balance text-white sm:text-7xl">
+                        Hi! I'm Marianne
+                      </h2>
+                      <h3 class="text-2xl font-bold tracking-tight text-balance text-white sm:text-4xl">
+                        FRONT END DEVELOPER
+                      </h3>                      
+                      <p class="mt-8 text-lg font-medium text-pretty text-gray-400 sm:text-xl/8">
+                        I'm a student from Tarlac State University and currently taking Bachelor in Information Technology Major in Web and Mobile Application. I'm an aspiring front-end web developer.
+                      </p>
+                  
+                      <!-- Button -->
+                      <div class="mt-10 flex items-center justify-center gap-x-6 animate-bounce">
+                        <a href="#about"
+                        class="rounded-full border-2 border-white/25 text-sm font-semibold text-white shadow-xs 
+                                hover:bg-yellow-500 hover:text-black transition-colors duration-300">
+                            <ion-icon name="arrow-down" class="size-5 p-[10px]"></ion-icon>
+                        </a>
+                      </div>
+                    </div>
+                  </div>                  
+            </div>
+        </section>
+        <!-- ABOUT -->
+        <section id="about" class="flex items-center justify-center">
+            <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 items-center px-5 py-20">
+              
+              <div class="col-span-1 flex justify-center ">
+                <img src="../assets/pics/marianne.jpg" 
+                  alt="Marianne"
+                  class="w-full max-w-md h-auto object-cover rounded-lg shadow-lg" />
+              </div>
+          
+              <div class="col-span-2 space-y-6 text-center md:text-left">
+                <h1 class="text-3xl font-bold text-yellow-400">ABOUT ME</h1>
+                
+                <p class="text-lg leading-relaxed text-white text-pretty">
+                  Hi, I'm <span class="font-semibold text-white">Marianne C. Balen</span> — a passionate 
+                  <span class="text-yellow-300">Front-End Developer</span> in the making.  
+                  Currently studying <span class="italic">Bachelor of Science in Information Technology, Major in Web and Mobile Application</span> 
+                  at Tarlac State University.
+                </p>
+          
+                <p class="text-lg leading-relaxed text-white">
+                  I love turning ideas into clean, responsive, and interactive web experiences.  
+                  My main focus is on building modern UI/UX with <span class="text-yellow-300">HTML, CSS, JavaScript, and React</span>,  
+                  while also exploring design tools and frameworks like <span class="text-yellow-300">Tailwind CSS</span> and <span class="text-yellow-300">Bootstrap</span>.
+                </p>
+          
+                <p class="text-lg leading-relaxed text-white">
+                  Outside coding, you’ll probably catch me doing <span class="text-yellow-300">art, exercising, or learning languages</span>.  
+                  I’m constantly looking for opportunities to grow and collaborate on exciting projects.
+                </p>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-6">
+                    <!-- Technical Skills -->
+                    <div class="bg-gray-800/50 rounded-md p-6 shadow-md">
+                      <h3 class="text-yellow-400 text-xl font-semibold mb-4">Technical Skills</h3>
+                      <ul class="space-y-2 text-gray-200">
+                        <li class="flex items-center gap-2"><ion-icon name="logo-html5" class="text-red-500"></ion-icon> HTML</li>
+                        <li class="flex items-center gap-2"><ion-icon name="logo-css3" class="text-blue-400"></ion-icon> CSS</li>
+                        <li class="flex items-center gap-2"><ion-icon name="logo-javascript" class="text-yellow-300"></ion-icon> JavaScript</li>
+                        <li class="flex items-center gap-2"><ion-icon name="logo-react" class="text-cyan-400"></ion-icon> React Native</li>
+                        <li class="flex items-center gap-2"><ion-icon name="code" class="text-cyan-400"></ion-icon>PHP</li>
+                        <li class="flex items-center gap-2"><ion-icon name="server" class="text-cyan-400"></ion-icon>mySQL</li>
+                      </ul>
+                    </div>
+                  
+                    <!-- Hobbies -->
+                    <div class="bg-gray-800/50 rounded-md p-6 shadow-md">
+                      <h3 class="text-yellow-400 text-xl font-semibold mb-4">Hobbies</h3>
+                      <ul class="space-y-2 text-gray-200">
+                        <li class="flex items-center gap-2"><ion-icon name="brush" class="text-pink-400"></ion-icon> Art</li>
+                        <li class="flex items-center gap-2"><ion-icon name="musical-notes" class="text-purple-400"></ion-icon> Dancing</li>
+                        <li class="flex items-center gap-2"><ion-icon name="game-controller" class="text-green-400"></ion-icon> Playing Games</li>
+                        <li class="flex items-center gap-2"><ion-icon name="language" class="text-green-400"></ion-icon>Learning languages</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <!-- Education -->
+                  <div class="bg-gray-800/50 rounded-md p-6 shadow-md mt-6 text-pretty">
+                    <h3 class="text-yellow-400 text-xl font-semibold mb-4">Education</h3>
+                    <ul class="space-y-3 text-gray-200">
+                      <li class="flex items-center gap-3">
+                        <ion-icon name="school" size="5" class="text-blue-400"></ion-icon>
+                        <span>Tarlac State University — BS Information Technology Major in Web and Mobile Application (Present)</span>
+                      </li>
+                      <li class="flex items-center gap-3">
+                        <ion-icon name="school-outline" size="5" class="text-green-400"></ion-icon>
+                        <span>St. Rose Catholic School Inc. - Science Technology and Engineering Mathematics (2022)</span>
+                      </li>
+                      <li class="flex items-center gap-3">
+                        <ion-icon name="school-outline" size="5" class="text-purple-400"></ion-icon>
+                        <span>St. Rose Catholic School Inc. - Junior High School (2016-2020)</span>
+                      </li>
+                    </ul>
+                  </div>
+
+                <div class="flex justify-center md:justify-start gap-6 pt-4">
+                  <a href="#portfolio" 
+                     class="px-6 py-3 rounded-full bg-yellow-500 text-black font-semibold hover:bg-yellow-400 transition">
+                    View My Work
+                  </a>
+                  <a href="#contact" 
+                     class="px-6 py-3 rounded-full border border-yellow-500 text-yellow-500 font-semibold hover:bg-yellow-500 hover:text-black transition">
+                    Contact Me
+                  </a>
+                </div>
+              </div>
+              
+            </div>
+        </section>
+          <!-- PORTFOLIO SECTION -->
+        <section id="portfolio" class="py-20 px-5">
+            <div class="max-w-6xl mx-auto text-center md:text-left">
+              <h1 class="text-3xl font-bold text-yellow-400 mb-12">Portfolio</h1>
+              <!-- Projects Grid -->
+              <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
+                <!-- Project 1 -->
+                <div class="bg-gray-800 rounded-lg shadow-lg overflow-hidden border-2 border-amber-500/70  hover:scale-105 hover:shadow-yellow-400/30 transition transform duration-300">
+                  <img src="../assets/mari_ss_portfolio/revio-app-ss.jpg" 
+                      alt="Revio App Project" 
+                      class="w-full h-48 object-contain mx-auto bg-black">
+                  <div class="p-6 space-y-4">
+                    <h2 class="text-xl font-semibold text-white">Revio App</h2>
+                    <p class="text-gray-400 text-sm">
+                      A reviewer generator that makes flashcards and summarization of the study materials.
+                    </p>
+                    <div class="w-28 p-1 h-auto text-center border border-cyan-600 rounded-full">
+                      <p class="text-cyan-200 text-xs font-light">React Native</p>
+                    </div>
+                    <div class="flex gap-4 justify-center md:justify-start">
+                      <!-- <a href="#" class="px-4 py-2 rounded-full bg-yellow-500 text-black text-sm font-semibold hover:bg-yellow-400 transition">Live Demo</a> -->
+                      <a href="https://github.com/marianne-yo/Revio-Mobile" target="_blank" class="px-4 py-2 rounded-lg border border-yellow-500 text-yellow-500 text-sm font-semibold hover:bg-yellow-500 hover:text-black transition">GitHub</a>
+                    </div>
+                  </div>
+                </div>
+          
+                <!-- Project 2 -->
+                <div class="bg-gray-800 rounded-lg shadow-lg overflow-hidden border-2 border-amber-500/70  hover:scale-105 hover:shadow-yellow-400/30 transition transform duration-300">
+                  <img src="../assets/mari_ss_portfolio/calc-ss.png" alt="Project 2" class="w-full h-48 object-cover">
+                  <div class="p-6 space-y-4">
+                    <h2 class="text-xl font-semibold text-white">Calculator</h2>
+                    <p class="text-gray-400 text-sm">
+                      My first simple calculator that handles basic arithmetic operations.
+                    </p>
+                    <div class="flex flex-row gap-1">
+                      <div class="w-20 p-1 h-auto text-center border border-orange-600 rounded-full">
+                      <p class="text-orange-200 text-xs font-light">HTML</p>
+                      </div>
+                      <div class="w-20 p-1 h-auto text-center border border-blue-600 rounded-full">
+                        <p class="text-blue-200 text-xs font-light">CSS</p>
+                      </div>
+                      <div class="w-20 p-1 h-auto text-center border border-amber-600 rounded-full">
+                        <p class="text-amber-200 text-xs font-light">JavaScript</p>
+                      </div>
+                    </div>
+                    <div class="flex gap-4 justify-center md:justify-start">
+                      <!-- <a href="#" class="px-4 py-2 rounded-full bg-yellow-500 text-black text-sm font-semibold hover:bg-yellow-400 transition">Live Demo</a> -->
+                      <a href="https://github.com/marianne-yo/My-Calculator" target="_blank" class="px-4 py-2 rounded-lg border border-yellow-500 text-yellow-500 text-sm font-semibold hover:bg-yellow-500 hover:text-black transition">GitHub</a>
+                    </div>
+                  </div>
+                </div>
+          
+                <!-- Project 3 -->
+                <div class="bg-gray-800 rounded-lg shadow-lg overflow-hidden border-2 border-amber-500/70 hover:scale-105 hover:shadow-yellow-400/30 transition transform duration-300">
+                  <img src="../assets/mari_ss_portfolio/tierra-ss.png" alt="Project 3" class="w-full h-48 object-cover">
+                  <div class="p-6 space-y-4">
+                    <h2 class="text-xl font-semibold text-white">Festverse</h2>
+                    <p class="text-gray-400 text-sm">
+                      A landing page for Festverse, a company that promotes music festivals.
+                    </p>
+                    <div class="flex flex-row gap-1">
+                      <div class="w-20 p-1 h-auto text-center border border-orange-600 rounded-full">
+                      <p class="text-orange-200 text-xs font-light">HTML</p>
+                      </div>
+                      <div class="w-20 p-1 h-auto text-center border border-blue-600 rounded-full">
+                        <p class="text-blue-200 text-xs font-light">CSS</p>
+                      </div>
+                      <div class="w-20 p-1 h-auto text-center border border-amber-600 rounded-full">
+                        <p class="text-amber-200 text-xs font-light">JavaScript</p>
+                      </div>
+                    </div>
+                    <div class="flex gap-4 justify-center md:justify-start">
+                      <!-- <a href="#" class="px-4 py-2 rounded-full bg-yellow-500 text-black text-sm font-semibold hover:bg-yellow-400 transition">Live Demo</a> -->
+                      <a href="https://github.com/marianne-yo/tierra" target="_blank" class="px-4 py-2 rounded-lg border border-yellow-500 text-yellow-500 text-sm font-semibold hover:bg-yellow-500 hover:text-black transition">GitHub</a>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="bg-gray-800 rounded-lg shadow-lg overflow-hidden border-2 border-amber-500/70 hover:scale-105 hover:shadow-yellow-400/30 transition transform duration-300">
+                  <img src="../assets/mari_ss_portfolio/profilecard-ss.png" alt="Project 3" class="w-full h-48 object-cover">
+                  <div class="p-6 space-y-4">
+                    <h2 class="text-xl font-semibold text-white">Profile Card</h2>
+                    <p class="text-gray-400 text-sm">
+                      A simple profile card, that has my details and my favorite quote.
+                    </p>
+                    <div class="flex flex-row gap-1">
+                      <div class="w-20 p-1 h-auto text-center border border-orange-600 rounded-full">
+                      <p class="text-orange-200 text-xs font-light">HTML</p>
+                      </div>
+                      <div class="w-20 p-1 h-auto text-center border border-blue-600 rounded-full">
+                        <p class="text-blue-200 text-xs font-light">CSS</p>
+                      </div>
+                      <div class="w-20 p-1 h-auto text-center border border-amber-600 rounded-full">
+                        <p class="text-amber-200 text-xs font-light">JavaScript</p>
+                      </div>
+                    </div>
+                    <div class="flex gap-4 justify-center md:justify-start">
+                      <!-- <a href="#" class="px-4 py-2 rounded-full bg-yellow-500 text-black text-sm font-semibold hover:bg-yellow-400 transition">Live Demo</a> -->
+                      <a href="https://github.com/marianne-yo/profileCard" target="_blank" class="px-4 py-2 rounded-lg border border-yellow-500 text-yellow-500 text-sm font-semibold hover:bg-yellow-500 hover:text-black transition">GitHub</a>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="bg-gray-800 rounded-lg shadow-lg overflow-hidden border-2 border-amber-500/70 hover:scale-105 hover:shadow-yellow-400/30 transition transform duration-300">
+                  <img src="../assets/mari_ss_portfolio/pricing-ss.png" alt="Project 3" class="w-full h-48 object-cover">
+                  <div class="p-6 space-y-4">
+                    <h2 class="text-xl font-semibold text-white">Festverse</h2>
+                    <p class="text-gray-400 text-sm">
+                      A simple pricing table that can be used in subscription.
+                    </p>
+                    <div class="flex flex-row gap-1">
+                      <div class="w-20 p-1 h-auto text-center border border-orange-600 rounded-full">
+                      <p class="text-orange-200 text-xs font-light">HTML</p>
+                      </div>
+                      <div class="w-20 p-1 h-auto text-center border border-blue-600 rounded-full">
+                        <p class="text-blue-200 text-xs font-light">CSS</p>
+                      </div>
+                      <div class="w-20 p-1 h-auto text-center border border-amber-600 rounded-full">
+                        <p class="text-amber-200 text-xs font-light">JavaScript</p>
+                      </div>
+                    </div>
+                    <div class="flex gap-4 justify-center md:justify-start">
+                      <!-- <a href="#" class="px-4 py-2 rounded-full bg-yellow-500 text-black text-sm font-semibold hover:bg-yellow-400 transition">Live Demo</a> -->
+                      <a href="https://github.com/marianne-yo/pricingTable" target="_blank" class="px-4 py-2 rounded-lg border border-yellow-500 text-yellow-500 text-sm font-semibold hover:bg-yellow-500 hover:text-black transition">GitHub</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          
+          
+          <section id="contact" class="py-10 px-20">
+            <div class="p-20 flex flex-col items-left">
+              <h1 class="text-3xl font-bold text-yellow-400 mb-12">CONTACT</h1>
+              <div class="flex items-center gap-4 text-center pb-5">
+                <ion-icon name="mail" class="text-yellow-500 size-10"></ion-icon>
+                <a href="mailto:mariannecbalen@gmail.com" class="text-white hover:underline">
+                  mariannecbalen@gmail.com
+                </a>
+              </div>
+              <div class="flex items-center gap-4 text-center pb-5">
+                <ion-icon name="logo-github" class="text-yellow-500 size-10"></ion-icon>
+                <a href="https://github.com/marianne-yo" target="_blank">
+                    <h4 class="text-white text-lg">
+                    marianne-yo
+                    </h4>
+                </a>
+              </div>
+              <div class="flex items-center gap-4 text-center pb-5">
+                <ion-icon name="logo-facebook" class="text-yellow-500 size-10"></ion-icon>
+                <a href="https://wwww.facebook.com/marianeee123" target="_blank">
+                    <h4 class="text-white text-lg">
+                    Marianne C. Balen
+                    </h4>
+                </a>
+              </div>
+              <!-- Button -->
+              <div class="mt-4 flex items-center justify-center animate-bounce">
+                <a href="#home"
+                class="rounded-full border-2 border-white/25 text-sm font-semibold text-white shadow-xs 
+                        hover:bg-yellow-500 hover:text-black transition-colors duration-300">
+                    <ion-icon name="arrow-up" class="size-5 p-[10px]"></ion-icon>
+                </a>
+              </div>
+            </div>
+          </section>
+          
+    </main>
+    <footer class="bg-gradient-to-t from-gray-900 to-black py-6">
+      <div class="flex flex-col items-center justify-center text-center">
+        <p class="text-gray-400 text-sm">&copy; 2025 Marianne Balen</p>
+        <p class="text-gray-500 text-xs mt-1">Building clean and creative web and app experiences.</p>
+      </div>
+    </footer>
+</body>
+</html>
