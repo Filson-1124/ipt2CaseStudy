@@ -1,0 +1,383 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Gudea:ital,wght@0,400;0,700;1,400&family=Karla:ital,wght@0,200..800;1,200..800&family=Mukta:wght@200;300;400;500;600;700;800&family=Onest:wght@100..900&family=Oxygen:wght@300;400;700&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Condiment&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+  font-family: "Oxygen", sans-serif;
+    color: rgb(0, 0, 0);
+    overflow-y: auto; 
+    
+}
+
+/* Video background */
+.background-video {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* Navigation wrapper */
+nav {
+    width: 100%;
+    position: fixed;
+    top: 20px;
+    left: 0;
+    padding: 0 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    z-index: 1000;
+}
+
+/* Logo */
+nav .logo {
+    width: 150px;
+}
+
+/* Nav tabs */
+.nav-tabs ul {
+    list-style: none;
+    text-align: right;
+}
+
+.nav-tabs ul li {
+    margin: 10px 0;
+}
+
+.nav-tabs ul li a {
+    text-decoration: none;
+    color: #ececec;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+.nav-tabs ul li a:hover {
+    color: rgb(255, 255, 255);
+    border-bottom: 5px solid #fff;
+}
+
+/* Home Section */
+.home {
+    text-align: center;
+    height: 100vh; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;          
+}
+
+.home h1 {
+    font-family: "Condiment", cursive;
+    font-size: 100px;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.home p {
+    font-size: 22px;
+    color: #ffffff;
+    max-width: 700px;   
+    line-height: 1.6;
+}
+
+.home p span{
+    padding-right: 7px;
+    font-family: "Condiment", cursive;
+}
+
+/* About Section */
+.about {
+    background: rgba(0, 0, 0, 0.552); 
+    color: #ffffff;
+    padding: 50px 12% 100px;
+    text-align: center;
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
+}
+
+.about-name {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 50px;
+    letter-spacing: 2px;
+}
+
+.about-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.about-image img {
+    width: 500px;
+    border-radius: 50px; 
+}
+
+.about-text {
+    max-width: 500px;
+    text-align: left;
+}
+
+.about-text p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+
+
+.skills-hobbies {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin: 30px 0;
+    flex-wrap: wrap;
+}
+
+.skills, .hobbies {
+    background: rgba(150, 150, 150, 0.29); 
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 30px;
+    flex: 1;
+    min-width: 230px;
+}
+
+.skills h3, .hobbies h3, .education h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: #ffffff;
+    letter-spacing: 1px;
+}
+
+.skills ul, .hobbies ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.skills ul li, .hobbies ul li {
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+.education {
+    background: rgba(150, 150, 150, 0.29); 
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 30px;
+    margin-top: 20px;
+    text-align: left;
+}
+
+.education h3 {
+    font-size: 22px;
+}
+
+.education p {
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+.about-socials {
+    background: rgba(150, 150, 150, 0.29); 
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 15px 20px;
+    border-radius: 30px;
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.about-socials a {
+    font-size: 28px;        
+    color: #ffffff;          
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.about-socials a:hover {
+    color: #ffffff;        
+    transform: scale(1.2);  
+}
+
+.about-socials h3{
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+/*PROJECTS section*/
+
+.projects {
+    background: rgba(0, 0, 0, 0.552); 
+    padding: 50px 13%;
+    text-align: center;
+    color: #fff;
+}
+
+.projects .section-title {
+    background: rgba(207, 214, 232, 0.182); 
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 30px;
+    font-size: 48px;
+    margin-bottom: 50px;
+    letter-spacing: 2px;
+    padding: 10px;
+}
+
+.projects-container {
+    padding: 50px 5% 100px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+}
+
+.project-card {
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    padding: 20px;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+.project-card img {
+    width: 100%;
+    border-radius: 12px;
+    margin-bottom: 15px;
+}
+
+.project-card h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.project-card p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: #ddd;
+}
+
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.project-tech span {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* SERVICES Section */
+.services {
+    padding: 50px 15% 100px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.552); 
+    color: #fff;
+}
+
+.services .section-title {
+    background: rgba(207, 214, 232, 0.182); 
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 30px;
+    font-size: 48px;
+    margin-bottom: 60px;
+    letter-spacing: 2px;
+    padding: 10px;
+}
+
+.services-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 40px;
+}
+
+.service-card {
+    background: rgba(255, 255, 255, 0.159);
+    border-radius: 30px;
+    padding: 40px 20px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    background: rgba(255, 255, 255, 0.425);
+    transition: all 0.3s ease;
+
+}
+
+.service-card i {
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.service-card h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.service-card p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #ddd;
+}
+
+/* FOOTER */
+.footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7);
+    background: rgba(0, 0, 0, 0.67); 
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(8px);
+    border-top: 1px solid rgba(94, 94, 94, 0.1);
+}
+
+.footer p span{
+    font-family: "Condiment", cursive;
+}
