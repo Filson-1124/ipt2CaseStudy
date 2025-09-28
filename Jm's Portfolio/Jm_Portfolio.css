@@ -67,6 +67,11 @@ nav .logo {
     color: rgb(255, 255, 255);
     border-bottom: 5px solid #fff;
 }
+.nav-tabs ul li a.active {
+    color: #ffffff;
+    border-bottom: 5px solid #fff;
+}
+
 
 /* Home Section */
 .home {
