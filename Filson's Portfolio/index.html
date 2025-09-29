@@ -22,7 +22,7 @@
     }
   </script>
 </head>
-<body class="dark:bg-gray-900 bg-gray-200">
+<body class="dark:bg-gray-900 bg-gray-200 ">
 <header class="sticky top-0 z-50 p-5 flex justify-between items-center bg-white dark:bg-gray-800 shadow-md">
   <!-- Logo -->
   <button onclick="scrollToSection('Hero')"> <h1 class="text-3xl font-black dark:text-white">Filson.</h1></button>
@@ -67,14 +67,14 @@
 
             <button class="bg-[#FAA941] dark:bg-[#be8131] duration-300 ease-in p-[1.5rem] md:w-[20%] xs:w-[100%] md:w-[30%]  shadow-[4px_4px_6px_rgba(0,0,0,0.2),-4px_-4px_6px_rgba(255,255,255,0.7)] dark:shadow-[4px_4px_6px_rgba(0,0,0,0.2),-4px_-4px_6px_rgba(100,199,250,0.6)]  rounded-3xl active:shadow-[inset_4px_4px_6px_rgba(0,0,0,0.2),inset_-4px_-4px_6px_rgba(255,255,255,0.7)] dark:active:shadow-[inset_4px_4px_6px_rgba(0,0,0,0.2),inset_-4px_-4px_6px_rgba(100,199,250,0.6)]"onclick="scrollToSection('About')" >More About Me</button>
 
-    <div class="flex gap-5 md:w-[20%] xs:w-[100%] place-content-center">
-    
+  <div class="flex gap-5 md:w-[20%] xs:w-[100%] place-content-center flex-wrap">
+
     <!-- Facebook Icon -->
     <div class="relative group">
         <div class="rounded-full p-2 bg-gray-200 dark:bg-transparent cursor-pointer">
             <ion-icon size="large" name="logo-facebook"></ion-icon>
         </div>
-        <div class="absolute left-full top-1/2 -translate-y-1/2 ml-2 bg-white dark:bg-gray-900 text-black dark:text-white p-3 rounded shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-10">
+        <div class="absolute md:left-full md:top-1/2 top-full left-1/2 transform md:-translate-y-1/2 md:translate-x-0 -translate-x-1/2 md:ml-2 mt-2 bg-white dark:bg-gray-900 text-black dark:text-white p-3 rounded shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-10">
             <p>Facebook Link:</p>
             <a href="https://facebook.com/yourprofile" target="_blank" class="text-blue-600 hover:underline">
                 facebook.com/filsonjuan
@@ -84,10 +84,10 @@
 
     <!-- Email Icon -->
     <div class="relative group">
-        <div class="rounded-full p-2 bg-gray-200 dark:bg-transparent  cursor-pointer">
+        <div class="rounded-full p-2 bg-gray-200 dark:bg-transparent cursor-pointer">
             <ion-icon size="large" name="mail"></ion-icon>
         </div>
-        <div class="absolute left-full top-1/2 -translate-y-1/2 ml-2 bg-white dark:bg-gray-900 text-black dark:text-white p-3 rounded shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-10">
+        <div class="absolute md:left-full md:top-1/2 top-full left-1/2 transform md:-translate-y-1/2 md:translate-x-0 -translate-x-1/2 md:ml-2 mt-2 bg-white dark:bg-gray-900 text-black dark:text-white p-3 rounded shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-10">
             <p>Email:</p>
             <a href="mailto:filsonbequibel1124@gmail.com" class="hover:underline">
                 filsonbequibel1124@gmail.com
@@ -97,10 +97,10 @@
 
     <!-- Call Icon -->
     <div class="relative group">
-        <div class="rounded-full p-2 bg-gray-200  dark:bg-transparent cursor-pointer">
+        <div class="rounded-full p-2 bg-gray-200 dark:bg-transparent cursor-pointer">
             <ion-icon size="large" name="call"></ion-icon>
         </div>
-        <div class="w-2xl absolute left-full top-1/2 -translate-y-1/2 ml-2 bg-white dark:bg-gray-900 text-black dark:text-white p-3 rounded shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-10">
+        <div class="absolute md:left-full md:top-1/2 top-full left-1/2 transform md:-translate-y-1/2 md:translate-x-0 -translate-x-1/2 md:ml-2 mt-2 bg-white dark:bg-gray-900 text-black dark:text-white p-3 rounded shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-10">
             <p class="text-sm">Phone:</p>
             <a href="tel:+639454674745" class="hover:underline text-sm">
                 +63 945-467-4745
@@ -109,6 +109,7 @@
     </div>
 
 </div>
+
 
 
         </div>
@@ -131,12 +132,35 @@
                     <img src="../Filson's Portfolio/assets/5f72bb52-001d-4cbf-869b-6c0dd21cb195.jpeg" alt="" class=" w-full rounded-2xl ">
                 </div>
 
-                <div class="md:w-[50%] xs:w-full place-self-center dark:text-white font-medium md:text-xl xs:text-sm text-start shadow-[inset_4px_4px_6px_rgba(0,0,0,0.2),inset_-4px_-4px_6px_rgba(255,255,255,0.7)]
+                <div class="flex flex-col gap-[20px] md:w-[50%] xs:w-full place-self-center dark:text-white font-medium md:text-xl xs:text-sm text-start shadow-[inset_4px_4px_6px_rgba(0,0,0,0.2),inset_-4px_-4px_6px_rgba(255,255,255,0.7)]
         dark:shadow-[inset_-4px_-4px_6px_rgba(0,0,0,0.6),inset_4px_4px_6px_rgba(100,199,250,0.6)] p-10 xs:p-5 rounded-2xl">
                     <p>
                         Hi! I’m Filson — a passionate, committed, and creative front-end developer who loves what I do. I work mainly with JavaScript, React, HTML, and CSS, but I’ve also explored Java, Python, and PHP to expand my skills.I’ve built projects like a reviewer generator, calculators, a payment system, and even a festival promotion page. Right now, I’m focused on Revio, a review material generator that uses Natural Language Processing with Acronym Mnemonics, the Leitner System, and Pomodoro techniques to make studying more effective.Outside of coding, I enjoy gaming and exploring new technologies. My goal is to grow as a developer and someday build big projects that create a real impact.
                     </p>
+                    
+                  <div class="text-black dark:text-white font-medium md:text-xl xs:text-sm text-start shadow-[inset_4px_4px_6px_rgba(0,0,0,0.2),inset_-4px_-4px_6px_rgba(255,255,255,0.7)]
+                            dark:shadow-[inset_-4px_-4px_6px_rgba(0,0,0,0.6),inset_4px_4px_6px_rgba(100,199,250,0.6)] p-10 xs:p-5 rounded-2xl">
+                      
+                      <h3 class="text-[#FAA941] font-black text-xl font-semibold mb-4">Education</h3>
+                      
+                      <ul class="space-y-3 text-black dark:text-white">
+                        <li class="flex items-center gap-3">
+                          <ion-icon name="school" size="5" class="text-blue-400"></ion-icon>
+                          <span>Tarlac State University — BS Information Technology Major in Web and Mobile Application (Present)</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                          <ion-icon name="school-outline" size="5" class="text-green-400"></ion-icon>
+                          <span>LaPaz National HighSchool - Senior High School (2021)</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                          <ion-icon name="school-outline" size="5" class="text-purple-400"></ion-icon>
+                          <span>LaPaz National Highschool - Junior High School (2015-2019)</span>
+                        </li>
+                      </ul>
+                    </div>
+
                 </div>
+                
                 
              </div>
         </section>

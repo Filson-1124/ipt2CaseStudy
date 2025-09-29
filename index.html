@@ -62,15 +62,33 @@
 
   <!-- Hero -->
   <div class="relative h-screen w-screen overflow-hidden bg-background">
-    <section class="bg-repeat h-screen w-screen flex 
-                    bg-[url('./assets/wal2.png')] 
-                    bg-top bg-[length:200%] 
-                    animate-moveBg">
-      <div class="w-full h-full flex flex-col items-center justify-center text-center p-1.5">
-        <h1 class="heroTitle text-4xl permanent-marker-regular text-headline text-[64px] leading-[4.2rem]">MEET THE TEAM.</h1>
-        <p class="text-paragraph">"A team of student programmers passionate about building ideas into reality."</p>
-      </div>
-    </section>
+<section class="bg-repeat h-screen w-screen flex flex-col md:flex-row  
+                bg-[url('./assets/wal2.png')] 
+                bg-top bg-[length:200%] 
+                animate-moveBg">
+
+  <!-- Left side: Text -->
+  <div class="w-full md:w-1/2 h-full flex flex-col items-center justify-center text-center p-4">
+    <h1 class="heroTitle text-4xl permanent-marker-regular text-headline text-[40px] md:text-[64px] leading-tight md:leading-[4.2rem]">
+      MEET THE TEAM.
+    </h1>
+    <p class="text-paragraph text-sm md:text-base">
+      "A team of student programmers passionate about building ideas into reality."
+    </p>
+  </div>
+
+  <!-- Right side: Image -->
+  <div class="w-full md:w-1/2 flex items-end justify-center">
+    <img src="./assets/pics/team.png" 
+         alt="" 
+         class="h-[60vh] md:max-h-[95%] w-auto object-contain" />
+  </div>
+
+</section>
+
+
+
+
   </div>
 
   <!-- Members -->
@@ -78,10 +96,10 @@
   <h1 class="mt-10 sectionTitle text-7xl">Members</h1>
   <div class="w-[95%] h-[100vh] flex items-center overflow-x-auto overflow-y-hidden snap-x snap-mandatory">
 
-   <!-- Jennie -->
+   <!-- Filson -->
   
-   <a href="./Filson's Portfolio/index.html">
-    <div class="member-card xs:w-[80%] xs:h-[70vh] lg:w-[25%] lg:h-[70%] 
+   
+    <div onclick="location.href='../Filson\'s Portfolio/index.html'" class="member-card xs:w-[80%] xs:h-[70vh] lg:w-[25%] lg:h-[70%] 
             relative group rounded-lg 
             min-w-[22rem] h-[90%] m-2 flex-shrink-0 snap-center overflow-hidden p-20">
 
@@ -91,58 +109,58 @@
        class="drop-shadow-[0_0_10px_rgba(255,255,255,0.4)] absolute place-self-center inset-0 w-full h-[90%] object-contain pointer-events-none z-20" />
 
   <!-- Image Window -->
-  <div class="absolute top-[16%] left-[5%] w-[90%] h-[32%] overflow-hidden z-10 rounded-md flex items-start justify-center">
-    <img src="./assets/pics/KIM JENNIE ❤️.jpeg"
+  <div class="absolute top-[17%] left-[5%] w-[90%] h-[32%] overflow-hidden z-10 rounded-md flex items-start justify-center">
+    <img src="./assets/pics/filson.png"
          alt="Jennie"
          class="w-[70%] h-auto object-contain transition duration-300 group-hover:blur-sm group-hover:scale-[0.9]" />
   </div>
 
   <!-- Overlay Cutout -->
-  <img src="./assets/pics/pngs/KIM_JENNIE__️-removebg-preview.png"
+  <img src="./assets/pics/pngs/filsonnobg.png"
        alt="Overlay"
-       class="absolute top-[10%] xs:left-[30%] md:left-1/2 -translate-x-1/2 w-[70%] h-auto object-contain opacity-0 scale-90
+       class="absolute top-[10%] xs:left-[30%] md:left-1/2 -translate-x-1/2 w-[120%] h-auto object-contain opacity-0 scale-90
               transition duration-300 z-30
               group-hover:opacity-100 group-hover:scale-100" />
 
   <!-- Text Placeholders -->
   <div class="absolute xs:bottom-[30%] md:bottom-[20%] xs:left-[10%]  md:left-[17%] w-[65%] h-[10%] text-sm text-black z-30">
-    <p class="font-bold px-2 py-1  text-black rounded group-hover:bg-black/70 group-hover:text-white">[Name Here]</p>
+    <p class="font-bold px-2 py-1  text-black rounded group-hover:bg-black/70 group-hover:text-white">Filson John Bequibel</p>
   </div>
   <div class="absolute xs:bottom-[25%] md:bottom-[15%] xs:left-[10%] md:left-[17%] md:w-[65%] md:h-[8%] text-xs text-black z-30">
-    <p class="px-2 py-1  text-black rounded group-hover:text-white group-hover:bg-black/70">[Description / Power Info]</p>
+    <p class="px-2 py-1  text-black rounded group-hover:text-white group-hover:bg-black/70">Web Dev Monster</p>
   </div>
   <div class="absolute xs:bottom-[18%] md:bottom-[11%] xs:left-[10%] md:left-[18%] w-[60%] md:h-[5%] text-xs text-black z-30 flex justify-between">
     <span class="px-2 py-1  text-black rounded group-hover:bg-black/70 group-hover:text-white">[HP]</span>
     <span class="px-2 py-1  text-black rounded group-hover:bg-black/70 group-hover:text-white">[Type]</span>
   </div>
-</div></a>
+</div>
 
 
 
 
-<!-- Jisoo -->
+<!-- Yu -->
 <div class="member-card xs:w-[80%] xs:h-[70vh] lg:w-[25%] lg:h-[70%] 
             relative group  rounded-lg 
             min-w-[22rem] h-[90%] m-2 flex-shrink-0 snap-center overflow-hidden">
 
   <img src="./assets/pokemonCard.png" class="drop-shadow-[0_0_10px_rgba(255,255,255,0.4)] absolute place-self-center inset-0 w-full h-[90%] object-contain pointer-events-none z-20" />
   
-  <div class="absolute top-[16%] left-[5%] w-[90%] h-[32%] overflow-hidden z-10 rounded-md flex items-start justify-center">
-    <img src="./assets/pics/Jisoo wallpaper 2024.jpeg" alt="Jisoo"
+  <div class="absolute top-[17%] left-[5%] w-[90%] h-[32%] overflow-hidden z-10 rounded-md flex items-start justify-center">
+    <img src="./assets/pics/yu.png" alt="Jisoo"
          class="w-[70%] h-auto object-contain transition duration-300 group-hover:blur-sm group-hover:scale-[0.9]" />
   </div>
   
-  <img src="./assets/pics/pngs/Jisoo_wallpaper_2024-removebg-preview.png"
+  <img src="./assets/pics/pngs/YuNoBG.png"
        alt="Overlay"
        class="absolute top-[0%] xs:left-[30%] md:left-1/2 -translate-x-1/2 w-[70%] h-auto object-contain opacity-0 scale-90
               transition duration-300 z-30
               group-hover:opacity-100 group-hover:scale-100" />
   
  <div class="absolute xs:bottom-[30%] md:bottom-[20%] xs:left-[10%]  md:left-[17%] w-[65%] h-[10%] text-sm text-black z-30">
-    <p class="font-bold px-2 py-1  text-black rounded group-hover:bg-black/70 group-hover:text-white">[Name Here]</p>
+    <p class="font-bold px-2 py-1  text-black rounded group-hover:bg-black/70 group-hover:text-white">Maria Theresa Yu</p>
   </div>
   <div class="absolute xs:bottom-[25%] md:bottom-[15%] xs:left-[10%] md:left-[17%] md:w-[65%] md:h-[8%] text-xs text-black z-30">
-    <p class="px-2 py-1  text-black rounded group-hover:text-white group-hover:bg-black/70">[Description / Power Info]</p>
+    <p class="px-2 py-1  text-black rounded group-hover:text-white group-hover:bg-black/70">AI Specialist</p>
   </div>
   <div class="absolute xs:bottom-[18%] md:bottom-[11%] xs:left-[10%] md:left-[18%] w-[60%] md:h-[5%] text-xs text-black z-30 flex justify-between">
     <span class="px-2 py-1  text-black rounded group-hover:bg-black/70 group-hover:text-white">[HP]</span>
@@ -151,29 +169,29 @@
 </div>
 
 
-<!-- Lisa -->
-<div class="member-card xs:w-[80%] xs:h-[70vh] lg:w-[25%] lg:h-[70%] 
+<!-- Mari -->
+<div onclick="location.href='../Marianne\'s Portfolio/Marianne_Portfolio.html'" class="member-card xs:w-[80%] xs:h-[70vh] lg:w-[25%] lg:h-[70%] 
             relative group  rounded-lg
             min-w-[22rem] h-[90%] m-2 flex-shrink-0 snap-center overflow-hidden">
 
   <img src="./assets/pokemonCard.png" class="drop-shadow-[0_0_10px_rgba(255,255,255,0.4)] absolute place-self-center inset-0 w-full h-[90%] object-contain pointer-events-none z-20" />
   
-  <div class="absolute top-[16%] left-[5%] w-[90%] h-[32%] overflow-hidden z-10 rounded-md flex items-start justify-center">
-    <img src="./assets/pics/download (2).jpeg" alt="Lisa"
+  <div class="absolute top-[17%] left-[5%] w-[90%] h-[32%] overflow-hidden z-10 rounded-md flex items-start justify-center">
+    <img src="./assets/pics/mari.png" alt="Lisa"
          class="w-[70%] h-auto object-contain transition duration-300 group-hover:blur-sm group-hover:scale-[0.9]" />
   </div>
   
-  <img src="./assets/pics/pngs/download__2_-removebg-preview.png"
+  <img src="./assets/pics/pngs/mariNobg.png"
        alt="Overlay"
-       class="absolute top-[10%] xs:left-[30%] md:left-1/2 -translate-x-1/2 w-[70%] h-auto object-contain opacity-0 scale-90
+       class="absolute top-[-10%] xs:left-[30%] md:left-1/2 -translate-x-1/2 w-[70%] h-auto object-contain opacity-0 scale-90
               transition duration-300 z-30
               group-hover:opacity-100 group-hover:scale-100" />
   
  <div class="absolute xs:bottom-[30%] md:bottom-[20%] xs:left-[10%]  md:left-[17%] w-[65%] h-[10%] text-sm text-black z-30">
-    <p class="font-bold px-2 py-1  text-black rounded group-hover:bg-black/70 group-hover:text-white">[Name Here]</p>
+    <p class="font-bold px-2 py-1  text-black rounded group-hover:bg-black/70 group-hover:text-white">Marianne Balen</p>
   </div>
   <div class="absolute xs:bottom-[25%] md:bottom-[15%] xs:left-[10%] md:left-[17%] md:w-[65%] md:h-[8%] text-xs text-black z-30">
-    <p class="px-2 py-1  text-black rounded group-hover:text-white group-hover:bg-black/70">[Description / Power Info]</p>
+    <p class="px-2 py-1  text-black rounded group-hover:text-white group-hover:bg-black/70">Mobile App Dev Goddess</p>
   </div>
   <div class="absolute xs:bottom-[18%] md:bottom-[11%] xs:left-[10%] md:left-[18%] w-[60%] md:h-[5%] text-xs text-black z-30 flex justify-between">
     <span class="px-2 py-1  text-black rounded group-hover:bg-black/70 group-hover:text-white">[HP]</span>
@@ -182,29 +200,29 @@
 </div>
 
 
-<!-- Rosé -->
+<!-- JM -->
 <div class="member-card xs:w-[80%] xs:h-[70vh] lg:w-[25%] lg:h-[70%] 
             relative group  rounded-lg 
             min-w-[22rem] h-[90%] m-2 flex-shrink-0 snap-center overflow-hidden">
 
   <img src="./assets/pokemonCard.png" class="drop-shadow-[0_0_10px_rgba(255,255,255,0.4)] absolute place-self-center inset-0 w-full h-[90%] object-contain pointer-events-none z-20" />
   
-  <div class="absolute top-[16%] left-[5%] w-[90%] h-[32%] overflow-hidden z-10 rounded-md flex items-start justify-center">
-    <img src="./assets/pics/download (1).jpeg" alt="Rosé"
+  <div class="absolute top-[17%] left-[5%] w-[90%] h-[32%] overflow-hidden z-10 rounded-md flex items-start justify-center">
+    <img src="./assets/pics/jm.png" alt="Rosé"
          class="w-[70%] h-auto object-contain transition duration-300 group-hover:blur-sm group-hover:scale-[0.9]" />
   </div>
   
-  <img src="./assets/pics/pngs/download__1_-removebg-preview.png"
+  <img src="./assets/pics/pngs/jmnoBg.png"
        alt="Overlay"
        class="absolute top-[10%] xs:left-[30%] md:left-1/2 -translate-x-1/2 w-[70%] h-auto object-contain opacity-0 scale-90
               transition duration-300 z-30
               group-hover:opacity-100 group-hover:scale-100" />
   
  <div class="absolute xs:bottom-[30%] md:bottom-[20%] xs:left-[10%]  md:left-[17%] w-[65%] h-[10%] text-sm text-black z-30">
-    <p class="font-bold px-2 py-1  text-black rounded group-hover:bg-black/70 group-hover:text-white">[Name Here]</p>
+    <p class="font-bold px-2 py-1  text-black rounded group-hover:bg-black/70 group-hover:text-white">john Michael Marimla</p>
   </div>
   <div class="absolute xs:bottom-[25%] md:bottom-[15%] xs:left-[10%] md:left-[17%] md:w-[65%] md:h-[8%] text-xs text-black z-30">
-    <p class="px-2 py-1  text-black rounded group-hover:text-white group-hover:bg-black/70">[Description / Power Info]</p>
+    <p class="px-2 py-1  text-black rounded group-hover:text-white group-hover:bg-black/70">King of Backend</p>
   </div>
   <div class="absolute xs:bottom-[18%] md:bottom-[11%] xs:left-[10%] md:left-[18%] w-[60%] md:h-[5%] text-xs text-black z-30 flex justify-between">
     <span class="px-2 py-1  text-black rounded group-hover:bg-black/70 group-hover:text-white">[HP]</span>
@@ -222,19 +240,77 @@
     <div class="md:w-1/2 w-full static top-0 md:h-screen overflow-auto p-6 bg-lightBackground rounded-xl md:sticky">
       <h2 class="text-4xl md:text-7xl font-bold mb-4 sectionTitle tracking-wide">About us.</h2>
       <p>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta nihil ex nesciunt libero aspernatur veritatis! 
-        Aspernatur reiciendis rerum illum, minus voluptatem ratione, error explicabo repellendus est esse deserunt sint facere, eum nisi.
+       We are a group of student programmers united by a shared passion for technology and innovation. Our journey as learners has inspired us to explore different areas of programming, from web and mobile development to creating solutions that address real-world problems. Each member of our team contributes unique strengths and ideas, and together we collaborate to bring concepts to life through coding, design, and problem-solving.
+
+As students, we continuously challenge ourselves to grow and improve by taking on projects that push us beyond our comfort zones. We believe that every line of code we write is a step toward becoming better programmers, innovators, and collaborators. Our group thrives on teamwork, curiosity, and the drive to turn creativity into practical applications. While we are still learning, we are determined to make an impact by developing meaningful projects that showcase not only our skills but also our dedication to the craft of programming.
+
+At the core of our mission is the belief that technology can empower people and make everyday life easier. With this mindset, we approach every project with focus, discipline, and the enthusiasm to create something valuable. Our group is more than just a team of student programmers—we are dreamers, builders, and problem solvers working together to shape ideas into reality.
       </p>
     </div>
 
     <!-- Scrollable Content (animated) -->
-    <div class="md:w-1/2 w-full p-2 space-y-8">
-      <p class="box h-[100vh] bg-red-200 rounded-lg opacity-0 translate-x-10 transition-all duration-700">Content Section 1</p>
-      <p class="box h-[100vh] bg-green-200 rounded-lg opacity-0 translate-x-10 transition-all duration-700">Content Section 2</p>
-      <p class="box h-[100vh] bg-blue-200 rounded-lg opacity-0 translate-x-10 transition-all duration-700">Content Section 3</p>
-      <p class="box h-[100vh] bg-purple-200 rounded-lg opacity-0 translate-x-10 transition-all duration-700">Content Section 4</p>
-    </div>
+   <div class="md:w-1/2 w-full p-2 space-y-8">
+
+  <!-- About Maria -->
+  <div class="p-10 box h-[100vh] md:h-[50vh] bg-red-200 rounded-lg opacity-0 translate-x-10 transition-all duration-700">
+    <h1 class="font-black text-2xl text-black mb-6">About Maria</h1>
+    <p class="text-black text-base leading-relaxed">
+      Maria is a dedicated student programmer with a strong interest in web design and front-end development.
+    </p>
+    <p class="text-black text-base leading-relaxed">
+      She enjoys transforming creative ideas into clean, visually appealing interfaces that enhance user experience.
+    </p>
+    <p class="text-black text-base leading-relaxed">
+      With her eye for detail and creativity, Maria brings design-focused solutions to the team’s projects.
+    </p>
+  </div>
+
+  <!-- About Filson -->
+  <div class="p-10 box h-[100vh] md:h-[50vh] bg-green-200 rounded-lg opacity-0 translate-x-10 transition-all duration-700">
+    <h1 class="font-black text-2xl text-black mb-6">About Filson</h1>
+    <p class="text-black text-base leading-relaxed">
+      Filson is a passionate programmer specializing in web and mobile development.
+    </p>
+    <p class="text-black text-base leading-relaxed">
+      He thrives on solving problems through code and is always eager to learn new technologies.
+    </p>
+    <p class="text-black text-base leading-relaxed">
+      As a team player, he leads by example, combining creativity and logic to make projects both functional and impactful.
+    </p>
+  </div>
+
+  <!-- About Marianne -->
+  <div class="p-10 box h-[100vh] md:h-[50vh] bg-blue-200 rounded-lg opacity-0 translate-x-10 transition-all duration-700">
+    <h1 class="font-black text-2xl text-black mb-6">About Marianne</h1>
+    <p class="text-black text-base leading-relaxed">
+      Marianne is an innovative thinker with a love for coding and problem-solving.
+    </p>
+    <p class="text-black text-base leading-relaxed">
+      She is highly motivated to explore new tools and frameworks that improve efficiency and creativity.
+    </p>
+    <p class="text-black text-base leading-relaxed">
+      Her adaptability and fresh ideas contribute greatly to the team’s collaborative efforts.
+    </p>
+  </div>
+
+  <!-- About John Michael -->
+  <div class="p-10 box h-[100vh] md:h-[50vh] bg-purple-200 rounded-lg opacity-0 translate-x-10 transition-all duration-700">
+    <h1 class="font-black text-2xl text-black mb-6">About John Michael</h1>
+    <p class="text-black text-base leading-relaxed">
+      John Michael is a hardworking student programmer with a focus on back-end development and systems logic.
+    </p>
+    <p class="text-black text-base leading-relaxed">
+      He excels at building strong foundations for applications, ensuring performance and reliability.
+    </p>
+    <p class="text-black text-base leading-relaxed">
+      With his problem-solving mindset and dedication, he strengthens the technical backbone of the team’s projects.
+    </p>
+  </div>
+
+</div>
+
   </section>
+  <h1>About Maria</h1>
 
   <!-- Contacts -->
  <section class="contacts p-10 w-[100vw] h-[100vh] bg-lightBackground flex flex-col" id="contacts">
@@ -246,9 +322,9 @@
     </header>
 
     <ul class="w-full mt-4">
-      <li class="flex gap-2"><h2>Github:</h2><p>*placeholder*</p></li>
-      <li class="flex gap-2"><h2>Email:</h2><p>*placeholder*</p></li>
-      <li class="flex gap-2"><h2>Phone Number:</h2><p>*placeholder*</p></li>
+      <li class="flex gap-2"><h2>Github:</h2><a href="https://github.com/Filson-1124/ipt2CaseStudy">https://github.com/Filson-1124/ipt2CaseStudy</a></li>
+      <li class="flex gap-2"><h2>Email:</h2><p>Revio@gmail.com</p></li>
+      <li class="flex gap-2"><h2>Phone Number:</h2><p>+63 912 345 6789</p></li>
     </ul>
   </div>
 
