@@ -1,0 +1,36 @@
+  /* Card Flip */
+  .perspective {
+    perspective: 1000px;
+  }
+  .preserve-3d {
+    transform-style: preserve-3d;
+  }
+  .backface-hidden {
+    backface-visibility: hidden;
+  }
+  .rotate-y-180 {
+    transform: rotateY(180deg);
+  }
+  .flip-card.flipped .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+
+/* Buttons under Education */
+  @keyframes pulse-click {
+  0%, 100% { box-shadow: 0 0 10px rgba(0,0,0,0.6); }
+  50% { box-shadow: 0 0 20px rgba(0,0,0,0.8); }
+}
+
+.animate-pulse-click {
+  animation: pulse-click 1.5s infinite;
+}
+
+
+/* Slide up class */
+  .duration-1500 {
+    transition-duration: 1500ms !important;
+  }
+  .duration-2000 {
+    transition-duration: 2000ms !important;
+  }
+

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jm's Portfolio</title>
+
+    <link rel="stylesheet" type="text/css" href="Jm_Portfolio.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body>
+    <!-- Background video -->
+    <video autoplay loop muted playsinline class="background-video">
+        <source src="images/backgound-video.mov" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- Navigation -->
+    <nav>
+    <div class="nav-logo">
+        <a href="#home"><img class="logo" src="images/logo.png" alt="logo"></a>
+    </div>
+    <div class="nav-tabs">
+        <ul>
+        <li class="hideOnMobile"><a href="#home">HOME</a></li>
+        <li class="hideOnMobile"><a href="#about">ABOUT</a></li>
+        <li class="hideOnMobile"><a href="#projects">PROJECTS</a></li>
+        <li class="hideOnMobile"><a href="#services">SERVICES</a></li>
+        <li class="menu" onclick="showSidebar()"><a href="#"><img src="images/menu.png" alt="menu" height="40px"></a></li>
+        </ul>
+    </div>
+    </nav>
+
+    <!--Mobile Header--> 
+    <header class="mobile-header">
+    <div class="mobile-container">
+        <a href="#home"><img class="mobile-logo" src="images/logo.png" alt="logo"></a>
+        <span class="menu" onclick="showSidebar()"><img src="images/menu.png" alt="menu" height="40px"></span>
+    </div>
+    </header>
+
+    <div class="overlay" onclick="hideSidebar()"></div>
+
+    <!-- Sidebar -->
+    <ul class="sidebar">
+    <span class="close-btn" onclick="hideSidebar()">✕</span>
+    <li><a href="#home">HOME</a></li>
+    <li><a href="#about">ABOUT</a></li>
+    <li><a href="#projects">PROJECTS</a></li>
+    <li><a href="#services">SERVICES</a></li>
+    </ul>
+
+
+
+
+    <!-- Home Section -->
+    <section id="home" class="home">
+        <h1>MIKERUS</h1>
+        <p>
+            Welcome! <span>MIKERUS</span>  is my trademark, representing all of my projects and creations. Here, I compile my works to showcase my skills, creativity, and growth. Explore my projects and get to know more about me.
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <h2 class="about-name">JOHN MICHAEL MARIMLA</h2>
+                <p class="about-intro">
+                    Hello! I'm John Michael C. Marimla, 21yrs old from Tarlac, Philippines, 
+                    a developer and editor with a goal of creating innovative solutions. 
+                    With a background in Information Technology and a love for editing, I love turning ideas into reality. 
+                    When I'm not coding/editing, you can find me exploring 
+                    new technologies or indulging in my hobbies.
+                </p>
+
+        <div class="about-container">
+            <div class="about-image">
+                <img src="images/profile.jpg" alt="Profile Image">
+            </div>
+             <h2 class="about-name-mobile">JOHN MICHAEL MARIMLA</h2>
+                  <p class="about-intro-mobile">
+                    Hello! I'm John Michael C. Marimla, 21yrs old from Tarlac, Philippines, 
+                    a developer and editor with a goal of creating innovative solutions. 
+                    With a background in Information Technology and a love for editing, I love turning ideas into reality. 
+                    When I'm not coding/editing, you can find me exploring 
+                    new technologies or indulging in my hobbies.
+                </p>
+            <div class="about-text">
+
+      <div class="skills-hobbies">
+                <div class="skills">
+                    <h3>Technical Stack</h3>
+                    <ul>
+                        <li><i class="fab fa-html5"></i> HTML</li>
+                        <li><i class="fab fa-css3-alt"></i> CSS</li>
+                        <li><i class="fab fa-js"></i> JavaScript</li>
+                        <li><i class="fab fa-react"></i> React.js</li>
+                        <li><i class="fab fa-java"></i> Java</li>
+                        <li><i class="fas fa-code"></i> VB.NET</li>
+                        <li><i class="fas fa-fire"></i> Firebase</li>
+                        <li><i class="fas fa-database"></i> MySQL</li>
+                        <li><i class="fab fa-php"></i> PHP</li>
+                    </ul>
+                </div>
+
+                <div class="hobbies">
+                    <h3>Hobbies & Talents</h3>
+                    <ul>
+                        <li>Drumming</li>
+                        <li>Singing</li>
+                        <li>Running</li>
+                        <li>Reading</li>
+                        <li>Photography</li>
+                        <li>Editing</li>
+                    </ul>
+                </div>
+            </div>
+
+
+                <div class="education">
+                    <h3>Education</h3>
+                    <p>Bachelor of Science in Information Technology<br>
+                    Tarlac State University, 2022 – Present</p>
+                </div>
+                
+                <div class="about-socials">
+                    <h3>Contact Info</h3>
+                    <a href="https://github.com/NAOH-JM" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/john-michael-marimla-8774a8283/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://www.upwork.com/freelancers/~0107a2503274081dab" target="_blank"><i class="fab fa-upwork"></i></a>
+                    <a href="https://www.instagram.com/marimlajmc/" target="_blank"><i class="fab fa-instagram"></i></a>
+                </div>
+
+            </div>
+            
+
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <h2 class="section-title">Projects</h2>
+
+    <div class="projects-container">
+        <div class="project-card">
+            <img src="images/mikerus.png" alt="Mikerus Project">
+            <h3>MIKERUS</h3>
+            <p>A personal portfolio website highlighting my projects, skills, and background.</p>
+            <div class="project-tech">
+                <span>HTML</span><span>CSS</span><span>JavaScript</span>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <img src="images/Meowmates.png" alt="Meowmates Project">
+            <h3>MEOWMATES</h3>
+            <p>A blog platform that provides cat care tips and health information.</p>
+            <div class="project-tech">
+                <span>HTML</span><span>CSS</span><span>JavaScript</span>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <img src="images/Cafe.png" alt="CafeKaDito Project">
+            <h3>CafeKaDito</h3>
+            <p>A Java-based coffee shop ordering system for managing customer orders.</p>
+            <div class="project-tech">
+                <span>Java</span>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <img src="images/calculator.png" alt="Calculator Project">
+            <h3>Calculator</h3>
+            <p>An interactive web calculator with a simple and creative design.</p>
+            <div class="project-tech">
+                <span>HTML</span><span>CSS</span><span>JavaScript</span>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <img src="images/revio.png" alt="REVIO Project">
+            <h3>REVIO</h3>
+            <p>A study app that generates reviewers using AI and learning techniques.</p>
+            <div class="project-tech">
+                <span>React</span><span>Firebase</span><span>AI</span>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <img src="images/Car Rental.jpg" alt="Car Rental Project">
+            <h3>Car Rental System</h3>
+            <p>A VB.NET car rental system with database integration using MS Access.</p>
+            <div class="project-tech">
+                <span>VB.NET</span><span>Ms Access</span>
+            </div>
+        </div>
+    </div>
+    </section>
+
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <h2 class="section-title">Services</h2>
+
+        <div class="services-container">
+            <div class="service-card">
+                <i class="fas fa-code"></i>
+                <h3>Web Development</h3>
+                <p>Responsive and modern websites tailored to your needs, built with clean and efficient code.</p>
+            </div>
+
+            <div class="service-card">
+                <i class="fas fa-coffee"></i>
+                <h3>Java Development</h3>
+                <p>Robust Java applications, from desktop systems to backend solutions.</p>
+            </div>
+
+            <div class="service-card">
+                <i class="fas fa-photo-video"></i>
+                <h3>Photo / Video Editing</h3>
+                <p>Professional editing to enhance visuals and create engaging multimedia content.</p>
+            </div>
+
+            <div class="service-card">
+                <i class="fas fa-pencil-ruler"></i>
+                <h3>UI / UX Design</h3>
+                <p>Beautiful, user-centered designs that improve usability and experience.</p>
+            </div>
+
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2025 Jm's Portfolio, <span>Mikerus</span>. All Rights Reserved.</p>
+    </footer>
+    <script src="Jm_Portfolio.js" defer></script>
+</body>
+</html>
