@@ -27,6 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+
 // Typing effect
 let i = 0;
 function typeEffect() {
