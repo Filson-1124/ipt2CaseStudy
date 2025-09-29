@@ -26,3 +26,11 @@
 }
 
 
+/* Slide up class */
+  .duration-1500 {
+    transition-duration: 1500ms !important;
+  }
+  .duration-2000 {
+    transition-duration: 2000ms !important;
+  }
+

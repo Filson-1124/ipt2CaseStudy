@@ -49,3 +49,9 @@ buttons.forEach((btn) => {
     card.classList.toggle("pointer-events-none");
   });
 });
+
+//Slide up
+  window.addEventListener("DOMContentLoaded", () => {
+    const aboutSection = document.getElementById("about");
+    aboutSection.classList.remove("opacity-0", "translate-y-10");
+  });
