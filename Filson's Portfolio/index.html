@@ -22,7 +22,7 @@
     }
   </script>
 </head>
-<body class="dark:bg-gray-900 bg-gray-200">
+<body class="dark:bg-gray-900 bg-gray-200 ">
 <header class="sticky top-0 z-50 p-5 flex justify-between items-center bg-white dark:bg-gray-800 shadow-md">
   <!-- Logo -->
   <button onclick="scrollToSection('Hero')"> <h1 class="text-3xl font-black dark:text-white">Filson.</h1></button>
@@ -67,14 +67,14 @@
 
             <button class="bg-[#FAA941] dark:bg-[#be8131] duration-300 ease-in p-[1.5rem] md:w-[20%] xs:w-[100%] md:w-[30%]  shadow-[4px_4px_6px_rgba(0,0,0,0.2),-4px_-4px_6px_rgba(255,255,255,0.7)] dark:shadow-[4px_4px_6px_rgba(0,0,0,0.2),-4px_-4px_6px_rgba(100,199,250,0.6)]  rounded-3xl active:shadow-[inset_4px_4px_6px_rgba(0,0,0,0.2),inset_-4px_-4px_6px_rgba(255,255,255,0.7)] dark:active:shadow-[inset_4px_4px_6px_rgba(0,0,0,0.2),inset_-4px_-4px_6px_rgba(100,199,250,0.6)]"onclick="scrollToSection('About')" >More About Me</button>
 
-    <div class="flex gap-5 md:w-[20%] xs:w-[100%] place-content-center">
-    
+  <div class="flex gap-5 md:w-[20%] xs:w-[100%] place-content-center flex-wrap">
+
     <!-- Facebook Icon -->
     <div class="relative group">
         <div class="rounded-full p-2 bg-gray-200 dark:bg-transparent cursor-pointer">
             <ion-icon size="large" name="logo-facebook"></ion-icon>
         </div>
-        <div class="absolute left-full top-1/2 -translate-y-1/2 ml-2 bg-white dark:bg-gray-900 text-black dark:text-white p-3 rounded shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-10">
+        <div class="absolute md:left-full md:top-1/2 top-full left-1/2 transform md:-translate-y-1/2 md:translate-x-0 -translate-x-1/2 md:ml-2 mt-2 bg-white dark:bg-gray-900 text-black dark:text-white p-3 rounded shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-10">
             <p>Facebook Link:</p>
             <a href="https://facebook.com/yourprofile" target="_blank" class="text-blue-600 hover:underline">
                 facebook.com/filsonjuan
@@ -84,10 +84,10 @@
 
     <!-- Email Icon -->
     <div class="relative group">
-        <div class="rounded-full p-2 bg-gray-200 dark:bg-transparent  cursor-pointer">
+        <div class="rounded-full p-2 bg-gray-200 dark:bg-transparent cursor-pointer">
             <ion-icon size="large" name="mail"></ion-icon>
         </div>
-        <div class="absolute left-full top-1/2 -translate-y-1/2 ml-2 bg-white dark:bg-gray-900 text-black dark:text-white p-3 rounded shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-10">
+        <div class="absolute md:left-full md:top-1/2 top-full left-1/2 transform md:-translate-y-1/2 md:translate-x-0 -translate-x-1/2 md:ml-2 mt-2 bg-white dark:bg-gray-900 text-black dark:text-white p-3 rounded shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-10">
             <p>Email:</p>
             <a href="mailto:filsonbequibel1124@gmail.com" class="hover:underline">
                 filsonbequibel1124@gmail.com
@@ -97,10 +97,10 @@
 
     <!-- Call Icon -->
     <div class="relative group">
-        <div class="rounded-full p-2 bg-gray-200  dark:bg-transparent cursor-pointer">
+        <div class="rounded-full p-2 bg-gray-200 dark:bg-transparent cursor-pointer">
             <ion-icon size="large" name="call"></ion-icon>
         </div>
-        <div class="w-2xl absolute left-full top-1/2 -translate-y-1/2 ml-2 bg-white dark:bg-gray-900 text-black dark:text-white p-3 rounded shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-10">
+        <div class="absolute md:left-full md:top-1/2 top-full left-1/2 transform md:-translate-y-1/2 md:translate-x-0 -translate-x-1/2 md:ml-2 mt-2 bg-white dark:bg-gray-900 text-black dark:text-white p-3 rounded shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-10">
             <p class="text-sm">Phone:</p>
             <a href="tel:+639454674745" class="hover:underline text-sm">
                 +63 945-467-4745
@@ -109,6 +109,7 @@
     </div>
 
 </div>
+
 
 
         </div>
