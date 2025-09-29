@@ -1,3 +1,4 @@
+  /* Card Flip */
   .perspective {
     perspective: 1000px;
   }
@@ -14,7 +15,7 @@
     transform: rotateY(180deg);
   }
 
-
+/* Buttons under Education */
   @keyframes pulse-click {
   0%, 100% { box-shadow: 0 0 10px rgba(0,0,0,0.6); }
   50% { box-shadow: 0 0 20px rgba(0,0,0,0.8); }
@@ -23,7 +24,5 @@
 .animate-pulse-click {
   animation: pulse-click 1.5s infinite;
 }
-
-
 
 
