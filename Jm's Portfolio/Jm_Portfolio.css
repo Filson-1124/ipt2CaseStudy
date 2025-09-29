@@ -1,7 +1,5 @@
 /* Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Gudea:ital,wght@0,400;0,700;1,400&family=Karla:ital,wght@0,200..800;1,200..800&family=Mukta:wght@200;300;400;500;600;700;800&family=Onest:wght@100..900&family=Oxygen:wght@300;400;700&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Condiment&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Oxanium:wght@200..800&family=Questrial&display=swap');
 * {
     margin: 0;
     padding: 0;
@@ -10,10 +8,9 @@
 
 body, html {
     height: 100%;
-  font-family: "Oxygen", sans-serif;
+    font-family: "Questrial", sans-serif;
     color: rgb(0, 0, 0);
     overflow-y: auto; 
-    
 }
 
 /* Video background */
@@ -30,22 +27,90 @@ body, html {
 nav {
     width: 100%;
     position: fixed;
-    top: 20px;
+    top: 10px;
     left: 0;
-    padding: 0 5%;
+    padding: 0 5% 0 2%;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     z-index: 1000;
 }
 
-/* Logo */
-nav .logo {
-    width: 150px;
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0,0,0,0.5); 
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+    z-index: 999; 
 }
 
-/* Nav tabs */
+.overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.sidebar {
+    font-family: "Orbitron", sans-serif;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100vh;
+    width: 75%; 
+    max-width: 300px;
+    background: rgba(255, 255, 255, 0.644); 
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 80px 30px;
+    transition: right 0.4s ease;
+    z-index: 1000;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.sidebar.show {
+    right: 0;
+}
+
+.sidebar .close-btn {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.sidebar li {
+    list-style: none;
+    margin: 20px 0;
+}
+
+.sidebar li a {
+    color: #000;
+    text-decoration: none;
+    font-size: 20px;
+    transition: opacity 0.2s ease;
+}
+
+.sidebar li a:hover {
+    opacity: 0.6;
+}
+
+nav .logo {
+    width: 200px;
+}
+
 .nav-tabs ul {
+    margin-top: 30px;
     list-style: none;
     text-align: right;
 }
@@ -56,11 +121,13 @@ nav .logo {
 
 .nav-tabs ul li a {
     text-decoration: none;
-    color: #ececec;
+    color: #bfbfbf;
+    font-family: "Orbitron", sans-serif;
     font-size: 20px;
     font-weight: 700;
     letter-spacing: 1px;
     transition: color 0.3s ease;
+    line-height: 35px;
 }
 
 .nav-tabs ul li a:hover {
@@ -71,7 +138,6 @@ nav .logo {
     color: #ffffff;
     border-bottom: 5px solid #fff;
 }
-
 
 /* Home Section */
 .home {
@@ -85,11 +151,11 @@ nav .logo {
 }
 
 .home h1 {
-    font-family: "Condiment", cursive;
-    font-size: 100px;
+    font-family: "Orbitron", sans-serif;
+    font-size: 90px;
     font-weight: 700;
     color: #ffffff;
-    letter-spacing: 2px;
+    letter-spacing: 0px;
     margin-bottom: 10px;
 }
 
@@ -102,12 +168,13 @@ nav .logo {
 
 .home p span{
     padding-right: 7px;
-    font-family: "Condiment", cursive;
+    font-weight: bold;
+    font-family: "Orbitron", sans-serif;
 }
 
 /* About Section */
 .about {
-    background: rgba(0, 0, 0, 0.552); 
+    background: linear-gradient(rgba(255, 255, 255, 0), rgb(9, 13, 23)); 
     color: #ffffff;
     padding: 50px 12% 100px;
     text-align: center;
@@ -116,10 +183,21 @@ nav .logo {
 }
 
 .about-name {
+    font-family: "Orbitron", sans-serif;
     font-size: 48px;
     font-weight: 700;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
     letter-spacing: 2px;
+}
+.about-intro{
+    font-size: 20px;
+    max-width: 80%;
+    margin: 0 auto 30px auto;
+    line-height: 1.6;
+    text-align: center;
+}
+.about-intro-mobile{
+    display: none;
 }
 
 .about-container {
@@ -129,23 +207,26 @@ nav .logo {
     gap: 30px;
     flex-wrap: wrap;
 }
+.about-name-mobile{
+    display: none;
+}
 
 .about-image img {
     width: 500px;
-    border-radius: 50px; 
+    border-radius: 50px;
+    max-width: 100%;
+    height: auto; 
 }
 
 .about-text {
     max-width: 500px;
-    text-align: left;
+    text-align: justify;
 }
 
 .about-text p {
     font-size: 18px;
     line-height: 1.6;
 }
-
-
 
 .skills-hobbies {
     display: flex;
@@ -156,7 +237,7 @@ nav .logo {
 }
 
 .skills, .hobbies {
-    background: rgba(150, 150, 150, 0.29); 
+    background: rgba(162, 188, 198, 0.29); 
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -176,15 +257,38 @@ nav .logo {
 .skills ul, .hobbies ul {
     list-style: none;
     padding-left: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 15px 25px;  
 }
 
-.skills ul li, .hobbies ul li {
+.skills ul li {
     font-size: 17px;
-    line-height: 1.8;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex: 1 1 150px; 
+}
+
+.skills ul li i {
+    font-size: 20px;
+    color: #fff;
+}
+
+/* Hobbies */
+.hobbies ul {
+    justify-content: center;
+}
+
+.hobbies ul li {
+    font-size: 17px;
+    flex: 1 1 120px; 
+    text-align: center;
 }
 
 .education {
-    background: rgba(150, 150, 150, 0.29); 
+    background: rgba(174, 188, 206, 0.29); 
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -204,10 +308,9 @@ nav .logo {
 }
 
 .about-socials {
-    background: rgba(150, 150, 150, 0.29); 
+    background: rgba(132, 146, 167, 0.29); 
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.1);
     padding: 15px 20px;
     border-radius: 30px;
@@ -234,35 +337,36 @@ nav .logo {
 }
 
 /*PROJECTS section*/
-
 .projects {
-    background: rgba(0, 0, 0, 0.552); 
-    padding: 50px 13%;
+    background: linear-gradient(rgb(9, 13, 23), rgba(255, 255, 255, 0));  
+    padding: 50px 15% 100px;
     text-align: center;
-    color: #fff;
+    color: #02001c;
 }
 
 .projects .section-title {
+    font-family: "Orbitron", sans-serif;
     background: rgba(207, 214, 232, 0.182); 
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 30px;
     font-size: 48px;
-    margin-bottom: 50px;
+    margin-bottom: 60px;
     letter-spacing: 2px;
     padding: 10px;
+    color: #ffffff;
 }
 
 .projects-container {
-    padding: 50px 5% 100px;
+    padding: 0px 5% 0px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 40px;
 }
 
 .project-card {
-    background: rgba(255, 255, 255, 0.08);
+    background: rgb(235, 243, 247);
     border-radius: 16px;
     padding: 20px;
     backdrop-filter: blur(12px);
@@ -292,7 +396,7 @@ nav .logo {
     font-size: 16px;
     line-height: 1.6;
     margin-bottom: 15px;
-    color: #ddd;
+    color: #4a4a4a;
 }
 
 .project-tech {
@@ -302,11 +406,11 @@ nav .logo {
 }
 
 .project-tech span {
-    background: rgba(255, 255, 255, 0.15);
+    background: rgba(72, 90, 112, 0.71);
     padding: 6px 12px;
     border-radius: 20px;
     font-size: 14px;
-    color: #fff;
+    color: #ffffff;
     border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
@@ -314,44 +418,44 @@ nav .logo {
 .services {
     padding: 50px 15% 100px;
     text-align: center;
-    background: rgba(0, 0, 0, 0.552); 
+    background: linear-gradient(rgba(9, 13, 23, 0),rgba(9, 13, 23, 0), rgba(0, 12, 27, 0.326)); 
     color: #fff;
 }
 
 .services .section-title {
-    background: rgba(207, 214, 232, 0.182); 
+    font-family: "Orbitron", sans-serif;
+    background: rgba(255, 255, 255, 0.304); 
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 30px;
     font-size: 48px;
-    margin-bottom: 60px;
+    margin-bottom: 40px;
     letter-spacing: 2px;
     padding: 10px;
 }
 
 .services-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    padding: 20px;
+    grid-template-columns: repeat(2,minmax(250px, 1fr));
+    margin: 20px;
     gap: 40px;
 }
 
 .service-card {
-    background: rgba(255, 255, 255, 0.159);
+    background: linear-gradient(135deg, rgba(238, 245, 255, 0.004), rgba(205, 236, 255, 0.571));
     border-radius: 30px;
     padding: 40px 20px;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.15);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .service-card:hover {
-    transform: translateY(-8px);
+    transform: translateY(-10px);
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
-    background: rgba(255, 255, 255, 0.425);
+    background: rgba(202, 230, 255, 0.421);
     transition: all 0.3s ease;
-
 }
 
 .service-card i {
@@ -384,5 +488,115 @@ nav .logo {
 }
 
 .footer p span{
-    font-family: "Condiment", cursive;
+   font-family: "Orbitron", sans-serif;
+    font-weight: bold;
+}
+
+.menu{
+    display: none;
+}
+
+/* Mobile Header */
+.mobile-header {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(46, 51, 58, 0.603);
+  backdrop-filter: blur(10px);
+  z-index: 900;
+}
+
+.mobile-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 25px 0px 20px;
+}
+
+.mobile-logo {
+  width: 90px;
+  height: auto;
+}
+
+@media(max-width: 800px){
+    nav {
+        display: none;
+    }
+    .mobile-header {
+        display: block;
+    }
+    .hideOnMobile{
+        display: none;
+    }
+    .menu{
+        display: block;
+    }
+
+    .home h1{
+        font-size: 70px;
+    }
+    .home p{
+        font-size: 20px;
+    }
+
+    .about, .projects, .services {
+        padding: 0px 5% 100px;
+        text-align: center;
+    }
+    .about-name{
+        display: none;
+    }
+    .about-intro{
+        display: none;
+    }
+    .about-intro-mobile{
+        display: block;
+        font-size: 18px;
+        max-width: 90%;
+        line-height: 1.6;
+        text-align: center;
+    }
+
+    .about-image img {
+        width: 100%; 
+        max-width: 500px; 
+        margin: 0 auto;  
+        display: block;   
+    }
+
+    .projects{
+        padding-top: 100px;
+    }
+  
+    .projects-container{
+        padding: 0;
+    }
+    .projects .section-title, .services .section-title{
+        background: rgba(34, 38, 48, 0.795); 
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+    }
+    .about-name-mobile{
+        font-family: "Orbitron", sans-serif;
+        font-size: 35px;
+        font-weight: 700;
+        letter-spacing: 2px;
+        display: block;
+    }
+    .services{
+        padding-top: 100px;
+    }
+    .services-container{
+        grid-template-columns: repeat(1,minmax(250px, 1fr));
+        margin: 0px;
+        padding: 0px;
+    }
+}
+
+@media(max-width: 400px){
+    .sidebar{
+        width: 100%;
+    }
 }
