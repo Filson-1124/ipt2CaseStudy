@@ -62,15 +62,33 @@
 
   <!-- Hero -->
   <div class="relative h-screen w-screen overflow-hidden bg-background">
-    <section class="bg-repeat h-screen w-screen flex 
-                    bg-[url('./assets/wal2.png')] 
-                    bg-top bg-[length:200%] 
-                    animate-moveBg">
-      <div class="w-full h-full flex flex-col items-center justify-center text-center p-1.5">
-        <h1 class="heroTitle text-4xl permanent-marker-regular text-headline text-[64px] leading-[4.2rem]">MEET THE TEAM.</h1>
-        <p class="text-paragraph">"A team of student programmers passionate about building ideas into reality."</p>
-      </div>
-    </section>
+<section class="bg-repeat h-screen w-screen flex flex-col md:flex-row  
+                bg-[url('./assets/wal2.png')] 
+                bg-top bg-[length:200%] 
+                animate-moveBg">
+
+  <!-- Left side: Text -->
+  <div class="w-full md:w-1/2 h-full flex flex-col items-center justify-center text-center p-4">
+    <h1 class="heroTitle text-4xl permanent-marker-regular text-headline text-[40px] md:text-[64px] leading-tight md:leading-[4.2rem]">
+      MEET THE TEAM.
+    </h1>
+    <p class="text-paragraph text-sm md:text-base">
+      "A team of student programmers passionate about building ideas into reality."
+    </p>
+  </div>
+
+  <!-- Right side: Image -->
+  <div class="w-full md:w-1/2 flex items-end justify-center">
+    <img src="./assets/pics/team.png" 
+         alt="" 
+         class="h-[60vh] md:max-h-[95%] w-auto object-contain" />
+  </div>
+
+</section>
+
+
+
+
   </div>
 
   <!-- Members -->
@@ -78,10 +96,10 @@
   <h1 class="mt-10 sectionTitle text-7xl">Members</h1>
   <div class="w-[95%] h-[100vh] flex items-center overflow-x-auto overflow-y-hidden snap-x snap-mandatory">
 
-   <!-- Jennie -->
+   <!-- Filson -->
   
-   <a href="./Filson's Portfolio/index.html">
-    <div class="member-card xs:w-[80%] xs:h-[70vh] lg:w-[25%] lg:h-[70%] 
+   
+    <div onclick="location.href='../Filson\'s Portfolio/index.html'" class="member-card xs:w-[80%] xs:h-[70vh] lg:w-[25%] lg:h-[70%] 
             relative group rounded-lg 
             min-w-[22rem] h-[90%] m-2 flex-shrink-0 snap-center overflow-hidden p-20">
 
@@ -91,58 +109,58 @@
        class="drop-shadow-[0_0_10px_rgba(255,255,255,0.4)] absolute place-self-center inset-0 w-full h-[90%] object-contain pointer-events-none z-20" />
 
   <!-- Image Window -->
-  <div class="absolute top-[16%] left-[5%] w-[90%] h-[32%] overflow-hidden z-10 rounded-md flex items-start justify-center">
-    <img src="./assets/pics/KIM JENNIE ❤️.jpeg"
+  <div class="absolute top-[17%] left-[5%] w-[90%] h-[32%] overflow-hidden z-10 rounded-md flex items-start justify-center">
+    <img src="./assets/pics/filson.png"
          alt="Jennie"
          class="w-[70%] h-auto object-contain transition duration-300 group-hover:blur-sm group-hover:scale-[0.9]" />
   </div>
 
   <!-- Overlay Cutout -->
-  <img src="./assets/pics/pngs/KIM_JENNIE__️-removebg-preview.png"
+  <img src="./assets/pics/pngs/filsonnobg.png"
        alt="Overlay"
-       class="absolute top-[10%] xs:left-[30%] md:left-1/2 -translate-x-1/2 w-[70%] h-auto object-contain opacity-0 scale-90
+       class="absolute top-[10%] xs:left-[30%] md:left-1/2 -translate-x-1/2 w-[120%] h-auto object-contain opacity-0 scale-90
               transition duration-300 z-30
               group-hover:opacity-100 group-hover:scale-100" />
 
   <!-- Text Placeholders -->
   <div class="absolute xs:bottom-[30%] md:bottom-[20%] xs:left-[10%]  md:left-[17%] w-[65%] h-[10%] text-sm text-black z-30">
-    <p class="font-bold px-2 py-1  text-black rounded group-hover:bg-black/70 group-hover:text-white">[Name Here]</p>
+    <p class="font-bold px-2 py-1  text-black rounded group-hover:bg-black/70 group-hover:text-white">Filson John Bequibel</p>
   </div>
   <div class="absolute xs:bottom-[25%] md:bottom-[15%] xs:left-[10%] md:left-[17%] md:w-[65%] md:h-[8%] text-xs text-black z-30">
-    <p class="px-2 py-1  text-black rounded group-hover:text-white group-hover:bg-black/70">[Description / Power Info]</p>
+    <p class="px-2 py-1  text-black rounded group-hover:text-white group-hover:bg-black/70">Web Dev Monster</p>
   </div>
   <div class="absolute xs:bottom-[18%] md:bottom-[11%] xs:left-[10%] md:left-[18%] w-[60%] md:h-[5%] text-xs text-black z-30 flex justify-between">
     <span class="px-2 py-1  text-black rounded group-hover:bg-black/70 group-hover:text-white">[HP]</span>
     <span class="px-2 py-1  text-black rounded group-hover:bg-black/70 group-hover:text-white">[Type]</span>
   </div>
-</div></a>
+</div>
 
 
 
 
-<!-- Jisoo -->
+<!-- Yu -->
 <div class="member-card xs:w-[80%] xs:h-[70vh] lg:w-[25%] lg:h-[70%] 
             relative group  rounded-lg 
             min-w-[22rem] h-[90%] m-2 flex-shrink-0 snap-center overflow-hidden">
 
   <img src="./assets/pokemonCard.png" class="drop-shadow-[0_0_10px_rgba(255,255,255,0.4)] absolute place-self-center inset-0 w-full h-[90%] object-contain pointer-events-none z-20" />
   
-  <div class="absolute top-[16%] left-[5%] w-[90%] h-[32%] overflow-hidden z-10 rounded-md flex items-start justify-center">
-    <img src="./assets/pics/Jisoo wallpaper 2024.jpeg" alt="Jisoo"
+  <div class="absolute top-[17%] left-[5%] w-[90%] h-[32%] overflow-hidden z-10 rounded-md flex items-start justify-center">
+    <img src="./assets/pics/yu.png" alt="Jisoo"
          class="w-[70%] h-auto object-contain transition duration-300 group-hover:blur-sm group-hover:scale-[0.9]" />
   </div>
   
-  <img src="./assets/pics/pngs/Jisoo_wallpaper_2024-removebg-preview.png"
+  <img src="./assets/pics/pngs/YuNoBG.png"
        alt="Overlay"
        class="absolute top-[0%] xs:left-[30%] md:left-1/2 -translate-x-1/2 w-[70%] h-auto object-contain opacity-0 scale-90
               transition duration-300 z-30
               group-hover:opacity-100 group-hover:scale-100" />
   
  <div class="absolute xs:bottom-[30%] md:bottom-[20%] xs:left-[10%]  md:left-[17%] w-[65%] h-[10%] text-sm text-black z-30">
-    <p class="font-bold px-2 py-1  text-black rounded group-hover:bg-black/70 group-hover:text-white">[Name Here]</p>
+    <p class="font-bold px-2 py-1  text-black rounded group-hover:bg-black/70 group-hover:text-white">Maria Theresa Yu</p>
   </div>
   <div class="absolute xs:bottom-[25%] md:bottom-[15%] xs:left-[10%] md:left-[17%] md:w-[65%] md:h-[8%] text-xs text-black z-30">
-    <p class="px-2 py-1  text-black rounded group-hover:text-white group-hover:bg-black/70">[Description / Power Info]</p>
+    <p class="px-2 py-1  text-black rounded group-hover:text-white group-hover:bg-black/70">AI Specialist</p>
   </div>
   <div class="absolute xs:bottom-[18%] md:bottom-[11%] xs:left-[10%] md:left-[18%] w-[60%] md:h-[5%] text-xs text-black z-30 flex justify-between">
     <span class="px-2 py-1  text-black rounded group-hover:bg-black/70 group-hover:text-white">[HP]</span>
@@ -151,29 +169,29 @@
 </div>
 
 
-<!-- Lisa -->
-<div class="member-card xs:w-[80%] xs:h-[70vh] lg:w-[25%] lg:h-[70%] 
+<!-- Mari -->
+<div onclick="location.href='../Marianne\'s Portfolio/Marianne_Portfolio.html'" class="member-card xs:w-[80%] xs:h-[70vh] lg:w-[25%] lg:h-[70%] 
             relative group  rounded-lg
             min-w-[22rem] h-[90%] m-2 flex-shrink-0 snap-center overflow-hidden">
 
   <img src="./assets/pokemonCard.png" class="drop-shadow-[0_0_10px_rgba(255,255,255,0.4)] absolute place-self-center inset-0 w-full h-[90%] object-contain pointer-events-none z-20" />
   
-  <div class="absolute top-[16%] left-[5%] w-[90%] h-[32%] overflow-hidden z-10 rounded-md flex items-start justify-center">
-    <img src="./assets/pics/download (2).jpeg" alt="Lisa"
+  <div class="absolute top-[17%] left-[5%] w-[90%] h-[32%] overflow-hidden z-10 rounded-md flex items-start justify-center">
+    <img src="./assets/pics/mari.png" alt="Lisa"
          class="w-[70%] h-auto object-contain transition duration-300 group-hover:blur-sm group-hover:scale-[0.9]" />
   </div>
   
-  <img src="./assets/pics/pngs/download__2_-removebg-preview.png"
+  <img src="./assets/pics/pngs/mariNobg.png"
        alt="Overlay"
-       class="absolute top-[10%] xs:left-[30%] md:left-1/2 -translate-x-1/2 w-[70%] h-auto object-contain opacity-0 scale-90
+       class="absolute top-[-10%] xs:left-[30%] md:left-1/2 -translate-x-1/2 w-[70%] h-auto object-contain opacity-0 scale-90
               transition duration-300 z-30
               group-hover:opacity-100 group-hover:scale-100" />
   
  <div class="absolute xs:bottom-[30%] md:bottom-[20%] xs:left-[10%]  md:left-[17%] w-[65%] h-[10%] text-sm text-black z-30">
-    <p class="font-bold px-2 py-1  text-black rounded group-hover:bg-black/70 group-hover:text-white">[Name Here]</p>
+    <p class="font-bold px-2 py-1  text-black rounded group-hover:bg-black/70 group-hover:text-white">Marianne Balen</p>
   </div>
   <div class="absolute xs:bottom-[25%] md:bottom-[15%] xs:left-[10%] md:left-[17%] md:w-[65%] md:h-[8%] text-xs text-black z-30">
-    <p class="px-2 py-1  text-black rounded group-hover:text-white group-hover:bg-black/70">[Description / Power Info]</p>
+    <p class="px-2 py-1  text-black rounded group-hover:text-white group-hover:bg-black/70">Mobile App Dev Goddess</p>
   </div>
   <div class="absolute xs:bottom-[18%] md:bottom-[11%] xs:left-[10%] md:left-[18%] w-[60%] md:h-[5%] text-xs text-black z-30 flex justify-between">
     <span class="px-2 py-1  text-black rounded group-hover:bg-black/70 group-hover:text-white">[HP]</span>
@@ -182,19 +200,19 @@
 </div>
 
 
-<!-- Rosé -->
+<!-- JM -->
 <div class="member-card xs:w-[80%] xs:h-[70vh] lg:w-[25%] lg:h-[70%] 
             relative group  rounded-lg 
             min-w-[22rem] h-[90%] m-2 flex-shrink-0 snap-center overflow-hidden">
 
   <img src="./assets/pokemonCard.png" class="drop-shadow-[0_0_10px_rgba(255,255,255,0.4)] absolute place-self-center inset-0 w-full h-[90%] object-contain pointer-events-none z-20" />
   
-  <div class="absolute top-[16%] left-[5%] w-[90%] h-[32%] overflow-hidden z-10 rounded-md flex items-start justify-center">
-    <img src="./assets/pics/download (1).jpeg" alt="Rosé"
+  <div class="absolute top-[17%] left-[5%] w-[90%] h-[32%] overflow-hidden z-10 rounded-md flex items-start justify-center">
+    <img src="./assets/pics/jm.png" alt="Rosé"
          class="w-[70%] h-auto object-contain transition duration-300 group-hover:blur-sm group-hover:scale-[0.9]" />
   </div>
   
-  <img src="./assets/pics/pngs/download__1_-removebg-preview.png"
+  <img src="./assets/pics/pngs/jmnoBg.png"
        alt="Overlay"
        class="absolute top-[10%] xs:left-[30%] md:left-1/2 -translate-x-1/2 w-[70%] h-auto object-contain opacity-0 scale-90
               transition duration-300 z-30
