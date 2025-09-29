@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+      <script src="https://cdn.tailwindcss.com"></script>
+      <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+  <!-- Tailwind Config -->
+  <script>
+    tailwind.config = {
+        darkMode: 'class',
+      theme: {
+        extend: {
+          screens: {
+            'xs': '390px',
+          },
+        }
+      }
+    }
+  </script>
+</head>
+<body class="dark:bg-gray-900 bg-gray-200">
+<header class="sticky top-0 z-50 p-5 flex justify-between items-center bg-white dark:bg-gray-800 shadow-md">
+  <!-- Logo -->
+  <button onclick="scrollToSection('Hero')"> <h1 class="text-3xl font-black dark:text-white">Filson.</h1></button>
+
+  <!-- Hamburger / Back Button -->
+  <button id="menuBtn" class="text-3xl md:hidden dark:text-white">
+    <!-- Hamburger icon (default) -->
+    <ion-icon id="menuIcon" name="menu"></ion-icon>
+    <!-- Back arrow icon (hidden by default) -->
+    <ion-icon id="backIcon"  name="arrow-back" class="hidden"></ion-icon>
+  </button>
+
+  <!-- Navbar -->
+  <ul id="navMenu" 
+      class="fixed top-0 left-0 h-full w-64 bg-white shadow-lg transform -translate-x-full transition-transform duration-300 flex flex-col gap-6 p-6 font-semibold xs:dark:bg-gray-800
+             md:static md:h-auto md:w-auto md:bg-transparent md:shadow-none md:flex md:flex-row md:gap-10 md:translate-x-0">
+    <li class="cursor-pointer text-xl dark:text-white"><button onclick="scrollToSection('About')">About</button></li>
+    <li class="cursor-pointer text-xl dark:text-white"><button onclick="scrollToSection('Service')">Service</button></li>
+    <li class="cursor-pointer text-xl dark:text-white"><button onclick="scrollToSection('Skills')" id="skilBut">Skills</button></li>
+     <li class="cursor-pointer text-xl dark:text-white"><button onclick="scrollToSection('Projects')" id="skilBut">Projects</button></li>
+     <li class="cursor-pointer text-xl dark:text-white"><button onclick="scrollToSection('Contacts')" id="skilBut">Contacts</button></li>
+    <li class="cursor-pointer text-xl dark:text-white">
+      <button id="themeBtn">
+        <ion-icon id="moonIcon" size="large" name="moon"></ion-icon>
+        <ion-icon id="sunIcon" size="large" name="sunny" class="hidden"></ion-icon>
+      </button>
+    </li>
+  </ul>
+</header>
+    <main class="flex flex-col xs:p-5 gap-10">
+        <section id="Hero" class="
+        xs:flex-col-reverse
+        w-[100%] h-[100%] duration-300 ease-in shadow-[4px_4px_6px_rgba(0,0,0,0.2),-4px_-4px_6px_rgba(255,255,255,0.7)]
+        dark:shadow-[inset_-4px_-4px_6px_rgba(0,0,0,0.6),inset_4px_4px_6px_rgba(100,199,250,0.6)]
+          rounded-xl xs:flex-col md:flex-row gap-10 flex p-10 place-content-between" >
+              <div class="w-[100%] text-start place-self-center flex flex-col gap-10 dark:text-white text-2xl">
+            <h1 class="duration-300 ease-in md:text-3xl xs:text-2xl">Hello! Its me, <b>Filson John </b><br> I'am a  <span id="typingText" class="xs:text-xl md:text-2xl font-bold border-r-2 border-white pr-2 animate-pulse"></span>  </h1>
+          
+            
+
+            <p class="md:w-[50%] xs:w-[100%] xs:text-sm md:text-lg duration-300 ease-in ">I'm an aspiring web designer with a willingness to learn and gain more experience to create and design websites. </p>
+
+            <button class="bg-[#FAA941] dark:bg-[#be8131] duration-300 ease-in p-[1.5rem] md:w-[20%] xs:w-[100%] md:w-[30%]  shadow-[4px_4px_6px_rgba(0,0,0,0.2),-4px_-4px_6px_rgba(255,255,255,0.7)] dark:shadow-[4px_4px_6px_rgba(0,0,0,0.2),-4px_-4px_6px_rgba(100,199,250,0.6)]  rounded-3xl active:shadow-[inset_4px_4px_6px_rgba(0,0,0,0.2),inset_-4px_-4px_6px_rgba(255,255,255,0.7)] dark:active:shadow-[inset_4px_4px_6px_rgba(0,0,0,0.2),inset_-4px_-4px_6px_rgba(100,199,250,0.6)]"onclick="scrollToSection('About')" >More About Me</button>
+
+    <div class="flex gap-5 md:w-[20%] xs:w-[100%] place-content-center">
+    
+    <!-- Facebook Icon -->
+    <div class="relative group">
+        <div class="rounded-full p-2 bg-gray-200 dark:bg-transparent cursor-pointer">
+            <ion-icon size="large" name="logo-facebook"></ion-icon>
+        </div>
+        <div class="absolute left-full top-1/2 -translate-y-1/2 ml-2 bg-white dark:bg-gray-900 text-black dark:text-white p-3 rounded shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-10">
+            <p>Facebook Link:</p>
+            <a href="https://facebook.com/yourprofile" target="_blank" class="text-blue-600 hover:underline">
+                facebook.com/filsonjuan
+            </a>
+        </div>
+    </div>
+
+    <!-- Email Icon -->
+    <div class="relative group">
+        <div class="rounded-full p-2 bg-gray-200 dark:bg-transparent  cursor-pointer">
+            <ion-icon size="large" name="mail"></ion-icon>
+        </div>
+        <div class="absolute left-full top-1/2 -translate-y-1/2 ml-2 bg-white dark:bg-gray-900 text-black dark:text-white p-3 rounded shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-10">
+            <p>Email:</p>
+            <a href="mailto:filsonbequibel1124@gmail.com" class="hover:underline">
+                filsonbequibel1124@gmail.com
+            </a>
+        </div>
+    </div>
+
+    <!-- Call Icon -->
+    <div class="relative group">
+        <div class="rounded-full p-2 bg-gray-200  dark:bg-transparent cursor-pointer">
+            <ion-icon size="large" name="call"></ion-icon>
+        </div>
+        <div class="w-2xl absolute left-full top-1/2 -translate-y-1/2 ml-2 bg-white dark:bg-gray-900 text-black dark:text-white p-3 rounded shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-10">
+            <p class="text-sm">Phone:</p>
+            <a href="tel:+639454674745" class="hover:underline text-sm">
+                +63 945-467-4745
+            </a>
+        </div>
+    </div>
+
+</div>
+
+
+        </div>
+
+          <img src="./assets/pfp.jpeg" alt="" class="duration-300 ease-in md:w-[40%] rounded-full place-self-center shadow-[inset_4px_4px_6px_rgba(0,0,0,0.2),inset_-4px_-4px_6px_rgba(255,255,255,0.7)]
+        dark:shadow-[inset_-4px_-4px_6px_rgba(0,0,0,0.6),inset_4px_4px_6px_rgba(100,199,250,0.6)] p-[20px]">
+    
+            
+          
+        </section>
+
+        <section id="About" class=" w-[100%]  duration-300 ease-in shadow-[4px_4px_6px_rgba(0,0,0,0.2),-4px_-4px_6px_rgba(255,255,255,0.7)]
+        dark:shadow-[inset_-4px_-4px_6px_rgba(0,0,0,0.6),inset_4px_4px_6px_rgba(100,199,250,0.6)]
+          rounded-xl xs:flex-col gap-10 flex p-10 text-center"> 
+             <h1 class="text-5xl font-extrabold font-Poppins text-[#FAA941] " >About <span class="text-gray-900 dark:text-white">Me</span></h1>
+
+             <div class="flex md:flex-row xs:flex-col gap-10 place-content-between ">
+                <div class="md:w-[30%] xs:w-full rounded-3xl shadow-[inset_4px_4px_6px_rgba(0,0,0,0.2),inset_-4px_-4px_6px_rgba(255,255,255,0.7)]
+        dark:shadow-[inset_-4px_-4px_6px_rgba(0,0,0,0.6),inset_4px_4px_6px_rgba(100,199,250,0.6)] p-5">
+                    <img src="../Filson's Portfolio/assets/5f72bb52-001d-4cbf-869b-6c0dd21cb195.jpeg" alt="" class=" w-full rounded-2xl ">
+                </div>
+
+                <div class="md:w-[50%] xs:w-full place-self-center dark:text-white font-medium md:text-xl xs:text-sm text-start shadow-[inset_4px_4px_6px_rgba(0,0,0,0.2),inset_-4px_-4px_6px_rgba(255,255,255,0.7)]
+        dark:shadow-[inset_-4px_-4px_6px_rgba(0,0,0,0.6),inset_4px_4px_6px_rgba(100,199,250,0.6)] p-10 xs:p-5 rounded-2xl">
+                    <p>
+                        Hi! I’m Filson — a passionate, committed, and creative front-end developer who loves what I do. I work mainly with JavaScript, React, HTML, and CSS, but I’ve also explored Java, Python, and PHP to expand my skills.I’ve built projects like a reviewer generator, calculators, a payment system, and even a festival promotion page. Right now, I’m focused on Revio, a review material generator that uses Natural Language Processing with Acronym Mnemonics, the Leitner System, and Pomodoro techniques to make studying more effective.Outside of coding, I enjoy gaming and exploring new technologies. My goal is to grow as a developer and someday build big projects that create a real impact.
+                    </p>
+                </div>
+                
+             </div>
+        </section>
+
+
+        <section id="Service" class=" w-[100%]  duration-300 ease-in shadow-[4px_4px_6px_rgba(0,0,0,0.2),-4px_-4px_6px_rgba(255,255,255,0.7)]
+        dark:shadow-[inset_-4px_-4px_6px_rgba(0,0,0,0.6),inset_4px_4px_6px_rgba(100,199,250,0.6)]
+          rounded-xl xs:flex-col gap-10 flex p-10 text-center"> 
+
+            <h1 class="text-5xl font-extrabold font-Poppins text-[#FAA941] " >My <span class="text-gray-900 dark:text-white">Services</span></h1>
+<div class="w-[100%] flex gap-10 place-content-center dark:text-white xs:flex-col md:flex-row ">
+
+        <div class="md:w-[30%] xs:w-full xs:flex-col  shadow-[4px_4px_6px_rgba(0,0,0,0.2),-4px_-4px_6px_rgba(255,255,255,0.7)]
+        dark:shadow-[inset_-4px_-4px_6px_rgba(0,0,0,0.6),inset_4px_4px_6px_rgba(100,199,250,0.6)]
+          rounded-xl md:flex-col gap-10 flex p-10 text-start">
+            <ion-icon name="code" size="large" class="place-self-start "></ion-icon>
+          <h1 class="text-2xl">   UI/UX Designs</h1>
+          <p>UI/UX design is the process of creating digital products that are both visually appealing and easy to use. UI (User Interface) design focuses on the look and layout of a product, such as colors, buttons, and typography. UX (User Experience) design focuses on the overall feel and usability, ensuring the product is intuitive, efficient, and satisfying for the user.
+ </p>
+        </div>
+         
+            <div class="md:w-[30%] xs:w-full xs:flex-col   shadow-[4px_4px_6px_rgba(0,0,0,0.2),-4px_-4px_6px_rgba(255,255,255,0.7)]
+        dark:shadow-[inset_-4px_-4px_6px_rgba(0,0,0,0.6),inset_4px_4px_6px_rgba(100,199,250,0.6)]
+          rounded-xl xs:flex-col  gap-10 flex p-10 text-start">
+          <ion-icon class="crop" name="crop" size="large"></ion-icon>
+          <h1 class="text-2xl" >Web Design</h1>
+             <p>Web design is the process of planning and creating websites, focusing on both appearance and functionality. It involves arranging content, choosing colors, fonts, and layouts to make the site visually appealing. It also ensures the site is user-friendly, accessible, and works well across different devices.
+</p>
+        </div>
+            <div class="md:w-[30%] xs:w-full xs:flex-col  shadow-[4px_4px_6px_rgba(0,0,0,0.2),-4px_-4px_6px_rgba(255,255,255,0.7)]
+        dark:shadow-[inset_-4px_-4px_6px_rgba(0,0,0,0.6),inset_4px_4px_6px_rgba(100,199,250,0.6)]
+          rounded-xl xs:flex-col  gap-10 flex p-10 text-start">
+          <ion-icon name="desktop" size="large"></ion-icon>
+           <h1 class="text-2xl" >Web Development</h1>
+             <p>Web development is the process of building and maintaining websites, making them functional and interactive. It involves writing code using programming languages to create the structure, features, and performance of a site. Web development can include both front-end (what users see) and back-end (server-side processes) work.
+</p>
+        </div>
+        </div>
+</div>
+        </section>
+
+
+        <section id="Skills" class=" flex flex-col w-[100%]  duration-300 ease-in shadow-[4px_4px_6px_rgba(0,0,0,0.2),-4px_-4px_6px_rgba(255,255,255,0.7)]
+        dark:shadow-[inset_-4px_-4px_6px_rgba(0,0,0,0.6),inset_4px_4px_6px_rgba(100,199,250,0.6)]
+          rounded-xl xs:flex-col gap-10 flex md:p-10 xs:p-5 text-center">
+          <div>
+             <h1 class="text-5xl font-extrabold font-Poppins text-[#FAA941] " >My <span class="text-gray-900 dark:text-white">Skills</span></h1>
+          </div>
+
+          <div class="main flex w-auto overflow-x-auto gap-10 xs:gap-5 md:p-10 xs:p-1 ">
+
+            <div class="flex md:w-[50%] md:max-h-[100vh] md:overflow-y-auto flex-col md:w-[100%] xs:w-full gap-10 text-center pt-5 shadow-[4px_4px_6px_rgba(0,0,0,0.2),-4px_-4px_6px_rgba(255,255,255,0.7)] 
+            dark:shadow-[inset_-4px_-4px_6px_rgba(0,0,0,0.6),inset_4px_4px_6px_rgba(100,199,250,0.6)] 
+            gap-3 md:gap-[1rem] rounded-2xl">
+                <h1 class="font-black text-xl text-gray-900 dark:text-white"> Tech Stack</h1>  
+                 <div class="flex md:flex-wrap xs:flex-col w-[50%] gap-10 p-10">
+
+  <!-- HTML -->
+  <div class="gauge w-full md:max-w-[180px] xs:min-w-[200px] hover:scale-110 transition ease-out duration-300">
+    <div class="gauge__body w-full h-0 pb-[50%] bg-gray-200 relative rounded-t-full overflow-hidden shadow-[4px_4px_6px_rgba(0,0,0,0.2),-4px_-4px_6px_rgba(255,255,255,0.7)] dark:shadow-[inset_-4px_-4px_6px_rgba(0,0,0,0.6),inset_4px_4px_6px_rgba(100,199,250,0.6)]">
+      <div class="gauge__fill absolute top-[100%] left-0 w-full h-full bg-[#009578] 
+                  origin-top transition-transform ease-out duration-700"
+           data-rotate="0.45turn"
+           style="transform: rotate(0turn)"></div>
+      <div class="gauge__cover w-[75%] h-[150%] bg-gray-200 dark:bg-gray-900 absolute 
+                  rounded-full top-[25%] left-1/2 -translate-x-1/2 shadow-[4px_4px_6px_rgba(0,0,0,0.2),inset_-4px_-4px_6px_rgba(255,255,255,0.7)] dark:shadow-[inset_-4px_-4px_6px_rgba(0,0,0,0.6),inset_4px_4px_6px_rgba(100,199,250,0.6)]">
+        <h1 class="mt-[10%] text-[1.5rem] font-bold text-[#FAA941]">HTML</h1>
+      </div>
+    </div>
+  </div>
+
+  <!-- CSS -->
+  <div class="gauge w-full md:max-w-[180px] xs:min-w-[200px] hover:scale-110 transition ease-out duration-300">
+    <div class="gauge__body w-full h-0 pb-[50%] bg-gray-200 relative rounded-t-full overflow-hidden shadow-[4px_4px_6px_rgba(0,0,0,0.2),-4px_-4px_6px_rgba(255,255,255,0.7)] dark:shadow-[inset_-4px_-4px_6px_rgba(0,0,0,0.6),inset_4px_4px_6px_rgba(100,199,250,0.6)]">
+      <div class="gauge__fill absolute top-[100%] left-0 w-full h-full bg-[#009578] 
+                  origin-top transition-transform ease-out duration-700"
+           data-rotate="0.38turn"
+           style="transform: rotate(0turn)"></div>
+      <div class="gauge__cover w-[75%] h-[150%] bg-gray-200 dark:bg-gray-900 absolute 
+                  rounded-full top-[25%] left-1/2 -translate-x-1/2 shadow-[4px_4px_6px_rgba(0,0,0,0.2),inset_-4px_-4px_6px_rgba(255,255,255,0.7)] dark:shadow-[inset_-4px_-4px_6px_rgba(0,0,0,0.6),inset_4px_4px_6px_rgba(100,199,250,0.6)]">
+        <h1 class="mt-[10%] text-[1.5rem] font-bold text-[#FAA941]">CSS</h1>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <div class="gauge w-full md:max-w-[180px] xs:min-w-[200px] hover:scale-110 transition ease-out duration-300">
+    <div class="gauge__body w-full h-0 pb-[50%] bg-gray-200 relative rounded-t-full overflow-hidden shadow-[4px_4px_6px_rgba(0,0,0,0.2),-4px_-4px_6px_rgba(255,255,255,0.7)] dark:shadow-[inset_-4px_-4px_6px_rgba(0,0,0,0.6),inset_4px_4px_6px_rgba(100,199,250,0.6)]">
+      <div class="gauge__fill absolute top-[100%] left-0 w-full h-full bg-[#009578] 
+                  origin-top transition-transform ease-out duration-700"
+           data-rotate="0.30turn"
+           style="transform: rotate(0turn)"></div>
+      <div class="gauge__cover w-[75%] h-[150%] bg-gray-200 dark:bg-gray-900 absolute 
+                  rounded-full top-[25%] left-1/2 -translate-x-1/2 shadow-[4px_4px_6px_rgba(0,0,0,0.2),inset_-4px_-4px_6px_rgba(255,255,255,0.7)] dark:shadow-[inset_-4px_-4px_6px_rgba(0,0,0,0.6),inset_4px_4px_6px_rgba(100,199,250,0.6)]">
+        <h1 class="mt-[18%] text-[1rem] font-bold text-[#FAA941]">JavaScript</h1>
+      </div>
+    </div>
+  </div>
+
+  <!-- React-JS -->
+  <div class="gauge w-full md:max-w-[180px] xs:min-w-[200px] hover:scale-110 transition ease-out duration-300">
+    <div class="gauge__body w-full h-0 pb-[50%] bg-gray-200 relative rounded-t-full overflow-hidden shadow-[4px_4px_6px_rgba(0,0,0,0.2),-4px_-4px_6px_rgba(255,255,255,0.7)] dark:shadow-[inset_-4px_-4px_6px_rgba(0,0,0,0.6),inset_4px_4px_6px_rgba(100,199,250,0.6)]">
+      <div class="gauge__fill absolute top-[100%] left-0 w-full h-full bg-[#009578] 
+                  origin-top transition-transform ease-out duration-700"
+           data-rotate="0.45turn"
+           style="transform: rotate(0turn)"></div>
+      <div class="gauge__cover w-[75%] h-[150%] bg-gray-200 dark:bg-gray-900 absolute 
+                  rounded-full top-[25%] left-1/2 -translate-x-1/2 shadow-[4px_4px_6px_rgba(0,0,0,0.2),inset_-4px_-4px_6px_rgba(255,255,255,0.7)] dark:shadow-[inset_-4px_-4px_6px_rgba(0,0,0,0.6),inset_4px_4px_6px_rgba(100,199,250,0.6)]">
+        <h1 class="mt-[18%] text-[1rem] font-bold text-[#FAA941]">React-JS</h1>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tailwind -->
+  <div class="gauge w-full md:max-w-[180px] xs:min-w-[200px] hover:scale-110 transition ease-out duration-300">
+    <div class="gauge__body w-full h-0 pb-[50%] bg-gray-200 relative rounded-t-full overflow-hidden shadow-[4px_4px_6px_rgba(0,0,0,0.2),-4px_-4px_6px_rgba(255,255,255,0.7)] dark:shadow-[inset_-4px_-4px_6px_rgba(0,0,0,0.6),inset_4px_4px_6px_rgba(100,199,250,0.6)]">
+      <div class="gauge__fill absolute top-[100%] left-0 w-full h-full bg-[#009578] 
+                  origin-top transition-transform ease-out duration-700"
+           data-rotate="0.25turn"
+           style="transform: rotate(0turn)"></div>
+      <div class="gauge__cover w-[75%] h-[150%] bg-gray-200 dark:bg-gray-900 absolute 
+                  rounded-full top-[25%] left-1/2 -translate-x-1/2 shadow-[4px_4px_6px_rgba(0,0,0,0.2),inset_-4px_-4px_6px_rgba(255,255,255,0.7)] dark:shadow-[inset_-4px_-4px_6px_rgba(0,0,0,0.6),inset_4px_4px_6px_rgba(100,199,250,0.6)]">
+        <h1 class="mt-[18%] text-[1rem] font-bold text-[#FAA941]">Tailwind</h1>
+      </div>
+    </div>
+  </div>
+
+   <!-- Python -->
+  <div class="gauge w-full md:max-w-[180px] xs:min-w-[200px] hover:scale-110 transition ease-out duration-300">
+    <div class="gauge__body w-full h-0 pb-[50%] bg-gray-200 relative rounded-t-full overflow-hidden shadow-[4px_4px_6px_rgba(0,0,0,0.2),-4px_-4px_6px_rgba(255,255,255,0.7)] dark:shadow-[inset_-4px_-4px_6px_rgba(0,0,0,0.6),inset_4px_4px_6px_rgba(100,199,250,0.6)]">
+      <div class="gauge__fill absolute top-[100%] left-0 w-full h-full bg-[#009578] 
+                  origin-top transition-transform ease-out duration-700"
+           data-rotate="0.30turn"
+           style="transform: rotate(0turn)"></div>
+      <div class="gauge__cover w-[75%] h-[150%] bg-gray-200 dark:bg-gray-900 absolute 
+                  rounded-full top-[25%] left-1/2 -translate-x-1/2 shadow-[4px_4px_6px_rgba(0,0,0,0.2),inset_-4px_-4px_6px_rgba(255,255,255,0.7)] dark:shadow-[inset_-4px_-4px_6px_rgba(0,0,0,0.6),inset_4px_4px_6px_rgba(100,199,250,0.6)]">
+        <h1 class="mt-[10%] text-[1.3rem] font-bold text-[#FAA941]">Python</h1>
+      </div>
+    </div>
+  </div>
+<!-- Java -->
+  <div class="gauge w-full md:max-w-[180px] xs:min-w-[200px] hover:scale-110 transition ease-out duration-300">
+    <div class="gauge__body w-full h-0 pb-[50%] bg-gray-200 relative rounded-t-full overflow-hidden shadow-[4px_4px_6px_rgba(0,0,0,0.2),-4px_-4px_6px_rgba(255,255,255,0.7)] dark:shadow-[inset_-4px_-4px_6px_rgba(0,0,0,0.6),inset_4px_4px_6px_rgba(100,199,250,0.6)]">
+      <div class="gauge__fill absolute top-[100%] left-0 w-full h-full bg-[#009578] 
+                  origin-top transition-transform ease-out duration-700"
+           data-rotate="0.45turn"
+           style="transform: rotate(0turn)"></div>
+      <div class="gauge__cover w-[75%] h-[150%] bg-gray-200 dark:bg-gray-900 absolute 
+                  rounded-full top-[25%] left-1/2 -translate-x-1/2 shadow-[4px_4px_6px_rgba(0,0,0,0.2),inset_-4px_-4px_6px_rgba(255,255,255,0.7)] dark:shadow-[inset_-4px_-4px_6px_rgba(0,0,0,0.6),inset_4px_4px_6px_rgba(100,199,250,0.6)]">
+        <h1 class="mt-[10%] text-[1.3rem] font-bold text-[#FAA941]">Java</h1>
+      </div>
+    </div>
+  </div>
+
+  <div class="gauge w-full md:max-w-[180px] xs:min-w-[200px] hover:scale-110 transition ease-out duration-300">
+    <div class="gauge__body w-full h-0 pb-[50%] bg-gray-200 relative rounded-t-full overflow-hidden shadow-[4px_4px_6px_rgba(0,0,0,0.2),-4px_-4px_6px_rgba(255,255,255,0.7)] dark:shadow-[inset_-4px_-4px_6px_rgba(0,0,0,0.6),inset_4px_4px_6px_rgba(100,199,250,0.6)]">
+      <div class="gauge__fill absolute top-[100%] left-0 w-full h-full bg-[#009578] 
+                  origin-top transition-transform ease-out duration-700"
+           data-rotate="0.24turn"
+           style="transform: rotate(0turn)"></div>
+      <div class="gauge__cover w-[75%] h-[150%] bg-gray-200 dark:bg-gray-900 absolute 
+                  rounded-full top-[25%] left-1/2 -translate-x-1/2 shadow-[4px_4px_6px_rgba(0,0,0,0.2),inset_-4px_-4px_6px_rgba(255,255,255,0.7)] dark:shadow-[inset_-4px_-4px_6px_rgba(0,0,0,0.6),inset_4px_4px_6px_rgba(100,199,250,0.6)]">
+        <h1 class="mt-[17%] text-[1.3rem] font-bold text-[#FAA941]">Visual Basic</h1>
+      </div>
+    </div>
+  </div>
+
+</div>
+            </div>
+
+           
+            <div class="flex w-[30%] md:flex-col xs:flex-col md:w-[100%] xs:w-full gap-10 text-center pt-5 shadow-[4px_4px_6px_rgba(0,0,0,0.2),-4px_-4px_6px_rgba(255,255,255,0.7)] 
+            dark:shadow-[inset_-4px_-4px_6px_rgba(0,0,0,0.6),inset_4px_4px_6px_rgba(100,199,250,0.6)] 
+            gap-4 md:gap-[1rem] rounded-2xl p-1">
+                <h1 class="font-black text-xl text-gray-900 dark:text-white">Soft Skills</h1> 
+                
+                <div class="xs:w-[70vw] md:w-full p-10" >
+                  <ul class="flex flex-col gap-3 [10px] text-start xs:text-base md:text-lg leading-relaxed list-disc dark:text-white">
+                      <li class="p-[5px] rounded-xl shadow-[inset_4px_4px_6px_rgba(0,0,0,0.2),inset_-4px_-4px_6px_rgba(255,255,255,0.7)] 
+            dark:shadow-[inset_-4px_-4px_6px_rgba(0,0,0,0.6),inset_4px_4px_6px_rgba(100,199,250,0.6)] 
+            gap-4 md:gap-[1rem] rounded-2xl p-2  font-bold">Problem-Solving </li>
+                      <li class="p-[5px] rounded-xl shadow-[inset_4px_4px_6px_rgba(0,0,0,0.2),inset_-4px_-4px_6px_rgba(255,255,255,0.7)] 
+            dark:shadow-[inset_-4px_-4px_6px_rgba(0,0,0,0.6),inset_4px_4px_6px_rgba(100,199,250,0.6)] 
+            gap-4 md:gap-[1rem] rounded-2xl p-2  font-bold">Critical Thinking </li>
+                      <li class="p-[5px] rounded-xl shadow-[inset_4px_4px_6px_rgba(0,0,0,0.2),inset_-4px_-4px_6px_rgba(255,255,255,0.7)] 
+            dark:shadow-[inset_-4px_-4px_6px_rgba(0,0,0,0.6),inset_4px_4px_6px_rgba(100,199,250,0.6)] 
+            gap-4 md:gap-[1rem] rounded-2xl p-2  font-bold">Adaptability</li>
+                      <li class="p-[5px] rounded-xl shadow-[inset_4px_4px_6px_rgba(0,0,0,0.2),inset_-4px_-4px_6px_rgba(255,255,255,0.7)] 
+            dark:shadow-[inset_-4px_-4px_6px_rgba(0,0,0,0.6),inset_4px_4px_6px_rgba(100,199,250,0.6)] 
+            gap-4 md:gap-[1rem] rounded-2xl p-2  font-bold">Communication</li>
+                      <li class="p-[5px] rounded-xl shadow-[inset_4px_4px_6px_rgba(0,0,0,0.2),inset_-4px_-4px_6px_rgba(255,255,255,0.7)] 
+            dark:shadow-[inset_-4px_-4px_6px_rgba(0,0,0,0.6),inset_4px_4px_6px_rgba(100,199,250,0.6)] 
+            gap-4 md:gap-[1rem] rounded-2xl p-2  font-bold">Collaboration & Teamwork </li>
+                      <li class="p-[5px] rounded-xl shadow-[inset_4px_4px_6px_rgba(0,0,0,0.2),inset_-4px_-4px_6px_rgba(255,255,255,0.7)] 
+            dark:shadow-[inset_-4px_-4px_6px_rgba(0,0,0,0.6),inset_4px_4px_6px_rgba(100,199,250,0.6)] 
+            gap-4 md:gap-[1rem] rounded-2xl p-2  font-bold">Time Management </li>
+                      <li class="p-[5px] rounded-xl shadow-[inset_4px_4px_6px_rgba(0,0,0,0.2),inset_-4px_-4px_6px_rgba(255,255,255,0.7)] 
+            dark:shadow-[inset_-4px_-4px_6px_rgba(0,0,0,0.6),inset_4px_4px_6px_rgba(100,199,250,0.6)] 
+            gap-4 md:gap-[1rem] rounded-2xl p-2  font-bold">Attention to Detail</li>
+                      <li class="p-[5px] rounded-xl shadow-[inset_4px_4px_6px_rgba(0,0,0,0.2),inset_-4px_-4px_6px_rgba(255,255,255,0.7)] 
+            dark:shadow-[inset_-4px_-4px_6px_rgba(0,0,0,0.6),inset_4px_4px_6px_rgba(100,199,250,0.6)] 
+            gap-4 md:gap-[1rem] rounded-2xl p-2  font-bold">Creativity</li>
+                      <li class="p-[5px] rounded-xl shadow-[inset_4px_4px_6px_rgba(0,0,0,0.2),inset_-4px_-4px_6px_rgba(255,255,255,0.7)] 
+            dark:shadow-[inset_-4px_-4px_6px_rgba(0,0,0,0.6),inset_4px_4px_6px_rgba(100,199,250,0.6)] 
+            gap-4 md:gap-[1rem] rounded-2xl p-2  font-bold">Patience & Persistence </li>
+                      <li class="p-[5px] rounded-xl shadow-[inset_4px_4px_6px_rgba(0,0,0,0.2),inset_-4px_-4px_6px_rgba(255,255,255,0.7)] 
+            dark:shadow-[inset_-4px_-4px_6px_rgba(0,0,0,0.6),inset_4px_4px_6px_rgba(100,199,250,0.6)] 
+            gap-4 md:gap-[1rem] rounded-2xl p-2  font-bold">Empathy</li>
+                      <li class="p-[5px] rounded-xl shadow-[inset_4px_4px_6px_rgba(0,0,0,0.2),inset_-4px_-4px_6px_rgba(255,255,255,0.7)] 
+            dark:shadow-[inset_-4px_-4px_6px_rgba(0,0,0,0.6),inset_4px_4px_6px_rgba(100,199,250,0.6)] 
+            gap-4 md:gap-[1rem] rounded-2xl p-2  font-bold">Conflict Resolution</li>
+                      <li class="p-[5px] rounded-xl shadow-[inset_4px_4px_6px_rgba(0,0,0,0.2),inset_-4px_-4px_6px_rgba(255,255,255,0.7)] 
+            dark:shadow-[inset_-4px_-4px_6px_rgba(0,0,0,0.6),inset_4px_4px_6px_rgba(100,199,250,0.6)] 
+            gap-4 md:gap-[1rem] rounded-2xl p-1 font-bold">Continuous Learning </li>
+                    </ul>
+
+                </div>
+               
+            </div>
+
+              <div class="flex w-[30%] md:flex-col xs:flex-col md:w-[100%] xs:w-full gap-10 text-center pt-5 shadow-[4px_4px_6px_rgba(0,0,0,0.2),-4px_-4px_6px_rgba(255,255,255,0.7)] 
+            dark:shadow-[inset_-4px_-4px_6px_rgba(0,0,0,0.6),inset_4px_4px_6px_rgba(100,199,250,0.6)] 
+            gap-4 md:gap-[1rem] rounded-2xl p-1">
+                <h1 class="font-black text-xl text-gray-900 dark:text-white">Hard Skills</h1> 
+                
+                <div class="xs:w-[70vw] md:w-full p-10" >
+                  <ul class="flex flex-col gap-3 [10px] text-start xs:text-base md:text-lg leading-relaxed list-disc dark:text-white">
+                      <li class="p-[5px] rounded-xl shadow-[inset_4px_4px_6px_rgba(0,0,0,0.2),inset_-4px_-4px_6px_rgba(255,255,255,0.7)] 
+            dark:shadow-[inset_-4px_-4px_6px_rgba(0,0,0,0.6),inset_4px_4px_6px_rgba(100,199,250,0.6)] 
+            gap-4 md:gap-[1rem] rounded-2xl p-2  font-bold">Photo Editing </li>
+                <li class="p-[5px] rounded-xl shadow-[inset_4px_4px_6px_rgba(0,0,0,0.2),inset_-4px_-4px_6px_rgba(255,255,255,0.7)] 
+            dark:shadow-[inset_-4px_-4px_6px_rgba(0,0,0,0.6),inset_4px_4px_6px_rgba(100,199,250,0.6)] 
+            gap-4 md:gap-[1rem] rounded-2xl p-2  font-bold">Video Editing </li>
+                <li class="p-[5px] rounded-xl shadow-[inset_4px_4px_6px_rgba(0,0,0,0.2),inset_-4px_-4px_6px_rgba(255,255,255,0.7)] 
+            dark:shadow-[inset_-4px_-4px_6px_rgba(0,0,0,0.6),inset_4px_4px_6px_rgba(100,199,250,0.6)] 
+            gap-4 md:gap-[1rem] rounded-2xl p-2  font-bold">Photography</li>
+                <li class="p-[5px] rounded-xl shadow-[inset_4px_4px_6px_rgba(0,0,0,0.2),inset_-4px_-4px_6px_rgba(255,255,255,0.7)] 
+            dark:shadow-[inset_-4px_-4px_6px_rgba(0,0,0,0.6),inset_4px_4px_6px_rgba(100,199,250,0.6)] 
+            gap-4 md:gap-[1rem] rounded-2xl p-2  font-bold">Videography </li>
+                      
+                    </ul>
+
+                </div>
+               
+            </div>
+
+            </div>
+          </div>
+
+          
+
+
+
+
+
+
+</div>
+
+<!-- Tailwind safelist (important) -->
+<div class="hidden rotate-[0.25turn] rotate-[0.30turn] rotate-[0.38turn] rotate-[0.45turn]"></div>
+
+        </section>
+
+
+        <section id="Projects" class=" flex flex-col w-[100%]  duration-300 ease-in shadow-[4px_4px_6px_rgba(0,0,0,0.2),-4px_-4px_6px_rgba(255,255,255,0.7)]
+        dark:shadow-[inset_-4px_-4px_6px_rgba(0,0,0,0.6),inset_4px_4px_6px_rgba(100,199,250,0.6)]
+          rounded-xl xs:flex-col gap-10 flex md:p-10 xs:p-5 text-center">
+          <div>
+            <h1 class="text-5xl font-extrabold font-Poppins text-[#FAA941] " >My <span class="text-gray-900 dark:text-white">Projects</span></h1>
+          </div>
+
+          <div class="w-[100%] min-h-screen flex flex-wrap wrap gap-10 place-content-center justify-center">
+            <div class="group relative w-[25%] h-[25%] xs:h-auto xs:w-auto 
+            shadow-[4px_4px_6px_rgba(0,0,0,0.2),-4px_-4px_6px_rgba(255,255,255,0.7)] 
+            dark:shadow-[inset_-4px_-4px_6px_rgba(0,0,0,0.6),inset_4px_4px_6px_rgba(100,199,250,0.6)] 
+            rounded-2xl justify-center place-content-center p-3 overflow-hidden">
+
+              <img src="../Filson's Portfolio/assets/fairey.png" alt="" class="md:w-[30rem] xs:w-2xl rounded-xl">
+
+              <div class="absolute bottom-0 left-0 w-full h-full   bg-gradient-to-t from-[#009578] to-[#009578]/20 opacity-0 
+                          translate-y-full group-hover:translate-y-0 group-hover:opacity-100 
+                          transition-all ease-out duration-700 md:p-20 xs:px-3 xs:place-content-center  md:place-content-end">
+                          <h1 class="text-center justify-center font-black text-white text-lg ">
+                            Tricycle Payment System Using Java Swing
+                          </h1>
+                        </div>
+          </div>
+
+
+
+
+
+            <div class="group relative w-[25%] h-[25%] xs:h-auto xs:w-auto 
+            shadow-[4px_4px_6px_rgba(0,0,0,0.2),-4px_-4px_6px_rgba(255,255,255,0.7)] 
+            dark:shadow-[inset_-4px_-4px_6px_rgba(0,0,0,0.6),inset_4px_4px_6px_rgba(100,199,250,0.6)] 
+            rounded-2xl justify-center place-content-center p-3 overflow-hidden">
+
+              <img src="../Filson's Portfolio/assets/festverse.png" alt="" class="md:w-[30rem] xs:w-2xl rounded-xl">
+
+              <div class="absolute bottom-0 left-0 w-full h-full bg-gradient-to-t from-[#009578] to-[#009578]/20 opacity-0 
+                          translate-y-full group-hover:translate-y-0 group-hover:opacity-100 
+                          transition-all ease-out duration-700 md:p-20 xs:px-3 xs:place-content-center  md:place-content-end">
+                          <h1 class="text-center justify-center font-black text-white text-lg ">
+                            Festival Promotion Website using HTML, CSS, and JavaScript
+                          </h1></div>
+          </div>
+
+
+
+          <div class="group relative w-[25%] h-[25%] xs:h-auto xs:w-auto 
+            shadow-[4px_4px_6px_rgba(0,0,0,0.2),-4px_-4px_6px_rgba(255,255,255,0.7)] 
+            dark:shadow-[inset_-4px_-4px_6px_rgba(0,0,0,0.6),inset_4px_4px_6px_rgba(100,199,250,0.6)] 
+            rounded-2xl justify-center place-content-center p-3 overflow-hidden ">
+
+              <img src="../Filson's Portfolio/assets/sas.png" alt="" class="md:w-[30rem] xs:w-2xl rounded-xl">
+
+              <div class="absolute bottom-0 left-0 w-full h-full   bg-gradient-to-t from-[#009578] to-[#009578]/20 opacity-0 
+                          translate-y-full group-hover:translate-y-0 group-hover:opacity-100 
+                          transition-all ease-out duration-700 md:p-20 xs:px-3 xs:place-content-center  md:place-content-end">
+                        <h1 class="text-center justify-center font-black text-white text-lg ">
+                            A Print and Design Business landing page using HTML, CSS, and JavaScript
+                          </h1></div>
+          </div>
+
+           <div class="group relative w-[25%] h-[25%] xs:h-auto xs:w-auto 
+            shadow-[4px_4px_6px_rgba(0,0,0,0.2),-4px_-4px_6px_rgba(255,255,255,0.7)] 
+            dark:shadow-[inset_-4px_-4px_6px_rgba(0,0,0,0.6),inset_4px_4px_6px_rgba(100,199,250,0.6)] 
+            rounded-2xl justify-center place-content-center p-3 overflow-hidden">
+
+              <img src="../Filson's Portfolio/assets/webCalculator.png" alt="" class="md:w-[30rem] xs:w-2xl rounded-xl">
+
+              <div class="absolute bottom-0 left-0 w-full h-full  bg-gradient-to-t from-[#009578] to-[#009578]/20  opacity-0 
+                          translate-y-full group-hover:translate-y-0 group-hover:opacity-100 
+                          transition-all ease-out duration-700 md:p-20 xs:px-3 xs:place-content-center  md:place-content-end" >
+                          <h1 class="text-center justify-center font-black text-white text-lg ">
+                            Web based Calculator using HTML, CSS, and JavaScript
+                          </h1>
+                        </div>
+          </div>
+
+
+          
+           <div class="group relative w-[25%] h-[25%] xs:h-auto xs:w-auto 
+            shadow-[4px_4px_6px_rgba(0,0,0,0.2),-4px_-4px_6px_rgba(255,255,255,0.7)] 
+            dark:shadow-[inset_-4px_-4px_6px_rgba(0,0,0,0.6),inset_4px_4px_6px_rgba(100,199,250,0.6)] 
+            rounded-2xl justify-center place-content-center p-3 overflow-hidden">
+
+              <img src="../Filson's Portfolio/assets/revio.png" alt="" class="md:w-[30rem] xs:w-2xl rounded-xl">
+
+              <div class="absolute bottom-0 left-0 w-full h-full  bg-gradient-to-t from-[#009578] to-[#009578]/20  opacity-0 
+                          translate-y-full group-hover:translate-y-0 group-hover:opacity-100 
+                          transition-all ease-out duration-700 md:p-20 xs:px-3 xs:place-content-center  md:place-content-end" >
+                          <h1 class="text-center justify-center font-black text-white text-lg ">
+                            Reviewer Generator Website Using ReactJS
+                          </h1>
+                        </div>
+          </div>
+          </div>
+        </section>
+
+        <section id="Contacts" class="flex flex-col w-[100%] duration-300 ease-in 
+        shadow-[4px_4px_6px_rgba(0,0,0,0.2),-4px_-4px_6px_rgba(255,255,255,0.7)]
+        dark:shadow-[inset_-4px_-4px_6px_rgba(0,0,0,0.6),inset_4px_4px_6px_rgba(100,199,250,0.6)]
+        rounded-xl xs:flex-col gap-10 flex md:p-10 xs:p-5 text-center">
+
+    <!-- Header -->
+    <div>
+        <h1 class="text-5xl font-extrabold font-Poppins text-[#FAA941]">
+            Contact <span class="text-gray-900 dark:text-white">Me</span>
+        </h1>
+    </div>
+
+    <!-- Contact Links -->
+    <div class="flex flex-col md:flex-row gap-6 justify-center items-center">
+        <a href="mailto:filsonbequibel1124@gmail.com?subject=Hello&body=I%20would%20like%20to%20contact%20you" class="px-6 py-3 bg-gray-200 dark:bg-gray-800 rounded-xl shadow hover:shadow-lg transition dark:shadow-[inset_-4px_-4px_6px_rgba(0,0,0,0.6),inset_4px_4px_6px_rgba(100,199,250,0.6)]
+        rounded-xl xs:flex-col gap-10 flex md:p-10 xs:p-5 text-center dark:text-white font-extrabold shadow-[4px_4px_6px_rgba(0,0,0,0.2),-4px_-4px_6px_rgba(255,255,255,0.7)]">
+            Email
+        </a>
+      
+        <a href="https://github.com/Filson-1124" target="_blank" rel="noopener noreferrer" class="px-6 py-3 bg-gray-200 dark:bg-gray-800 rounded-xl shadow hover:shadow-lg transition dark:shadow-[inset_-4px_-4px_6px_rgba(0,0,0,0.6),inset_4px_4px_6px_rgba(100,199,250,0.6)]
+        rounded-xl xs:flex-col gap-10 flex md:p-10 xs:p-5 text-center dark:text-white font-extrabold shadow-[4px_4px_6px_rgba(0,0,0,0.2),-4px_-4px_6px_rgba(255,255,255,0.7)]">
+            GitHub
+        </a>
+        <a href="https://www.facebook.com/filsonjuan" target="_blank" rel="noopener noreferrer" class="px-6 py-3 bg-gray-200 dark:bg-gray-800 rounded-xl shadow hover:shadow-lg transition dark:shadow-[inset_-4px_-4px_6px_rgba(0,0,0,0.6),inset_4px_4px_6px_rgba(100,199,250,0.6)]
+        rounded-xl xs:flex-col gap-10 flex md:p-10 xs:p-5 text-center dark:text-white font-extrabold shadow-[4px_4px_6px_rgba(0,0,0,0.2),-4px_-4px_6px_rgba(255,255,255,0.7)]">
+            Facebook
+        </a>
+    </div>
+</section>
+
+    </main>
+    
+    <script src="script.js"></script>
+</body>
+</html>
