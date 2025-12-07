@@ -23,6 +23,40 @@
   </script>
 </head>
 <body class="dark:bg-gray-900 bg-gray-200 ">
+  <!-- Modal Background -->
+<div id="curiousModal" 
+     class="fixed inset-0 bg-black/50 backdrop-blur-sm flex justify-center items-center 
+            opacity-0 pointer-events-none transition-all duration-300 z-[9999]">
+
+  <!-- Modal Box -->
+  <div id="modalBox"
+       class="bg-white dark:bg-gray-800 rounded-2xl p-8 w-[90%] max-w-md shadow-xl 
+              scale-90 opacity-0 transition-all duration-300">
+
+    <h2 id="quizCategory" 
+        class="text-xl font-bold text-gray-900 dark:text-white mb-3">
+      Trivia Category
+    </h2>
+
+    <p id="quizQuestion" 
+       class="text-gray-700 dark:text-gray-300 text-lg font-medium mb-6">
+      Loading question...
+    </p>
+
+    <!-- OPTIONS -->
+    <div id="quizOptions" class="flex flex-col gap-3 mb-6"></div>
+
+    <!-- CLOSE BUTTON -->
+    <button id="closeModalBtn" 
+            class="w-full bg-gray-300 dark:bg-gray-700 text-gray-900 dark:text-white py-3 rounded-xl 
+                   font-semibold shadow-md active:scale-95 transition">
+      Close
+    </button>
+
+  </div>
+</div>
+
+
 <header class="sticky top-0 z-50 p-5 flex justify-between items-center bg-white dark:bg-gray-800 shadow-md">
   <!-- Logo -->
   <button onclick="scrollToSection('Hero')"> <h1 class="text-3xl font-black dark:text-white">Filson.</h1></button>
@@ -44,6 +78,10 @@
     <li class="cursor-pointer text-xl dark:text-white"><button onclick="scrollToSection('Skills')" id="skilBut">Skills</button></li>
      <li class="cursor-pointer text-xl dark:text-white"><button onclick="scrollToSection('Projects')" id="skilBut">Projects</button></li>
      <li class="cursor-pointer text-xl dark:text-white"><button onclick="scrollToSection('Contacts')" id="skilBut">Contacts</button></li>
+     <li class="cursor-pointer text-xl dark:text-white">
+  <button id="curiousBtn">Feeling Curious?</button>
+</li>
+
     <li class="cursor-pointer text-xl dark:text-white">
       <button id="themeBtn">
         <ion-icon id="moonIcon" size="large" name="moon"></ion-icon>
@@ -54,7 +92,7 @@
 </header>
     <main class="flex flex-col xs:p-5 gap-10">
         <section id="Hero" class="
-        xs:flex-col-reverse
+        flex-col-reverse
         w-[100%] h-[100%] duration-300 ease-in shadow-[4px_4px_6px_rgba(0,0,0,0.2),-4px_-4px_6px_rgba(255,255,255,0.7)]
         dark:shadow-[inset_-4px_-4px_6px_rgba(0,0,0,0.6),inset_4px_4px_6px_rgba(100,199,250,0.6)]
           rounded-xl xs:flex-col md:flex-row gap-10 flex p-10 place-content-between" >
@@ -125,10 +163,10 @@
 
         <section id="About" class=" w-[100%]  duration-300 ease-in shadow-[4px_4px_6px_rgba(0,0,0,0.2),-4px_-4px_6px_rgba(255,255,255,0.7)]
         dark:shadow-[inset_-4px_-4px_6px_rgba(0,0,0,0.6),inset_4px_4px_6px_rgba(100,199,250,0.6)]
-          rounded-xl xs:flex-col gap-10 flex p-10 text-center"> 
+          rounded-xl flex-col gap-10 flex p-10 text-center"> 
              <h1 class="text-5xl font-extrabold font-Poppins text-[#FAA941] " >About <span class="text-gray-900 dark:text-white">Me</span></h1>
 
-             <div class="flex md:flex-row xs:flex-col gap-10 place-content-between ">
+             <div class="flex flex-col md:flex-row  gap-10 place-content-between ">
                 <div class="md:w-[30%] xs:w-full rounded-3xl shadow-[inset_4px_4px_6px_rgba(0,0,0,0.2),inset_-4px_-4px_6px_rgba(255,255,255,0.7)]
         dark:shadow-[inset_-4px_-4px_6px_rgba(0,0,0,0.6),inset_4px_4px_6px_rgba(100,199,250,0.6)] p-5">
                     <img src="../Filson's Portfolio/assets/5f72bb52-001d-4cbf-869b-6c0dd21cb195.jpeg" alt="" class=" w-full rounded-2xl ">
@@ -170,14 +208,14 @@
 
         <section id="Service" class=" w-[100%]  duration-300 ease-in shadow-[4px_4px_6px_rgba(0,0,0,0.2),-4px_-4px_6px_rgba(255,255,255,0.7)]
         dark:shadow-[inset_-4px_-4px_6px_rgba(0,0,0,0.6),inset_4px_4px_6px_rgba(100,199,250,0.6)]
-          rounded-xl xs:flex-col gap-10 flex p-10 text-center"> 
+          rounded-xl flex-col gap-10 flex p-10 text-center"> 
 
             <h1 class="text-5xl font-extrabold font-Poppins text-[#FAA941] " >My <span class="text-gray-900 dark:text-white">Services</span></h1>
-<div class="w-[100%] flex gap-10 place-content-center dark:text-white xs:flex-col md:flex-row ">
+<div class="w-[100%] flex gap-10 place-content-center dark:text-white flex-col md:flex-row ">
 
-        <div class="md:w-[30%] xs:w-full xs:flex-col  shadow-[4px_4px_6px_rgba(0,0,0,0.2),-4px_-4px_6px_rgba(255,255,255,0.7)]
+        <div class="md:w-[30%] flex xs:w-full flex-col  shadow-[4px_4px_6px_rgba(0,0,0,0.2),-4px_-4px_6px_rgba(255,255,255,0.7)]
         dark:shadow-[inset_-4px_-4px_6px_rgba(0,0,0,0.6),inset_4px_4px_6px_rgba(100,199,250,0.6)]
-          rounded-xl md:flex-col gap-10 flex p-10 text-start">
+          rounded-xl  gap-10  p-10 text-start">
             <ion-icon name="code" size="large" class="place-self-start "></ion-icon>
           <h1 class="text-2xl">   UI/UX Designs</h1>
           <p>UI/UX design is the process of creating digital products that are both visually appealing and easy to use. UI (User Interface) design focuses on the look and layout of a product, such as colors, buttons, and typography. UX (User Experience) design focuses on the overall feel and usability, ensuring the product is intuitive, efficient, and satisfying for the user.
@@ -186,7 +224,7 @@
          
             <div class="md:w-[30%] xs:w-full xs:flex-col   shadow-[4px_4px_6px_rgba(0,0,0,0.2),-4px_-4px_6px_rgba(255,255,255,0.7)]
         dark:shadow-[inset_-4px_-4px_6px_rgba(0,0,0,0.6),inset_4px_4px_6px_rgba(100,199,250,0.6)]
-          rounded-xl xs:flex-col  gap-10 flex p-10 text-start">
+          rounded-xl flex-col  gap-10 flex p-10 text-start">
           <ion-icon class="crop" name="crop" size="large"></ion-icon>
           <h1 class="text-2xl" >Web Design</h1>
              <p>Web design is the process of planning and creating websites, focusing on both appearance and functionality. It involves arranging content, choosing colors, fonts, and layouts to make the site visually appealing. It also ensures the site is user-friendly, accessible, and works well across different devices.
@@ -194,7 +232,7 @@
         </div>
             <div class="md:w-[30%] xs:w-full xs:flex-col  shadow-[4px_4px_6px_rgba(0,0,0,0.2),-4px_-4px_6px_rgba(255,255,255,0.7)]
         dark:shadow-[inset_-4px_-4px_6px_rgba(0,0,0,0.6),inset_4px_4px_6px_rgba(100,199,250,0.6)]
-          rounded-xl xs:flex-col  gap-10 flex p-10 text-start">
+          rounded-xl flex-col  gap-10 flex p-10 text-start">
           <ion-icon name="desktop" size="large"></ion-icon>
            <h1 class="text-2xl" >Web Development</h1>
              <p>Web development is the process of building and maintaining websites, making them functional and interactive. It involves writing code using programming languages to create the structure, features, and performance of a site. Web development can include both front-end (what users see) and back-end (server-side processes) work.
@@ -207,21 +245,21 @@
 
         <section id="Skills" class=" flex flex-col w-[100%]  duration-300 ease-in shadow-[4px_4px_6px_rgba(0,0,0,0.2),-4px_-4px_6px_rgba(255,255,255,0.7)]
         dark:shadow-[inset_-4px_-4px_6px_rgba(0,0,0,0.6),inset_4px_4px_6px_rgba(100,199,250,0.6)]
-          rounded-xl xs:flex-col gap-10 flex md:p-10 xs:p-5 text-center">
+          rounded-xl xs:flex-col gap-10 flex md:p-10 xs:p-5 pt-10 text-center">
           <div>
              <h1 class="text-5xl font-extrabold font-Poppins text-[#FAA941] " >My <span class="text-gray-900 dark:text-white">Skills</span></h1>
           </div>
 
-          <div class="main flex w-auto overflow-x-auto gap-10 xs:gap-5 md:p-10 xs:p-1 ">
+          <div class="main flex w-[95%] overflow-auto gap-10 gap-5 md:p-10 p-1 ">
 
-            <div class="flex md:w-[50%] md:max-h-[100vh] md:overflow-y-auto flex-col md:w-[100%] xs:w-full gap-10 text-center pt-5 shadow-[4px_4px_6px_rgba(0,0,0,0.2),-4px_-4px_6px_rgba(255,255,255,0.7)] 
+            <div class="flex flex-col p-10 shadow-[4px_4px_6px_rgba(0,0,0,0.2),-4px_-4px_6px_rgba(255,255,255,0.7)] 
             dark:shadow-[inset_-4px_-4px_6px_rgba(0,0,0,0.6),inset_4px_4px_6px_rgba(100,199,250,0.6)] 
-            gap-3 md:gap-[1rem] rounded-2xl">
-                <h1 class="font-black text-xl text-gray-900 dark:text-white"> Tech Stack</h1>  
-                 <div class="flex md:flex-wrap xs:flex-col w-[50%] gap-10 p-10">
+            rounded-2xl">
+                <h1 class="font-black text-xl  text-gray-900 dark:text-white"> Tech Stack</h1>  
+                 <div class="flex flex-col p-5 gap-10 overflow-y-auto">
 
   <!-- HTML -->
-  <div class="gauge w-full md:max-w-[180px] xs:min-w-[200px] hover:scale-110 transition ease-out duration-300">
+  <div class="gauge w-full md:max-w-[180px] min-w-[200px] hover:scale-110 transition ease-out duration-300">
     <div class="gauge__body w-full h-0 pb-[50%] bg-gray-200 relative rounded-t-full overflow-hidden shadow-[4px_4px_6px_rgba(0,0,0,0.2),-4px_-4px_6px_rgba(255,255,255,0.7)] dark:shadow-[inset_-4px_-4px_6px_rgba(0,0,0,0.6),inset_4px_4px_6px_rgba(100,199,250,0.6)]">
       <div class="gauge__fill absolute top-[100%] left-0 w-full h-full bg-[#009578] 
                   origin-top transition-transform ease-out duration-700"
@@ -235,7 +273,7 @@
   </div>
 
   <!-- CSS -->
-  <div class="gauge w-full md:max-w-[180px] xs:min-w-[200px] hover:scale-110 transition ease-out duration-300">
+  <div class="gauge w-full md:max-w-[180px] min-w-[200px] hover:scale-110 transition ease-out duration-300">
     <div class="gauge__body w-full h-0 pb-[50%] bg-gray-200 relative rounded-t-full overflow-hidden shadow-[4px_4px_6px_rgba(0,0,0,0.2),-4px_-4px_6px_rgba(255,255,255,0.7)] dark:shadow-[inset_-4px_-4px_6px_rgba(0,0,0,0.6),inset_4px_4px_6px_rgba(100,199,250,0.6)]">
       <div class="gauge__fill absolute top-[100%] left-0 w-full h-full bg-[#009578] 
                   origin-top transition-transform ease-out duration-700"
@@ -249,7 +287,7 @@
   </div>
 
   <!-- JavaScript -->
-  <div class="gauge w-full md:max-w-[180px] xs:min-w-[200px] hover:scale-110 transition ease-out duration-300">
+  <div class="gauge w-full md:max-w-[180px] min-w-[200px] hover:scale-110 transition ease-out duration-300">
     <div class="gauge__body w-full h-0 pb-[50%] bg-gray-200 relative rounded-t-full overflow-hidden shadow-[4px_4px_6px_rgba(0,0,0,0.2),-4px_-4px_6px_rgba(255,255,255,0.7)] dark:shadow-[inset_-4px_-4px_6px_rgba(0,0,0,0.6),inset_4px_4px_6px_rgba(100,199,250,0.6)]">
       <div class="gauge__fill absolute top-[100%] left-0 w-full h-full bg-[#009578] 
                   origin-top transition-transform ease-out duration-700"
@@ -263,7 +301,7 @@
   </div>
 
   <!-- React-JS -->
-  <div class="gauge w-full md:max-w-[180px] xs:min-w-[200px] hover:scale-110 transition ease-out duration-300">
+  <div class="gauge w-full md:max-w-[180px] min-w-[200px] hover:scale-110 transition ease-out duration-300">
     <div class="gauge__body w-full h-0 pb-[50%] bg-gray-200 relative rounded-t-full overflow-hidden shadow-[4px_4px_6px_rgba(0,0,0,0.2),-4px_-4px_6px_rgba(255,255,255,0.7)] dark:shadow-[inset_-4px_-4px_6px_rgba(0,0,0,0.6),inset_4px_4px_6px_rgba(100,199,250,0.6)]">
       <div class="gauge__fill absolute top-[100%] left-0 w-full h-full bg-[#009578] 
                   origin-top transition-transform ease-out duration-700"
@@ -277,7 +315,7 @@
   </div>
 
   <!-- Tailwind -->
-  <div class="gauge w-full md:max-w-[180px] xs:min-w-[200px] hover:scale-110 transition ease-out duration-300">
+  <div class="gauge w-full md:max-w-[180px] min-w-[200px] hover:scale-110 transition ease-out duration-300">
     <div class="gauge__body w-full h-0 pb-[50%] bg-gray-200 relative rounded-t-full overflow-hidden shadow-[4px_4px_6px_rgba(0,0,0,0.2),-4px_-4px_6px_rgba(255,255,255,0.7)] dark:shadow-[inset_-4px_-4px_6px_rgba(0,0,0,0.6),inset_4px_4px_6px_rgba(100,199,250,0.6)]">
       <div class="gauge__fill absolute top-[100%] left-0 w-full h-full bg-[#009578] 
                   origin-top transition-transform ease-out duration-700"
@@ -291,7 +329,7 @@
   </div>
 
    <!-- Python -->
-  <div class="gauge w-full md:max-w-[180px] xs:min-w-[200px] hover:scale-110 transition ease-out duration-300">
+  <div class="gauge w-full md:max-w-[180px] min-w-[200px] hover:scale-110 transition ease-out duration-300">
     <div class="gauge__body w-full h-0 pb-[50%] bg-gray-200 relative rounded-t-full overflow-hidden shadow-[4px_4px_6px_rgba(0,0,0,0.2),-4px_-4px_6px_rgba(255,255,255,0.7)] dark:shadow-[inset_-4px_-4px_6px_rgba(0,0,0,0.6),inset_4px_4px_6px_rgba(100,199,250,0.6)]">
       <div class="gauge__fill absolute top-[100%] left-0 w-full h-full bg-[#009578] 
                   origin-top transition-transform ease-out duration-700"
@@ -304,7 +342,7 @@
     </div>
   </div>
 <!-- Java -->
-  <div class="gauge w-full md:max-w-[180px] xs:min-w-[200px] hover:scale-110 transition ease-out duration-300">
+  <div class="gauge w-full md:max-w-[180px] min-w-[200px] hover:scale-110 transition ease-out duration-300">
     <div class="gauge__body w-full h-0 pb-[50%] bg-gray-200 relative rounded-t-full overflow-hidden shadow-[4px_4px_6px_rgba(0,0,0,0.2),-4px_-4px_6px_rgba(255,255,255,0.7)] dark:shadow-[inset_-4px_-4px_6px_rgba(0,0,0,0.6),inset_4px_4px_6px_rgba(100,199,250,0.6)]">
       <div class="gauge__fill absolute top-[100%] left-0 w-full h-full bg-[#009578] 
                   origin-top transition-transform ease-out duration-700"
@@ -317,7 +355,7 @@
     </div>
   </div>
 
-  <div class="gauge w-full md:max-w-[180px] xs:min-w-[200px] hover:scale-110 transition ease-out duration-300">
+  <div class="gauge w-full md:max-w-[180px] min-w-[200px] hover:scale-110 transition ease-out duration-300">
     <div class="gauge__body w-full h-0 pb-[50%] bg-gray-200 relative rounded-t-full overflow-hidden shadow-[4px_4px_6px_rgba(0,0,0,0.2),-4px_-4px_6px_rgba(255,255,255,0.7)] dark:shadow-[inset_-4px_-4px_6px_rgba(0,0,0,0.6),inset_4px_4px_6px_rgba(100,199,250,0.6)]">
       <div class="gauge__fill absolute top-[100%] left-0 w-full h-full bg-[#009578] 
                   origin-top transition-transform ease-out duration-700"
@@ -334,12 +372,12 @@
             </div>
 
            
-            <div class="flex w-[30%] md:flex-col xs:flex-col md:w-[100%] xs:w-full gap-10 text-center pt-5 shadow-[4px_4px_6px_rgba(0,0,0,0.2),-4px_-4px_6px_rgba(255,255,255,0.7)] 
+            <div class=" w-[100vw] p-5 shadow-[4px_4px_6px_rgba(0,0,0,0.2),-4px_-4px_6px_rgba(255,255,255,0.7)] 
             dark:shadow-[inset_-4px_-4px_6px_rgba(0,0,0,0.6),inset_4px_4px_6px_rgba(100,199,250,0.6)] 
-            gap-4 md:gap-[1rem] rounded-2xl p-1">
+            rounded-2xl">
                 <h1 class="font-black text-xl text-gray-900 dark:text-white">Soft Skills</h1> 
                 
-                <div class="xs:w-[70vw] md:w-full p-10" >
+                <div class="w-[80vw] md:w-full p-10" >
                   <ul class="flex flex-col gap-3 [10px] text-start xs:text-base md:text-lg leading-relaxed list-disc dark:text-white">
                       <li class="p-[5px] rounded-xl shadow-[inset_4px_4px_6px_rgba(0,0,0,0.2),inset_-4px_-4px_6px_rgba(255,255,255,0.7)] 
             dark:shadow-[inset_-4px_-4px_6px_rgba(0,0,0,0.6),inset_4px_4px_6px_rgba(100,199,250,0.6)] 
@@ -383,12 +421,11 @@
                
             </div>
 
-              <div class="flex w-[30%] md:flex-col xs:flex-col md:w-[100%] xs:w-full gap-10 text-center pt-5 shadow-[4px_4px_6px_rgba(0,0,0,0.2),-4px_-4px_6px_rgba(255,255,255,0.7)] 
-            dark:shadow-[inset_-4px_-4px_6px_rgba(0,0,0,0.6),inset_4px_4px_6px_rgba(100,199,250,0.6)] 
-            gap-4 md:gap-[1rem] rounded-2xl p-1">
+              <div class="p-5 w-[100vw] shadow-[4px_4px_6px_rgba(0,0,0,0.2),-4px_-4px_6px_rgba(255,255,255,0.7)] 
+            dark:shadow-[inset_-4px_-4px_6px_rgba(0,0,0,0.6),inset_4px_4px_6px_rgba(100,199,250,0.6)] rounded-2xl">
                 <h1 class="font-black text-xl text-gray-900 dark:text-white">Hard Skills</h1> 
                 
-                <div class="xs:w-[70vw] md:w-full p-10" >
+                <div class="w-[80vw] md:w-full p-10" >
                   <ul class="flex flex-col gap-3 [10px] text-start xs:text-base md:text-lg leading-relaxed list-disc dark:text-white">
                       <li class="p-[5px] rounded-xl shadow-[inset_4px_4px_6px_rgba(0,0,0,0.2),inset_-4px_-4px_6px_rgba(255,255,255,0.7)] 
             dark:shadow-[inset_-4px_-4px_6px_rgba(0,0,0,0.6),inset_4px_4px_6px_rgba(100,199,250,0.6)] 
@@ -434,8 +471,8 @@
             <h1 class="text-5xl font-extrabold font-Poppins text-[#FAA941] " >My <span class="text-gray-900 dark:text-white">Projects</span></h1>
           </div>
 
-          <div class="w-[100%] min-h-screen flex flex-wrap wrap gap-10 place-content-center justify-center">
-            <div class="group relative w-[25%] h-[25%] xs:h-auto xs:w-auto 
+          <div class=" min-h-screen flex flex-wrap gap-10 place-content-center justify-center">
+            <div class="group relative w-[90%] h-[25%] xs:h-auto xs:w-auto 
             shadow-[4px_4px_6px_rgba(0,0,0,0.2),-4px_-4px_6px_rgba(255,255,255,0.7)] 
             dark:shadow-[inset_-4px_-4px_6px_rgba(0,0,0,0.6),inset_4px_4px_6px_rgba(100,199,250,0.6)] 
             rounded-2xl justify-center place-content-center p-3 overflow-hidden">
@@ -455,7 +492,7 @@
 
 
 
-            <div class="group relative w-[25%] h-[25%] xs:h-auto xs:w-auto 
+            <div class="group relative w-[90%] h-[25%] xs:h-auto xs:w-auto 
             shadow-[4px_4px_6px_rgba(0,0,0,0.2),-4px_-4px_6px_rgba(255,255,255,0.7)] 
             dark:shadow-[inset_-4px_-4px_6px_rgba(0,0,0,0.6),inset_4px_4px_6px_rgba(100,199,250,0.6)] 
             rounded-2xl justify-center place-content-center p-3 overflow-hidden">
@@ -472,7 +509,7 @@
 
 
 
-          <div class="group relative w-[25%] h-[25%] xs:h-auto xs:w-auto 
+          <div class="group relative w-[90%] h-[25%] xs:h-auto xs:w-auto 
             shadow-[4px_4px_6px_rgba(0,0,0,0.2),-4px_-4px_6px_rgba(255,255,255,0.7)] 
             dark:shadow-[inset_-4px_-4px_6px_rgba(0,0,0,0.6),inset_4px_4px_6px_rgba(100,199,250,0.6)] 
             rounded-2xl justify-center place-content-center p-3 overflow-hidden ">
@@ -487,7 +524,7 @@
                           </h1></div>
           </div>
 
-           <div class="group relative w-[25%] h-[25%] xs:h-auto xs:w-auto 
+           <div class="group relative w-[90%] h-[25%] xs:h-auto xs:w-auto 
             shadow-[4px_4px_6px_rgba(0,0,0,0.2),-4px_-4px_6px_rgba(255,255,255,0.7)] 
             dark:shadow-[inset_-4px_-4px_6px_rgba(0,0,0,0.6),inset_4px_4px_6px_rgba(100,199,250,0.6)] 
             rounded-2xl justify-center place-content-center p-3 overflow-hidden">
@@ -505,7 +542,7 @@
 
 
           
-           <div class="group relative w-[25%] h-[25%] xs:h-auto xs:w-auto 
+           <div class="group relative w-[90%] h-[25%] xs:h-auto xs:w-auto 
             shadow-[4px_4px_6px_rgba(0,0,0,0.2),-4px_-4px_6px_rgba(255,255,255,0.7)] 
             dark:shadow-[inset_-4px_-4px_6px_rgba(0,0,0,0.6),inset_4px_4px_6px_rgba(100,199,250,0.6)] 
             rounded-2xl justify-center place-content-center p-3 overflow-hidden">
