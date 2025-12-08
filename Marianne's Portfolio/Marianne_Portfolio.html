@@ -105,7 +105,7 @@
                 </h2>
                 <h3 class="text-2xl font-bold tracking-tight text-balance text-yellow-400 sm:text-4xl">
                   FRONT END DEVELOPER
-                </h3>                      
+                </h3>
 
                 <p class="mt-8 text-lg font-medium text-pretty text-gray-400 sm:text-xl/8 max-w-2xl mx-auto">
                   I'm a student from Tarlac State University and currently taking Bachelor in Information Technology Major in Web and Mobile Application. I'm an aspiring front-end web developer.
@@ -215,6 +215,27 @@
               
             </div>
         </section>
+
+        <div class="bg-gray-800/50 rounded-md p-6 shadow-md mt-6 text-center">
+          <h3 class="text-yellow-400 text-xl font-semibold mb-4">Random Dog Fact & Image</h3>
+
+          <img id="dog-image"
+              class="w-full max-w-xs aspect-square object-cover rounded-xl mx-auto mb-4 border-4 border-yellow-400/50">
+
+          <div id="dog-loader" class="hidden flex justify-center mb-4">
+            <div class="animate-spin rounded-full h-10 w-10 border-t-2 border-b-2 border-yellow-400"></div>
+          </div>
+
+          <p id="dog-fact" class="text-gray-300 text-sm italic mb-2">Fetching a fun fact...</p>
+          <p id="dog-breed" class="text-gray-400 text-xs italic mb-4"></p>
+
+          <button id="fetch-dog-btn" class="px-4 py-2 rounded-full border border-yellow-500 text-yellow-500 font-semibold hover:bg-yellow-500 hover:text-black transition">
+            Fetch New Dog
+          </button>
+        </div>
+        
+        <div class="bg-gray-800/50 rounded-md p-6 shadow-md mt-6 text-pretty">
+
           <!-- PORTFOLIO SECTION -->
         <section id="portfolio" class="py-20 px-5">
             <div class="max-w-6xl mx-auto text-center md:text-left">
@@ -392,5 +413,112 @@
         <p class="text-gray-500 text-xs mt-1">Building clean and creative web and app experiences.</p>
       </div>
     </footer>
+
+    <script>
+      const breedFacts = {
+        "affenpinscher": "Affenpinschers are known as 'monkey dogs' due to their expressive faces.",
+        "african": "African village dogs are among the oldest domesticated dog lineages.",
+        "airedale": "Airedales are the largest of all terrier breeds, known as the 'King of Terriers'.",
+        "akita": "Akitas were originally used in Japan to guard royalty and hunt bears.",
+        "appenzeller": "Appenzellers are strong mountain dogs used to herd cattle in Switzerland.",
+        "australian cattle": "Aussie Cattle Dogs were bred from dingoes mixed with herding dogs.",
+        "basenji": "Basenjis do not bark — they make a unique sound known as a 'baroo'.",
+        "beagle": "Beagles have one of the strongest senses of smell among dog breeds.",
+        "bluetick": "Bluetick Coonhounds are known for their cold-trailing hunting ability.",
+        "borzoi": "Borzoi dogs were bred in Russia to hunt wolves.",
+        "bouvier": "Bouviers are powerful farm dogs originally bred in Belgium for cattle work.",
+        "boxer": "Boxers were bred in Germany for hunting wild boar.",
+        "bulldog": "Bulldogs were historically used in the sport of bull-baiting.",
+        "bulldog french": "French Bulldogs became popular among lace workers in England.",
+        "bulldog boston": "Boston Bulldogs are a smaller variant of the English bulldog.",
+        "cairn": "Cairn Terriers are known for their appearance in The Wizard of Oz as Toto.",
+        "cattledog australian": "Australian Cattle Dogs are incredibly intelligent and energetic.",
+        "chihuahua": "Chihuahuas are named after the Mexican state of Chihuahua.",
+        "chow": "Chow Chows have unique blue-black tongues.",
+        "collie": "Collies were bred in Scotland as sheep herding dogs.",
+        "collie border": "Border Collies are widely considered the smartest dog breed.",
+        "coonhound": "Coonhounds were bred in the U.S. for hunting raccoons.",
+        "corgi": "Corgis were used to herd cattle by nipping at their heels.",
+        "corgi cardigan": "Cardigan Corgis have long fox-like tails, unlike Pembrokes.",
+        "corgi pembroke": "Pembroke Corgis are famous for their connection to British royalty.",
+        "dachshund": "Dachshunds were bred to hunt badgers — their name means 'badger dog'.",
+        "dalmatian": "Dalmatians were traditionally used as carriage dogs running beside horses.",
+        "doberman": "Dobermans were developed by a tax collector for protection.",
+        "elkhound norwegian": "Norwegian Elkhounds were used to hunt elk and bears.",
+        "finnish lapphund": "Finnish Lapphunds were used to herd reindeer.",
+        "germanshepherd": "German Shepherds are valued for their intelligence and versatility.",
+        "greyhound": "Greyhounds are the fastest dog breed, reaching up to 45 mph.",
+        "husky": "Huskies were bred by the Chukchi people as sled dogs.",
+        "keeshond": "Keeshonds were popular watchdogs on Dutch riverboats.",
+        "labrador": "Labradors are the most popular dog breed worldwide.",
+        "leonberg": "Leonbergers were developed to resemble lions.",
+        "malamute": "Alaskan Malamutes are powerful Arctic sled dogs.",
+        "mastiff": "Mastiffs were used by ancient civilizations for guarding and war.",
+        "newfoundland": "Newfoundlands are excellent swimmers and rescue dogs.",
+        "pitbull": "Pitbulls originally descended from English bull-baiting dogs.",
+        "pointer german": "German Pointers are highly skilled hunting dogs.",
+        "pomeranian": "Pomeranians are descendants of large Arctic sled dogs.",
+        "poodle": "Poodles originated in Germany and were bred as water retrievers.",
+        "pug": "Pugs were companions of Chinese emperors.",
+        "retriever golden": "Golden Retrievers were bred for retrieving waterfowl.",
+        "retriever labrador": "Labrador Retrievers were bred to retrieve fishnets.",
+        "rottweiler": "Rottweilers descend from Roman drover dogs.",
+        "samoyed": "Samoyeds are known for their smiling expression.",
+        "shiba": "Shiba Inus are one of Japan’s oldest dog breeds.",
+        "shihtzu": "Shih Tzus were bred as royal lapdogs in China.",
+        "spaniel cocker": "Cocker Spaniels were bred as bird-hunting dogs.",
+        "spaniel irish": "Irish Spaniels are excellent water dogs.",
+        "spaniel japanese": "Japanese Chins were bred for Asian royalty.",
+        "spaniel sussex": "Sussex Spaniels are known for their golden-liver coat.",
+        "stbernard": "St. Bernards were rescue dogs in the Swiss Alps.",
+        "terrier border": "Border Terriers helped farmers hunt foxes in the Scottish borders.",
+        "terrier bull": "Bull Terriers are known for their unique egg-shaped heads.",
+        "terrier fox": "Fox Terriers were bred to chase foxes out of their dens.",
+        "terrier irish": "Irish Terriers are one of the oldest terrier breeds.",
+        "terrier yorkshire": "Yorkshire Terriers were used to catch rats in textile mills.",
+        "wolfhound irish": "Irish Wolfhounds are among the tallest dog breeds."
+      };
+      async function fetchDogContent() {
+        const imageElement = document.getElementById('dog-image');
+        const factElement = document.getElementById('dog-fact');
+        const breedElement = document.getElementById('dog-breed');
+        const loader = document.getElementById('dog-loader');
+
+        loader.classList.remove("hidden");
+        factElement.textContent = "Loading...";
+        breedElement.textContent = "";
+
+        try {
+          const allowedBreeds = Object.keys(breedFacts);
+          const randomBreed = allowedBreeds[Math.floor(Math.random() * allowedBreeds.length)];
+
+          function toDogApiPath(breedName) {
+            const parts = breedName.split(" ");
+            return parts.length === 1 ? parts[0] : `${parts[0]}/${parts[1]}`;
+          }
+
+          const apiPath = toDogApiPath(randomBreed);
+
+          const dogRes = await fetch(`https://dog.ceo/api/breed/${apiPath}/images/random`);
+          const dogData = await dogRes.json();
+
+          breedElement.textContent = "Breed: " + randomBreed;
+          factElement.textContent = breedFacts[randomBreed];
+          imageElement.src = dogData.message;
+
+        } catch (err) {
+          factElement.textContent = "Failed to load dog info.";
+          console.error(err);
+        }
+
+        loader.classList.add("hidden");
+      }
+
+      fetchDogContent();
+
+      document.getElementById("fetch-dog-btn").addEventListener("click", fetchDogContent);
+    </script>
+
+
 </body>
 </html>
