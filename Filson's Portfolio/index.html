@@ -1,3 +1,5 @@
+<!--I hope this is the last revision and push I will do :> -->>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,7 +10,7 @@
       <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
-  <!-- Tailwind Config -->
+
   <script>
     tailwind.config = {
         darkMode: 'class',
@@ -23,12 +25,12 @@
   </script>
 </head>
 <body class="dark:bg-gray-900 bg-gray-200 ">
-  <!-- Modal Background -->
+  
 <div id="curiousModal" 
      class="fixed inset-0 bg-black/50 backdrop-blur-sm flex justify-center items-center 
             opacity-0 pointer-events-none transition-all duration-300 z-[9999]">
 
-  <!-- Modal Box -->
+
   <div id="modalBox"
        class="bg-white dark:bg-gray-800 rounded-2xl p-8 w-[90%] max-w-md shadow-xl 
               scale-90 opacity-0 transition-all duration-300">
@@ -43,10 +45,10 @@
       Loading question...
     </p>
 
-    <!-- OPTIONS -->
+ 
     <div id="quizOptions" class="flex flex-col gap-3 mb-6"></div>
 
-    <!-- CLOSE BUTTON -->
+ 
     <button id="closeModalBtn" 
             class="w-full bg-gray-300 dark:bg-gray-700 text-gray-900 dark:text-white py-3 rounded-xl 
                    font-semibold shadow-md active:scale-95 transition">
@@ -58,18 +60,18 @@
 
 
 <header class="sticky top-0 z-50 p-5 flex justify-between items-center bg-white dark:bg-gray-800 shadow-md">
-  <!-- Logo -->
+
   <button onclick="scrollToSection('Hero')"> <h1 class="text-3xl font-black dark:text-white">Filson.</h1></button>
 
-  <!-- Hamburger / Back Button -->
+ 
   <button id="menuBtn" class="text-3xl md:hidden dark:text-white">
-    <!-- Hamburger icon (default) -->
+ 
     <ion-icon id="menuIcon" name="menu"></ion-icon>
-    <!-- Back arrow icon (hidden by default) -->
+    
     <ion-icon id="backIcon"  name="arrow-back" class="hidden"></ion-icon>
   </button>
 
-  <!-- Navbar -->
+
   <ul id="navMenu" 
       class="fixed top-0 left-0 h-full w-64 bg-white shadow-lg transform -translate-x-full transition-transform duration-300 flex flex-col gap-6 p-6 font-semibold xs:dark:bg-gray-800
              md:static md:h-auto md:w-auto md:bg-transparent md:shadow-none md:flex md:flex-row md:gap-10 md:translate-x-0">
@@ -107,7 +109,7 @@
 
   <div class="flex gap-5 md:w-[20%] xs:w-[100%] place-content-center flex-wrap">
 
-    <!-- Facebook Icon -->
+  
     <div class="relative group">
         <div class="rounded-full p-2 bg-gray-200 dark:bg-transparent cursor-pointer">
             <ion-icon size="large" name="logo-facebook"></ion-icon>
@@ -120,7 +122,7 @@
         </div>
     </div>
 
-    <!-- Email Icon -->
+
     <div class="relative group">
         <div class="rounded-full p-2 bg-gray-200 dark:bg-transparent cursor-pointer">
             <ion-icon size="large" name="mail"></ion-icon>
@@ -133,7 +135,7 @@
         </div>
     </div>
 
-    <!-- Call Icon -->
+
     <div class="relative group">
         <div class="rounded-full p-2 bg-gray-200 dark:bg-transparent cursor-pointer">
             <ion-icon size="large" name="call"></ion-icon>
@@ -258,7 +260,7 @@
                 <h1 class="font-black text-xl  text-gray-900 dark:text-white"> Tech Stack</h1>  
                  <div class="flex flex-col p-5 gap-10 overflow-y-auto">
 
-  <!-- HTML -->
+
   <div class="gauge w-full md:max-w-[180px] min-w-[200px] hover:scale-110 transition ease-out duration-300">
     <div class="gauge__body w-full h-0 pb-[50%] bg-gray-200 relative rounded-t-full overflow-hidden shadow-[4px_4px_6px_rgba(0,0,0,0.2),-4px_-4px_6px_rgba(255,255,255,0.7)] dark:shadow-[inset_-4px_-4px_6px_rgba(0,0,0,0.6),inset_4px_4px_6px_rgba(100,199,250,0.6)]">
       <div class="gauge__fill absolute top-[100%] left-0 w-full h-full bg-[#009578] 
@@ -272,7 +274,7 @@
     </div>
   </div>
 
-  <!-- CSS -->
+
   <div class="gauge w-full md:max-w-[180px] min-w-[200px] hover:scale-110 transition ease-out duration-300">
     <div class="gauge__body w-full h-0 pb-[50%] bg-gray-200 relative rounded-t-full overflow-hidden shadow-[4px_4px_6px_rgba(0,0,0,0.2),-4px_-4px_6px_rgba(255,255,255,0.7)] dark:shadow-[inset_-4px_-4px_6px_rgba(0,0,0,0.6),inset_4px_4px_6px_rgba(100,199,250,0.6)]">
       <div class="gauge__fill absolute top-[100%] left-0 w-full h-full bg-[#009578] 
@@ -286,7 +288,7 @@
     </div>
   </div>
 
-  <!-- JavaScript -->
+ 
   <div class="gauge w-full md:max-w-[180px] min-w-[200px] hover:scale-110 transition ease-out duration-300">
     <div class="gauge__body w-full h-0 pb-[50%] bg-gray-200 relative rounded-t-full overflow-hidden shadow-[4px_4px_6px_rgba(0,0,0,0.2),-4px_-4px_6px_rgba(255,255,255,0.7)] dark:shadow-[inset_-4px_-4px_6px_rgba(0,0,0,0.6),inset_4px_4px_6px_rgba(100,199,250,0.6)]">
       <div class="gauge__fill absolute top-[100%] left-0 w-full h-full bg-[#009578] 
@@ -300,7 +302,7 @@
     </div>
   </div>
 
-  <!-- React-JS -->
+
   <div class="gauge w-full md:max-w-[180px] min-w-[200px] hover:scale-110 transition ease-out duration-300">
     <div class="gauge__body w-full h-0 pb-[50%] bg-gray-200 relative rounded-t-full overflow-hidden shadow-[4px_4px_6px_rgba(0,0,0,0.2),-4px_-4px_6px_rgba(255,255,255,0.7)] dark:shadow-[inset_-4px_-4px_6px_rgba(0,0,0,0.6),inset_4px_4px_6px_rgba(100,199,250,0.6)]">
       <div class="gauge__fill absolute top-[100%] left-0 w-full h-full bg-[#009578] 
@@ -314,7 +316,7 @@
     </div>
   </div>
 
-  <!-- Tailwind -->
+
   <div class="gauge w-full md:max-w-[180px] min-w-[200px] hover:scale-110 transition ease-out duration-300">
     <div class="gauge__body w-full h-0 pb-[50%] bg-gray-200 relative rounded-t-full overflow-hidden shadow-[4px_4px_6px_rgba(0,0,0,0.2),-4px_-4px_6px_rgba(255,255,255,0.7)] dark:shadow-[inset_-4px_-4px_6px_rgba(0,0,0,0.6),inset_4px_4px_6px_rgba(100,199,250,0.6)]">
       <div class="gauge__fill absolute top-[100%] left-0 w-full h-full bg-[#009578] 
@@ -328,7 +330,7 @@
     </div>
   </div>
 
-   <!-- Python -->
+
   <div class="gauge w-full md:max-w-[180px] min-w-[200px] hover:scale-110 transition ease-out duration-300">
     <div class="gauge__body w-full h-0 pb-[50%] bg-gray-200 relative rounded-t-full overflow-hidden shadow-[4px_4px_6px_rgba(0,0,0,0.2),-4px_-4px_6px_rgba(255,255,255,0.7)] dark:shadow-[inset_-4px_-4px_6px_rgba(0,0,0,0.6),inset_4px_4px_6px_rgba(100,199,250,0.6)]">
       <div class="gauge__fill absolute top-[100%] left-0 w-full h-full bg-[#009578] 
@@ -341,7 +343,7 @@
       </div>
     </div>
   </div>
-<!-- Java -->
+
   <div class="gauge w-full md:max-w-[180px] min-w-[200px] hover:scale-110 transition ease-out duration-300">
     <div class="gauge__body w-full h-0 pb-[50%] bg-gray-200 relative rounded-t-full overflow-hidden shadow-[4px_4px_6px_rgba(0,0,0,0.2),-4px_-4px_6px_rgba(255,255,255,0.7)] dark:shadow-[inset_-4px_-4px_6px_rgba(0,0,0,0.6),inset_4px_4px_6px_rgba(100,199,250,0.6)]">
       <div class="gauge__fill absolute top-[100%] left-0 w-full h-full bg-[#009578] 
@@ -565,14 +567,14 @@
         dark:shadow-[inset_-4px_-4px_6px_rgba(0,0,0,0.6),inset_4px_4px_6px_rgba(100,199,250,0.6)]
         rounded-xl xs:flex-col gap-10 flex md:p-10 xs:p-5 text-center">
 
-    <!-- Header -->
+
     <div>
         <h1 class="text-5xl font-extrabold font-Poppins text-[#FAA941]">
             Contact <span class="text-gray-900 dark:text-white">Me</span>
         </h1>
     </div>
 
-    <!-- Contact Links -->
+
     <div class="flex flex-col md:flex-row gap-6 justify-center items-center">
         <a href="mailto:filsonbequibel1124@gmail.com?subject=Hello&body=I%20would%20like%20to%20contact%20you" class="px-6 py-3 bg-gray-200 dark:bg-gray-800 rounded-xl shadow hover:shadow-lg transition dark:shadow-[inset_-4px_-4px_6px_rgba(0,0,0,0.6),inset_4px_4px_6px_rgba(100,199,250,0.6)]
         rounded-xl xs:flex-col gap-10 flex md:p-10 xs:p-5 text-center dark:text-white font-extrabold shadow-[4px_4px_6px_rgba(0,0,0,0.2),-4px_-4px_6px_rgba(255,255,255,0.7)]">

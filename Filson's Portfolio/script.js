@@ -10,17 +10,16 @@ const navMenu = document.getElementById("navMenu");
 const menuIcon = document.getElementById("menuIcon");
 const backIcon = document.getElementById("backIcon");
 
-// Animate gauges once when page loads
 document.addEventListener("DOMContentLoaded", () => {
   const fills = document.querySelectorAll(".gauge__fill");
 
   fills.forEach((fill) => {
     const target = fill.getAttribute("data-rotate") || "0turn";
 
-    // Start from 0
+
     fill.style.transform = "rotate(0turn)";
 
-    // Animate to target after small delay
+ 
     setTimeout(() => {
       fill.style.transform = `rotate(${target})`;
     }, 200);
@@ -28,23 +27,23 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-// Typing effect
+
 let i = 0;
 function typeEffect() {
   if (i < text.length) {
     typingElement.innerHTML += text.charAt(i);
     i++;
-    setTimeout(typeEffect, 50); // typing speed
+    setTimeout(typeEffect, 50); 
   }
 }
 typeEffect();
 
-// Smooth scroll
+
 function scrollToSection(id) {
   document.getElementById(id).scrollIntoView({ behavior: "smooth" });
 }
 
-// Theme toggle
+
 themeBtn.addEventListener("click", () => {
   html.classList.toggle("dark");
 
@@ -57,11 +56,9 @@ themeBtn.addEventListener("click", () => {
   }
 });
 
-// Mobile menu toggle
+
 menuBtn.addEventListener("click", () => {
   navMenu.classList.toggle("-translate-x-full");
-
-  // Swap icons
   menuIcon.classList.toggle("hidden");
   backIcon.classList.toggle("hidden");
 });
@@ -78,7 +75,7 @@ menuBtn.addEventListener("click", () => {
 
   let correctAnswer = "";
 
-  /** OPEN MODAL */
+
   curiousBtn.addEventListener("click", () => {
     curiousModal.classList.remove("pointer-events-none", "opacity-0");
     modalBox.classList.remove("opacity-0", "scale-90");
@@ -86,10 +83,10 @@ menuBtn.addEventListener("click", () => {
     curiousModal.classList.add("opacity-100");
     modalBox.classList.add("opacity-100", "scale-100");
 
-    loadTrivia(); // always fetch fresh question
+    loadTrivia();
   });
 
-  /** CLOSE MODAL */
+
   closeModalBtn.addEventListener("click", closeModal);
 
   function closeModal() {
@@ -100,7 +97,7 @@ menuBtn.addEventListener("click", () => {
     modalBox.classList.remove("opacity-100", "scale-100");
   }
 
-  /** LOAD TRIVIA FROM API */
+ 
   async function loadTrivia() {
     quizOptions.innerHTML = "Loading...";
     
@@ -114,7 +111,7 @@ menuBtn.addEventListener("click", () => {
     quizCategory.textContent = trivia.category;
     quizQuestion.innerHTML = trivia.question;
 
-    // Combine answers & shuffle
+ 
     const answers = [...trivia.incorrect_answers, trivia.correct_answer]
       .sort(() => Math.random() - 0.5);
 
@@ -134,7 +131,7 @@ menuBtn.addEventListener("click", () => {
   let autoCloseTimer;
 
 function startAutoClose() {
-    // Clear any previous timer so they don't stack
+   
     clearTimeout(autoCloseTimer);
 
     autoCloseTimer = setTimeout(() => {
@@ -143,11 +140,11 @@ function startAutoClose() {
 }
 
 
-  /** ANSWER SELECTION */
+
   function selectAnswer(button, selected) {
     const allButtons = quizOptions.querySelectorAll("button");
 
-    // Disable all answer buttons
+   
     allButtons.forEach(btn => btn.disabled = true);
 
     if (selected === correctAnswer) {
@@ -155,7 +152,7 @@ function startAutoClose() {
     } else {
       button.classList.add("bg-red-500", "text-white");
 
-      // highlight correct answer
+    
       allButtons.forEach(btn => {
         if (btn.innerText === correctAnswer) {
           btn.classList.add("bg-green-500", "text-white");
