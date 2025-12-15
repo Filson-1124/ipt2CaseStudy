@@ -443,7 +443,7 @@ nav .logo {
 }
 
 .service-card {
-    background: linear-gradient(135deg, rgba(238, 245, 255, 0.004), rgba(205, 236, 255, 0.571));
+    background: linear-gradient(135deg, rgba(89, 118, 160, 0.475), rgba(0, 38, 62, 0.382));
     border-radius: 30px;
     padding: 40px 20px;
     backdrop-filter: blur(10px);
@@ -600,3 +600,147 @@ nav .logo {
         width: 100%;
     }
 }
+
+/* Riddles Section */
+.riddles-section {
+    padding: 100px 10%;
+    background: linear-gradient(rgba(0, 12, 27, 0.326),rgb(9, 13, 23), rgba(0, 12, 27, 0.326)); 
+    color: #fff;
+    text-align: center;
+    
+}
+
+.riddles-section .section-title {
+    font-family: "Orbitron", sans-serif;
+    font-size: clamp(1rem, 5vw, 3rem);
+    font-weight: 900;
+    color: #ffffff;
+    margin-bottom: 60px;
+    letter-spacing: 2px;
+    text-shadow: 0 0 15px rgba(255,255,255,0.2);
+}
+
+/* Riddles Grid */
+.riddles-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 35px;
+    justify-items: center;
+    perspective: 1400px;
+}
+
+/* Flashcard */
+.flashcard {
+    width: 500px;   
+    height: 450px;  
+    cursor: pointer;
+    perspective: 1400px;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.flashcard-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.7s cubic-bezier(0.68,-0.55,0.27,1.55);
+    transform-style: preserve-3d;
+    border-radius: 25px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.35);
+    display: flex;
+}
+
+/* Flipped */
+.flashcard.flipped .flashcard-inner {
+    transform: rotateY(180deg);
+}
+
+/* Front/Back */
+.flashcard-front, .flashcard-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+    box-sizing: border-box;
+    transition: all 0.4s ease;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: auto;
+    text-align: center;
+}
+
+/* Front */
+.flashcard-front {
+    background: rgba(255,255,255,0.1);
+    border: 1.5px solid #c8d3ff;
+    font-family: "Oxanium", sans-serif;
+    font-weight: 700;
+    font-size: clamp(1rem, 2.5vw, 1.3rem); 
+    color: #fff;
+    text-shadow: 0 0 5px rgba(0,0,0,0.3);
+}
+
+/* Hint text */
+.flashcard-front h5 {
+    margin-top: 12px;
+    font-size: clamp(0.8rem, 2vw, 1rem);
+    font-weight: 400;
+    font-style: italic;
+    color: rgba(255,255,255,0.7);
+}
+
+/* Back */
+.flashcard-back {
+    background: linear-gradient(145deg, #9bb6ffaa, #1e00ff69);
+    color: #fff;
+    font-family: "Orbitron", sans-serif;
+    font-size: clamp(1rem, 2.5vw, 1.3rem); 
+    font-weight: 600;
+    transform: rotateY(180deg);
+    box-shadow: 0 0 35px rgba(255,255,255,0.2);
+}
+
+/* Button */
+#new-riddle-btn {
+    margin-top: 50px;
+    padding: 10px 20px;
+    font-size: clamp(1rem, 2vw, 1rem);
+    font-family: "Orbitron", sans-serif;
+    font-weight: 700;
+    color: #fff;
+    background: #4834d4;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 25px rgba(72,52,212,0.4);
+}
+
+#new-riddle-btn:hover {
+    background: #b4dbff;
+    transform: scale(1.02);
+    box-shadow: 0 8px 30px rgba(70, 70, 70, 0.245);
+}
+
+@media(max-width: 800px) {
+    .flashcard {
+        width: 90%;
+        height: 200px;
+    }
+
+    .riddles-section .section-title {
+        font-size: clamp(1.8rem, 6vw, 2.5rem);
+    }
+
+    #new-riddle-btn {
+        width: 90%;
+        font-size: clamp(1rem, 4vw, 1.2rem);
+    }
+}
+
