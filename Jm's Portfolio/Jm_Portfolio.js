@@ -47,7 +47,7 @@ async function fetchRiddle() {
 }
 
 function displayRiddles(riddles) {
-    container.innerHTML = '';
+    container.innerHTML = ' ';
 
     riddles.forEach(riddle => {
         const card = document.createElement('div');
