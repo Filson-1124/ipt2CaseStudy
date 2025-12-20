@@ -73,7 +73,10 @@
     </nav>
 
     <!-- Aboout Section -->
-    <section id="about" class="flex items-center justify-center  opacity-0 translate-y-10 transition-all duration-1500 ease-in-out delay-300 ">
+    <section
+      id="about"
+      class="flex items-center justify-center opacity-0 translate-y-10 transition-all duration-1500 ease-in-out delay-300"
+    >
       <div>
         <br /><br /><br /><br /><br />
         <div class="flex space-x-4 justify-center">
@@ -106,6 +109,73 @@
             <div
               class="flex flex-col sm:flex-row justify-end sm:space-x-4 space-y-4 sm:space-y-0 pt-6"
             >
+              <!-- advice button -->
+              <button
+                id="adviceBtn"
+                class="bg-[#6c757d] text-white px-10 py-4 rounded-full font-['Poppins'] font-extrabold text-xl shadow-md transition transform duration-300 hover:bg-[#565e65] hover:scale-105 hover:-translate-y-1 hover:shadow-xl"
+              >
+                Get an Advice
+              </button>
+
+              <!-- advice modal popup -->
+              <div
+                id="adviceModal"
+                class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden z-[9999]"
+              >
+                <div
+                  class="bg-[#fffcf5] rounded-xl p-8 max-w-md text-center relative shadow-lg"
+                >
+                  <span
+                    id="closeModal"
+                    class="absolute top-3 right-5 text-xl cursor-pointer"
+                    >&times;</span
+                  >
+                  <h2 class="text-2xl font-bold mb-4">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 640 640"
+                      class="w-8 h-8 text-gray-700 inline-block"
+                    >
+                      <!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                      <path
+                        fill="#343a40"
+
+                        d="M64 416L64 192C64 139 107 96 160 96L480 96C533 96 576 139 576 192L576 416C576 469 533 512 480 512L360 512C354.8 512 349.8 513.7 345.6 516.8L230.4 603.2C226.2 606.3 221.2 608 216 608C202.7 608 192 597.3 192 584L192 512L160 512C107 512 64 469 64 416z"
+                      />
+                    </svg>
+                    Make sense, right?
+                  </h2>
+
+                  <p id="adviceText" class="text-lg italic mb-2 relative">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 640 640"
+                      class="w-6 h-6 text-gray-700 align-text-top inline-block mr-1"
+                    >
+                      <path
+                        d="M96 280C96 213.7 149.7 160 216 160L224 160C241.7 160 256 174.3 256 192C256 209.7 241.7 224 224 224L216 224C185.1 224 160 249.1 160 280L160 288L224 288C259.3 288 288 316.7 288 352L288 416C288 451.3 259.3 480 224 480L160 480C124.7 480 96 451.3 96 416L96 280zM352 280C352 213.7 405.7 160 472 160L480 160C497.7 160 512 174.3 512 192C512 209.7 497.7 224 480 224L472 224C441.1 224 416 249.1 416 280L416 288L480 288C515.3 288 544 316.7 544 352L544 416C544 451.3 515.3 480 480 480L416 480C380.7 480 352 451.3 352 416L352 280z"
+                      />
+                    </svg>
+
+                    <span id="adviceTextContent" class="text-left"
+                      >advice appear here</span
+                    >
+
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 640 640"
+                      class="w-6 h-6 text-gray-700 align-text-bottom inline-block ml-1"
+                    >
+                      <path
+                        d="M544 360C544 426.3 490.3 480 424 480L416 480C398.3 480 384 465.7 384 448C384 430.3 398.3 416 416 416L424 416C454.9 416 480 390.9 480 360L480 352L416 352C380.7 352 352 323.3 352 288L352 224C352 188.7 380.7 160 416 160L480 160C515.3 160 544 188.7 544 224L544 360zM288 360C288 426.3 234.3 480 168 480L160 480C142.3 480 128 465.7 128 448C128 430.3 142.3 416 160 416L168 416C198.9 416 224 390.9 224 360L224 352L160 352C124.7 352 96 323.3 96 288L96 224C96 188.7 124.7 160 160 160L224 160C259.3 160 288 188.7 288 224L288 360z"
+                      />
+                    </svg>
+                  </p>
+
+                  <p class="text-sm text-gray-500 italic">—— Advice Slip API</p>
+                </div>
+              </div>
+
               <!-- See More Button -->
               <button
                 class="bg-[#8f71b1] text-white px-10 py-4 rounded-full font-['Poppins'] font-extrabold text-xl shadow-md transition transform duration-300 hover:bg-[#7a5ca8] hover:scale-105 hover:-translate-y-1 hover:shadow-xl"
@@ -135,7 +205,7 @@
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="flex items-center justify-center ">
+    <section id="skills" class="flex items-center justify-center">
       <div>
         <div class="flex justify-center py-2">
           <h2
@@ -540,18 +610,10 @@
             </div>
           </div>
           <div class="w-[200px] absolute top-[125px] left-[380px]">
-            <img
-              class="drop-shadow-2xl"
-              src="assets/shirtchess2.png"
-              alt=""
-            />
+            <img class="drop-shadow-2xl" src="assets/shirtchess2.png" alt="" />
           </div>
           <div class="w-[215px] absolute top-[125px] left-[190px]">
-            <img
-              class="drop-shadow-2xl"
-              src="assets/shirtchess1.png"
-              alt=""
-            />
+            <img class="drop-shadow-2xl" src="assets/shirtchess1.png" alt="" />
           </div>
         </div>
         <div><br /><br /><br /></div>
@@ -916,7 +978,6 @@
         </p>
       </footer>
     </section>
-<script src="Yu.js" ></script>
-    
+    <script src="Yu.js"></script>
   </body>
 </html>

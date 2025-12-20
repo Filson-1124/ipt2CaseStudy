@@ -51,7 +51,40 @@ buttons.forEach((btn) => {
 });
 
 //Slide up
-  window.addEventListener("DOMContentLoaded", () => {
-    const aboutSection = document.getElementById("about");
-    aboutSection.classList.remove("opacity-0", "translate-y-10");
-  });
+window.addEventListener("DOMContentLoaded", () => {
+  const aboutSection = document.getElementById("about");
+  aboutSection.classList.remove("opacity-0", "translate-y-10");
+});
+
+
+//added advice slip API
+const adviceBtn = document.getElementById("adviceBtn");
+const adviceModal = document.getElementById("adviceModal");
+const adviceText = document.getElementById("adviceText");
+const closeModal = document.getElementById("closeModal");
+
+adviceBtn.addEventListener("click", async () => {
+  try {
+    const response = await fetch("https://api.adviceslip.com/advice", {
+      cache: "no-cache",
+    });
+    const data = await response.json();
+    const adviceTextContent = document.getElementById("adviceTextContent");
+    adviceTextContent.textContent = data.slip.advice;
+    adviceModal.classList.remove("hidden");
+  } catch (error) {
+    adviceText.textContent = "Sorry, could not fetch advice. Please try again.";
+    adviceModal.classList.remove("hidden");
+    console.error(error);
+  }
+});
+
+closeModal.addEventListener("click", () => {
+  adviceModal.classList.add("hidden");
+});
+
+adviceModal.addEventListener("click", (e) => {
+  if (e.target === adviceModal) {
+    adviceModal.classList.add("hidden");
+  }
+});
